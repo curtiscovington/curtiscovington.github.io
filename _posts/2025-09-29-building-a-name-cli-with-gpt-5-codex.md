@@ -8,8 +8,6 @@ tags:
   - cli
 reading_time: "6 min read"
 ---
-# Building a Name CLI with GPT-5-Codex
-
 *Project repo: [github.com/curtiscovington/ssa-names](https://github.com/curtiscovington/ssa-names)*
 
 I handed GPT-5-Codex the SSA's baby-name dataset and asked it to build a CLI. No plan, just curiosity about what modern AI could deliver when paired with a real dataset. Two hours later, I had a tool that could generate statistically accurate random names—and I'd validated it with proper hypothesis testing. Yay statistics!
