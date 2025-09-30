@@ -1,3 +1,13 @@
+---
+title: "Building a Name CLI with GPT-5-Codex"
+description: "Pairing with GPT-5-Codex to turn the SSA baby-name dataset into a polished Go CLI with weighted sampling, charts, and automated releases."
+date: 2025-09-29
+tags:
+  - ai
+  - go
+  - cli
+reading_time: "6 min read"
+---
 # Building a Name CLI with GPT-5-Codex
 
 *Project repo: [github.com/curtiscovington/ssa-names](https://github.com/curtiscovington/ssa-names)*

@@ -356,6 +356,22 @@ img {
   color: var(--text-muted);
 }
 
+.post__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.post__tag {
+  background: rgba(58, 93, 255, 0.08);
+  color: var(--primary);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
 .post__content {
   color: var(--text);
   font-size: 1.05rem;

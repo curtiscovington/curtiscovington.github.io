@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<main class="post">
+  <article class="post__container">
+    <div class="post__meta">
+      <p class="post__date">{{ page.date | date: '%B %-d, %Y' }}</p>
+      <h1 class="post__title">{{ page.title }}</h1>
+      {% if page.reading_time %}
+        <p class="post__reading">{{ page.reading_time }}</p>
+      {% endif %}
+      {% if page.tags %}
+        <div class="post__tags">
+          {% for tag in page.tags %}
+            <span class="post__tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="post__content">
+      {{ content }}
+    </div>
+  </article>
+  <aside class="post__aside">
+    <div class="post__card">
+      <h2>Keep exploring</h2>
+      <p>Browse more writing and see what else I'm building.</p>
+      <a class="post__cta" href="{{ '/#latest' | relative_url }}">Back to all posts</a>
+    </div>
+  </aside>
+</main>
