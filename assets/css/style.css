@@ -85,7 +85,7 @@ img {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
-  object-position: 50% 46%;
+  object-position: 50% 5%;
   border: 2px solid rgba(255, 255, 255, 0.85);
 }
 
