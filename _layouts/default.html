@@ -39,7 +39,13 @@
     <header class="site-header">
       <div class="container">
         <div class="brand">
-          <span class="brand__logo" aria-hidden="true">CC</span>
+          <img
+            class="brand__avatar"
+            src="{{ '/img/profile.png' | relative_url }}"
+            alt="Portrait of Curtis Covington"
+            width="44"
+            height="44"
+          />
           <div class="brand__text">
             <a href="{{ '/' | relative_url }}" class="brand__name">{{ site.title }}</a>
             <span class="brand__tagline">Designing &amp; Building with Intent</span>
