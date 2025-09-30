@@ -39,13 +39,15 @@
     <header class="site-header">
       <div class="container">
         <div class="brand">
-          <img
-            class="brand__avatar"
-            src="{{ '/img/profile.webp' | relative_url }}"
-            alt="Portrait of Curtis Covington"
-            width="44"
-            height="44"
-          />
+          <span class="brand__avatar-frame" aria-hidden="true">
+            <img
+              class="brand__avatar"
+              src="{{ '/img/profile.webp' | relative_url }}"
+              alt="Portrait of Curtis Covington"
+              width="48"
+              height="48"
+            />
+          </span>
           <div class="brand__text">
             <a href="{{ '/' | relative_url }}" class="brand__name">{{ site.title }}</a>
             <span class="brand__tagline">Designing &amp; Building with Intent</span>
