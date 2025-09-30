@@ -8,7 +8,19 @@ tags:
   - cli
 reading_time: "6 min read"
 ---
-*Project repo: [github.com/curtiscovington/ssa-names](https://github.com/curtiscovington/ssa-names)*
+<a class="repo-card" href="https://github.com/curtiscovington/ssa-names" target="_blank" rel="noopener">
+  <span class="repo-card__icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58 0-.29-.01-1.05-.02-2.06-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.33-1.78-1.33-1.78-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.82 1.31 3.51 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.53 11.53 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.64.24 2.86.12 3.16.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.47 5.92.43.37.81 1.1.81 2.23 0 1.61-.02 2.9-.02 3.29 0 .32.21.7.82.58A12 12 0 0 0 24 12C24 5.37 18.63 0 12 0Z"/>
+    </svg>
+  </span>
+  <span class="repo-card__body">
+    <span class="repo-card__eyebrow">Project repository</span>
+    <span class="repo-card__title">SSA Names CLI</span>
+    <span class="repo-card__description">Explore the weighted sampler, statistical tests, and release automation on GitHub.</span>
+  </span>
+  <span class="repo-card__arrow" aria-hidden="true">↗</span>
+</a>
 
 I handed GPT-5-Codex the SSA's baby-name dataset and asked it to build a CLI. No plan, just curiosity about what modern AI could deliver when paired with a real dataset. Two hours later, I had a tool that could generate statistically accurate random names—and I'd validated it with proper hypothesis testing. Yay statistics!
 
