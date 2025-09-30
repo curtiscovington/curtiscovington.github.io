@@ -42,6 +42,15 @@ if (!post) {
     .then((markdown) => {
       if (!postContent) return;
       postContent.innerHTML = marked.parse(markdown);
+
+      const firstElement = postContent.firstElementChild;
+      if (
+        firstElement &&
+        firstElement.tagName === 'H1' &&
+        firstElement.textContent.trim().toLowerCase() === post.title.trim().toLowerCase()
+      ) {
+        firstElement.remove();
+      }
     })
     .catch(() => {
       renderNotFound();
