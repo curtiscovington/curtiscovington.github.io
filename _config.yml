@@ -1,0 +1,27 @@
+# Site settings
+title: "Curtis Covington"
+email: hello@curtiscovington.com
+description: >-
+  The personal blog of Curtis Covington — essays on design, development, and building with curiosity.
+url: "https://curtiscovington.com"
+baseurl: ""
+permalink: /posts/:slug/
+
+# Build settings
+plugins:
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+feed:
+  path: feed.xml
