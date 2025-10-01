@@ -9,7 +9,6 @@ tags:
 reading_time: "6 min read"
 repo_card:
   url: "https://github.com/curtiscovington/ssa-names"
-  eyebrow: "Project repository"
   title: "SSA Names CLI"
   description: "Explore the weighted sampler, statistical tests, and release automation on GitHub."
 ---
