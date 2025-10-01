@@ -7,9 +7,11 @@ tags:
   - go
   - cli
 reading_time: "6 min read"
+repo_card:
+  url: "https://github.com/curtiscovington/ssa-names"
+  title: "SSA Names CLI"
+  description: "Explore the weighted sampler, statistical tests, and release automation on GitHub."
 ---
-*Project repo: [github.com/curtiscovington/ssa-names](https://github.com/curtiscovington/ssa-names)*
-
 I handed GPT-5-Codex the SSA's baby-name dataset and asked it to build a CLI. No plan, just curiosity about what modern AI could deliver when paired with a real dataset. Two hours later, I had a tool that could generate statistically accurate random names—and I'd validated it with proper hypothesis testing. Yay statistics!
 
 ## The Hook: Probabilistic Name Generation
