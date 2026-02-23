@@ -10,9 +10,9 @@ tags:
   - machine-learning
 reading_time: "8 min read"
 repo_card:
-  url: "https://github.com/curtiscovington/sae-interpretability-blog"
-  title: "SAE Interpretability Experiment"
-  description: "Reproducible pipeline for activation collection, SAE training, interpretation, evaluation, and visualization on Apple Silicon."
+  url: "https://github.com/curtiscovington/sae-interpretability"
+  title: "SAE Interpretability"
+  description: "A lightweight, local-only, reproducible experiment for feature probing with Sparse Autoencoders (SAEs) on Apple Silicon."
 ---
 I wanted to answer a practical question: **can we get meaningful interpretability signal from Sparse Autoencoders (SAEs) on a tiny open model, locally, in a few hours?**
 
@@ -20,8 +20,8 @@ Short answer: **yes**—with caveats.
 
 I ran an end-to-end SAE probing pipeline on `EleutherAI/pythia-70m-deduped`, extracted a single layer's activations, trained SAEs, and evaluated transfer between two contrasting corpora:
 
-- **A (general text):** WikiText-like prose
-- **B (code):** Python-heavy source text
+- **A (general text):** WikiText-2 training text (raw public text source)
+- **B (code):** Python-heavy source text (CPython + Flask + NumPy files from public GitHub raw URLs)
 
 The full run produced reproducible metrics, feature summaries, and figures suitable for this post.
 
@@ -35,7 +35,7 @@ A lot of interpretability writeups either:
 I wanted the opposite:
 
 - **Local-only** (Apple Silicon MPS + CPU fallback)
-- **Reproducible** (fixed config, deterministic artifacts, one command)
+- **Re-runnable** (pinned deps, fixed config, one command, fixed seed)
 - **Quant + qual together** (MSE/R²/L0/L1 + concrete feature examples)
 - **Generalization test** (train on A, evaluate on B, and vice versa)
 
@@ -48,6 +48,8 @@ That last one matters: if features only work in-domain, they're less useful as i
 - **SAE:** linear encoder/decoder, ReLU hidden, MSE + L1 sparsity penalty
 - **Token budget:** 120k tokens for A, 120k for B
 - **Hardware target:** M1 MacBook (MPS), CPU fallback enabled
+
+> Note: MPS training can have minor run-to-run variation even with fixed seeds; expect close but not bit-identical metrics.
 
 I ran two major passes:
 
@@ -113,7 +115,7 @@ Useful, but often less crisp than code features.
 
 ## What improved after pushing sparsity?
 
-Compared to the previous run, average L0 dropped significantly (fewer active features per token), which is what I wanted. Reconstruction degraded slightly, but remained strong overall.
+Compared to the previous run, average L0 dropped significantly (from ~747–826 down to ~564–620 non-zeros/token), which is what I wanted. Reconstruction degraded slightly, but remained strong overall.
 
 That tradeoff is expected:
 
