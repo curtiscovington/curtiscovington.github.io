@@ -10,9 +10,9 @@ tags:
   - machine-learning
 reading_time: "8 min read"
 repo_card:
-  url: "https://github.com/curtiscovington/sae-interpretability"
-  title: "SAE Interpretability"
-  description: "A lightweight, local-only, reproducible experiment for feature probing with Sparse Autoencoders (SAEs) on Apple Silicon."
+  url: "https://github.com/curtiscovington/sae-interpretability/tree/exp-2026-02-23"
+  title: "SAE Interpretability (tag: exp-2026-02-23)"
+  description: "Tagged snapshot of the local-only reproducible SAE feature probing experiment."
 ---
 I wanted to answer a practical question: **can we get meaningful interpretability signal from Sparse Autoencoders (SAEs) on a tiny open model, locally, in a few hours?**
 
