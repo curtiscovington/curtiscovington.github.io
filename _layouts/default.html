@@ -50,13 +50,14 @@
           </span>
           <div class="brand__text">
             <a href="{{ '/' | relative_url }}" class="brand__name">{{ site.title }}</a>
-            <span class="brand__tagline">Designing &amp; Building with Intent</span>
+            <span class="brand__tagline">Reproducible ML Experiments &amp; Interpretability</span>
           </div>
         </div>
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="{{ '/#latest' | relative_url }}" class="site-nav__link">Latest Posts</a>
           <a href="{{ '/#about' | relative_url }}" class="site-nav__link">About</a>
           <a href="mailto:{{ site.email }}" class="site-nav__link">Contact</a>
+          <a href="https://twitter.com/cucovin" target="_blank" rel="noopener" class="site-nav__link">Twitter</a>
         </nav>
       </div>
     </header>
@@ -65,7 +66,7 @@
 
     <footer class="site-footer">
       <div class="container">
-        <p>&copy; {{ 'now' | date: '%Y' }} Curtis Covington. Crafted with curiosity.</p>
+        <p>&copy; {{ 'now' | date: '%Y' }} Curtis Covington. Reproducible ML experiments, interpretability notes, and runnable artifacts.</p>
         <a class="rss-link" href="{{ '/feed.xml' | relative_url }}">RSS</a>
       </div>
     </footer>

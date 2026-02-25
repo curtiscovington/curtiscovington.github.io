@@ -2,7 +2,7 @@
 title: "Curtis Covington"
 email: curtis.covington@gmail.com
 description: >-
-  The personal blog of Curtis Covington — essays on design, development, and building with curiosity.
+  Curtis Covington builds reproducible ML experiments and the tools around them—mostly interpretability work on open models, with clear methodology, measurable results, and runnable artifacts.
 url: "https://curtiscovington.com"
 baseurl: ""
 permalink: /posts/:slug/
