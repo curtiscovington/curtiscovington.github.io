@@ -1,6 +1,7 @@
 ---
 title: "From Tokens to Concepts: Building a Local SAE Interpretability Lab on an M1 Mac"
 description: "Layer sweeps, top-k sparsity sweeps, and an interactive explorer for SAE feature discovery on a small open-weight model."
+date: 2026-02-24
 tags:
   - ai
   - interpretability
@@ -8,6 +9,10 @@ tags:
   - sparse-autoencoders
   - pytorch
 reading_time: "9 min read"
+repo_card:
+  url: "https://github.com/curtiscovington/sae-interpretability/tree/exp-2026-02-24"
+  title: "SAE Interpretability Lab (tag: exp-2026-02-24)"
+  description: "Layer sweeps, top-k sparsity experiments, and an interactive feature explorer on Apple Silicon."
 ---
 
 I started this project with a simple question:
@@ -21,9 +26,6 @@ If you missed the first post, start here:
 
 This post is the continuation: in Part 1, I proved the pipeline worked. In this one, I pushed sparsity harder, compared top-k regimes, and built an interactive explorer so insights are easier to discover.
 
-Code snapshot for this post:
-- **Repo (tagged):** https://github.com/curtiscovington/sae-interpretability/tree/exp-2026-02-24
-
 ## Why this matters
 
 A lot of interpretability work is either:
@@ -36,7 +38,7 @@ I wanted both:
 - measurable transfer,
 - and a practical UI for feature exploration.
 
-All local. No paid APIs. No cloud. 
+All local. No paid APIs. No cloud.
 
 ---
 
@@ -142,7 +144,7 @@ That’s the biggest practical shift: this is now a **tooling foundation**, not 
 
 This is the feature-space concept map from the best run. Each point is an SAE feature; nearby points tend to behave similarly and often share concept-like patterns.
 
-For this map, each **feature vector** is constructed from the SAE decoder row for that feature (its learned output direction in model space) concatenated with a small selectivity/statistics embedding (`freqA-freqB`, `magA-mB`, `freqA`, `freqB`). I then project those feature vectors to 3D with PCA.
+For this map, each **feature vector** is constructed from the SAE decoder row for that feature (its learned output direction in model space) concatenated with a small selectivity/statistics embedding (`freqA-freqB`, `magA-magB`, `freqA`, `freqB`). I then project those feature vectors to 3D with PCA.
 
 Cluster colors come from **k-means with k=10** on the PCA-reduced feature vectors using Euclidean distance. `k=10` was chosen as a practical visual granularity for exploration (not heavily tuned).
 
