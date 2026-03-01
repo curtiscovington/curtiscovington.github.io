@@ -1,0 +1,73 @@
+name: Build and Deploy Pages on Tag
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      should_deploy: ${{ steps.verify.outputs.on_main }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify tag points to main
+        id: verify
+        run: |
+          git fetch --no-tags --depth=1 origin main
+          if git merge-base --is-ancestor origin/main "$GITHUB_SHA"; then
+            echo "on_main=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Tag does not reference main; skipping deploy."
+            echo "on_main=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Configure Pages
+        if: steps.verify.outputs.on_main == 'true'
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Ruby
+        if: steps.verify.outputs.on_main == 'true'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Build with Jekyll
+        if: steps.verify.outputs.on_main == 'true'
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+
+      - name: Upload artifact
+        if: steps.verify.outputs.on_main == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.should_deploy == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
