@@ -79,7 +79,7 @@
       <div class="container">
         <a href="{{ '/' | relative_url }}" class="brand__name">{{ site.title }}</a>
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="{{ '/#latest' | relative_url }}" class="site-nav__link">Posts</a>
+          <a href="{{ '/#latest' | relative_url }}" class="site-nav__link{% if page.layout == 'post' %} is-active{% endif %}">Posts</a>
           <a href="{{ '/#research' | relative_url }}" class="site-nav__link">Research</a>
           <a href="{{ '/#about' | relative_url }}" class="site-nav__link">About</a>
         </nav>

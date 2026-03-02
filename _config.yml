@@ -11,7 +11,7 @@ x:
   username: "cucovin"
 
 # Social preview image (used for Open Graph / Twitter cards)
-og_image: "/img/social/site-preview-card-brand-v3.jpg"
+og_image: "/img/social/site-preview-card-brand-v4.png"
 
 # Build settings
 plugins:
