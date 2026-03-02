@@ -58,7 +58,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
@@ -77,26 +77,11 @@
   <body{% if body_class %} class="{{ body_class }}"{% endif %}>
     <header class="site-header">
       <div class="container">
-        <div class="brand">
-          <span class="brand__avatar-frame" aria-hidden="true">
-            <img
-              class="brand__avatar"
-              src="{{ '/img/profile.webp' | relative_url }}"
-              alt="Portrait of Curtis Covington"
-              width="48"
-              height="48"
-            />
-          </span>
-          <div class="brand__text">
-            <a href="{{ '/' | relative_url }}" class="brand__name">{{ site.title }}</a>
-            <span class="brand__tagline">Reproducible ML Experiments &amp; Interpretability</span>
-          </div>
-        </div>
+        <a href="{{ '/' | relative_url }}" class="brand__name">{{ site.title }}</a>
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="{{ '/#latest' | relative_url }}" class="site-nav__link">Latest Posts</a>
+          <a href="{{ '/#latest' | relative_url }}" class="site-nav__link">Posts</a>
+          <a href="{{ '/#research' | relative_url }}" class="site-nav__link">Research</a>
           <a href="{{ '/#about' | relative_url }}" class="site-nav__link">About</a>
-          <a href="mailto:{{ site.email }}" class="site-nav__link">Contact</a>
-          <a href="https://x.com/cucovin" target="_blank" rel="noopener" class="site-nav__link">X</a>
         </nav>
       </div>
     </header>

@@ -1,0 +1,61 @@
+.hero {
+  padding: 7rem 0 4.5rem;
+}
+
+.hero__content {
+  max-width: var(--content-max);
+}
+
+.hero__eyebrow {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.hero__title {
+  margin: 1rem 0 1rem;
+}
+
+.hero__subtitle {
+  margin: 0;
+  color: var(--text-secondary);
+  max-width: 760px;
+}
+
+.posts {
+  padding: 2rem 0 1rem;
+}
+
+.posts__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.research,
+.about {
+  padding: 3rem 0 1rem;
+}
+
+.research h2,
+.about h2 {
+  margin: 0 0 0.9rem;
+}
+
+.research p,
+.about p {
+  margin: 0 0 1rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 5rem;
+  }
+
+  .posts__grid {
+    grid-template-columns: 1fr;
+  }
+}

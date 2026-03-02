@@ -31,3 +31,6 @@ defaults:
 
 feed:
   path: feed.xml
+
+sass:
+  sass_dir: assets/css

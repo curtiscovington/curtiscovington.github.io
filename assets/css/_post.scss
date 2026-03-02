@@ -1,0 +1,64 @@
+.post {
+  width: min(100% - 3rem, var(--content-max));
+  margin: 4.5rem auto 0;
+}
+
+.post__container {
+  width: 100%;
+}
+
+.post__hero {
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border-subtle);
+  background: radial-gradient(circle at 15% 0%, rgba(107, 168, 255, 0.08), transparent 48%);
+}
+
+.post__title {
+  margin: 0;
+}
+
+.post__meta-row {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.post__date,
+.post__reading {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.post__content > *:first-child {
+  margin-top: 0;
+}
+
+.post__content > *:last-child {
+  margin-bottom: 0;
+}
+
+.post__content p {
+  margin: 0 0 1.4rem;
+}
+
+.post__content h1,
+.post__content h2,
+.post__content h3,
+.post__content h4 {
+  margin: 2.2rem 0 1rem;
+}
+
+.post__content h2,
+.post__content h3 {
+  color: #d8e6ff;
+}
+
+@media (max-width: 640px) {
+  .post {
+    width: min(100% - 2rem, var(--content-max));
+    margin-top: 3rem;
+  }
+}

@@ -1,0 +1,228 @@
+.section-heading {
+  margin: 0 auto 2.5rem;
+  max-width: var(--content-max);
+}
+
+.section-heading__eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section-heading__title {
+  margin: 0;
+}
+
+.section-heading__subtitle {
+  margin: 0.9rem 0 0;
+  color: var(--text-secondary);
+}
+
+.post-card {
+  background: var(--background-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.post-card:hover,
+.post-card:focus-within {
+  border-color: rgba(107, 168, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.post-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 0.85rem;
+}
+
+.post-card__title {
+  margin: 0;
+}
+
+.post-card__excerpt {
+  margin: 0.8rem 0 0;
+  color: var(--text-secondary);
+}
+
+.post-card__tags,
+.post__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.post-card__tag,
+.post__tag {
+  color: var(--text-secondary);
+  background: rgba(17, 24, 51, 0.65);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  font-size: 14px;
+  padding: 0.2rem 0.65rem;
+}
+
+.post-card__link,
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1.1rem;
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.post-card__link:hover,
+.post-card__link:focus,
+.hero__cta:hover,
+.hero__cta:focus {
+  color: var(--accent-glow);
+}
+
+.post__content a {
+  color: var(--accent-primary);
+}
+
+.post__content blockquote {
+  margin: 0 0 2rem;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--accent-primary);
+  background: rgba(79, 140, 255, 0.08);
+  border-radius: var(--radius-sm);
+}
+
+.post__content ul,
+.post__content ol {
+  margin: 0 0 1.6rem;
+  padding-left: 1.4rem;
+}
+
+.post__content li + li {
+  margin-top: 0.45rem;
+}
+
+.post__content pre,
+.post__content code {
+  font-family: 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
+}
+
+.post__content pre {
+  margin: 0 0 2rem;
+  overflow-x: auto;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(107, 168, 255, 0.2);
+  background: #0f1630;
+  color: #cdd8f3;
+}
+
+.post__content pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.post__content code {
+  background: rgba(79, 140, 255, 0.14);
+  border: 1px solid rgba(107, 168, 255, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 0.12em 0.35em;
+  color: #d5e4ff;
+  font-size: 0.92em;
+}
+
+.post__content img,
+.post__content figure {
+  margin: 2rem 0;
+  border-radius: var(--radius-md);
+}
+
+.post__content figure {
+  border: 1px solid var(--border-subtle);
+  padding: 0.6rem;
+  background: rgba(17, 24, 51, 0.4);
+}
+
+.post__content figure figcaption {
+  margin-top: 0.55rem;
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-align: center;
+}
+
+.post__content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 2rem;
+}
+
+.post__content th,
+.post__content td {
+  border: 1px solid var(--border-subtle);
+  padding: 0.65rem 0.75rem;
+}
+
+.post__content th {
+  background: rgba(79, 140, 255, 0.12);
+}
+
+.repo-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 2rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: rgba(17, 24, 51, 0.6);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.repo-card:hover,
+.repo-card:focus {
+  border-color: rgba(107, 168, 255, 0.45);
+  background: rgba(17, 24, 51, 0.85);
+}
+
+.repo-card__icon {
+  color: var(--accent-primary);
+  line-height: 0;
+}
+
+.repo-card__icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.repo-card__body {
+  flex: 1;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.repo-card__eyebrow {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.repo-card__title {
+  font-weight: 600;
+}
+
+.repo-card__description {
+  color: var(--text-secondary);
+}

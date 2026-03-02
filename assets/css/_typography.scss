@@ -1,0 +1,45 @@
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+small {
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
