@@ -1,11 +1,14 @@
 # Site settings
 title: "Curtis Covington"
+author: "Curtis Covington"
 email: curtis.covington@gmail.com
 description: >-
   Curtis Covington builds reproducible ML experiments and the tools around them—mostly interpretability work on open models, with clear methodology, measurable results, and runnable artifacts.
 url: "https://curtiscovington.com"
 baseurl: ""
 permalink: /posts/:slug/
+x:
+  username: "cucovin"
 
 # Social preview image (used for Open Graph / Twitter cards)
 og_image: "/img/social/site-preview-card-brand-v3.jpg"

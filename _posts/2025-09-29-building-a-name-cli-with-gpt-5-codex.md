@@ -7,6 +7,7 @@ tags:
   - go
   - cli
 reading_time: "6 min read"
+og_image: "/img/social/site-preview-card-brand-v3.jpg"
 repo_card:
   url: "https://github.com/curtiscovington/ssa-names"
   title: "SSA Names CLI"

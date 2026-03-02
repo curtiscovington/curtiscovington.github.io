@@ -9,6 +9,7 @@ tags:
   - transformers
   - mechanistic-interpretability
 reading_time: "10 min read"
+og_image: "/img/posts/ai-brain-surgery/feature64-delta-contrast-vs-alpha.png"
 repo_card:
   url: "https://github.com/curtiscovington/sae-interpretability/tree/exp-2026-03-01-brain-surgery"
   title: "SAE Brain Surgery Lab (tag: exp-2026-03-01-brain-surgery)"

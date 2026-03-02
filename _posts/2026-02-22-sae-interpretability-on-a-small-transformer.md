@@ -9,6 +9,7 @@ tags:
   - pytorch
   - machine-learning
 reading_time: "8 min read"
+og_image: "/img/posts/sae-interpretability/generalization_bar.png"
 repo_card:
   url: "https://github.com/curtiscovington/sae-interpretability/tree/exp-2026-02-23"
   title: "SAE Interpretability (tag: exp-2026-02-23)"

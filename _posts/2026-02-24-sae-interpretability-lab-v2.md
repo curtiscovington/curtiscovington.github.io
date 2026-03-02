@@ -9,6 +9,7 @@ tags:
   - sparse-autoencoders
   - pytorch
 reading_time: "9 min read"
+og_image: "/img/posts/sae-interpretability-lab/feature_map_3d.png"
 repo_card:
   url: "https://github.com/curtiscovington/sae-interpretability/tree/exp-2026-02-24"
   title: "SAE Interpretability Lab (tag: exp-2026-02-24)"
