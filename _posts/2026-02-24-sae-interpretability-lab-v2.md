@@ -22,7 +22,7 @@ I started this project with a simple question:
 Then it evolved into something more useful: an **interpretability lab** I can actually run, iterate, and explore.
 
 If you missed the first post, start here:
-- **Part 1:** https://curtiscovington.com/2026/02/22/sae-interpretability-on-a-small-transformer/
+- **Part 1:** https://curtiscovington.com/posts/sae-interpretability-on-a-small-transformer/
 
 This post is the continuation: in Part 1, I proved the pipeline worked. In this one, I pushed sparsity harder, compared top-k regimes, and built an interactive explorer so insights are easier to discover.
 

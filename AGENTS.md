@@ -80,6 +80,8 @@ repo_card:
 
 ## Drafting Workflow (Preferred)
 
+Canonical repo path: `/Users/curtis/dev/curtiscovington.github.io`
+
 Best practice is a two-pass workflow:
 
 1. During project work: capture running notes
@@ -90,6 +92,8 @@ Best practice is a two-pass workflow:
 - Write once results are stable enough to summarize.
 - Use captured notes to fill setup, protocol, metrics, and caveats.
 - Add visuals only if they clarify the decision or finding.
+- Draft in `_drafts/` first. Move to `_posts/` only when publication is requested.
+- Add a layman TL;DR **after** the full draft is written, and place it near the top (not as a bottom duplicate).
 
 This is better than fully writing in parallel because real conclusions usually shift while building. Parallel capture + post-milestone drafting gives speed without narrative drift.
 
