@@ -8,8 +8,8 @@
 }
 
 .site-header {
-  border-bottom: 1px solid var(--border-subtle);
-  background: rgba(11, 16, 32, 0.9);
+  border-bottom: 1px solid rgba(30, 39, 71, 0.9);
+  background: rgba(11, 16, 32, 0.88);
   backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
@@ -21,39 +21,47 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .brand__name {
+  position: relative;
   color: var(--text-primary);
   text-decoration: none;
   font-family: 'Space Grotesk', 'Inter', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.24rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.brand__name:hover,
+.brand__name:focus {
+  color: var(--accent-glow);
 }
 
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 1.1rem;
+  gap: 1.3rem;
 }
 
 .site-nav__link {
   position: relative;
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.95rem;
-  transition: color var(--transition-fast);
+  font-size: 0.93rem;
+  letter-spacing: 0.01em;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
 }
 
 .site-nav__link::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -0.3rem;
-  width: 100%;
-  height: 1px;
+  right: 0;
+  bottom: -0.38rem;
+  height: 2px;
   background: var(--accent-primary);
   transform: scaleX(0);
   transform-origin: left;
@@ -67,6 +75,14 @@
 
 .site-nav__link:hover::after,
 .site-nav__link:focus::after {
+  transform: scaleX(1);
+}
+
+.site-nav__link.is-active {
+  color: var(--text-primary);
+}
+
+.site-nav__link.is-active::after {
   transform: scaleX(1);
 }
 
@@ -96,9 +112,22 @@
 
   .site-header .container,
   .site-footer .container {
+    min-height: auto;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 1rem 0;
+    padding: 0.9rem 0;
+  }
+
+  .site-nav {
+    width: 100%;
+    gap: 1rem;
+    overflow-x: auto;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
   }
 }
