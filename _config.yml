@@ -8,7 +8,7 @@ baseurl: ""
 permalink: /posts/:slug/
 
 # Social preview image (used for Open Graph / Twitter cards)
-og_image: "/img/social/site-preview-card-brand-v2.jpg"
+og_image: "/img/social/site-preview-card-brand-v3.jpg"
 
 # Build settings
 plugins:
