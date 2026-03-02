@@ -7,6 +7,9 @@ url: "https://curtiscovington.com"
 baseurl: ""
 permalink: /posts/:slug/
 
+# Social preview image (used for Open Graph / Twitter cards)
+og_image: "/img/social/site-preview-card-brand.jpg"
+
 # Build settings
 plugins:
   - jekyll-feed

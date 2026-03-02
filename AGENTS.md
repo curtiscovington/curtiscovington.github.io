@@ -105,3 +105,28 @@ Produce a `working draft` with explicit placeholders:
 Use this when asked to draft:
 
 `Draft a blog post in Curtis's style using the AGENTS.md blog guidelines. Lead with a practical question, prioritize reproducible setup + measured results, include limitations, and end with a one-sentence bold TL;DR. Do not invent numbers; mark unknowns clearly.`
+
+## Social Preview Images (Open Graph / Twitter)
+
+This repo uses explicit social metadata in `_layouts/default.html`.
+
+Priority order for preview image selection:
+1. `page.og_image` (per-post override)
+2. `page.image` (alternate per-post field)
+3. `site.og_image` from `_config.yml` (site default)
+
+Important behavior:
+- The profile/avatar image in the header (`/img/profile.webp`) is **not** intended as the social preview image.
+- If a post should have a custom share card, set `og_image` in that post's front matter.
+- Use an absolute-safe path like `/img/posts/<slug>/<image>.png`.
+
+Recommended front matter snippet:
+
+```yaml
+og_image: "/img/posts/my-post/social-preview.png"
+```
+
+Before publishing a new post, verify:
+- The image file exists in the repo.
+- The path starts with `/img/...`.
+- The preview looks correct in link unfurl tools (Open Graph/Twitter validators) after deploy.
