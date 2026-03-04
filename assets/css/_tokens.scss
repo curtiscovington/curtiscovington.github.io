@@ -1,20 +1,147 @@
 :root {
+  color-scheme: light;
+
+  --bg-canvas: #f5f7fb;
+  --bg-surface-1: #ffffff;
+  --bg-surface-2: #eef2fa;
+
+  --text-primary: #131928;
+  --text-secondary: #2a3246;
+  --text-muted: #5b6478;
+
+  --border-subtle: #d4dbe9;
+  --border-strong: #b2bfd8;
+
+  --accent: #1a56d6;
+  --accent-hover: #0f3fb6;
+  --focus-ring: rgba(26, 86, 214, 0.45);
+
+  --surface-tint-soft: rgba(26, 86, 214, 0.06);
+  --surface-tint-strong: rgba(26, 86, 214, 0.12);
+  --hero-glow: rgba(48, 92, 188, 0.15);
+  --header-bg: rgba(245, 247, 251, 0.8);
+  --footer-bg: rgba(255, 255, 255, 0.68);
+  --link-underline: rgba(26, 86, 214, 0.46);
+  --rss-underline: rgba(42, 50, 70, 0.4);
+  --card-hover-bg: #f9fbff;
+  --code-block-bg: #e5ecfa;
+  --repo-card-hover-bg: #f7faff;
+
+  --shadow-sm: 0 2px 8px rgba(14, 24, 46, 0.07);
+  --shadow-md: 0 10px 24px rgba(14, 24, 46, 0.1);
+  --shadow-lg: 0 20px 36px rgba(14, 24, 46, 0.14);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --transition-fast: 180ms ease;
+  --transition-mid: 260ms ease;
+
+  --content-max: 760px;
+  --container-max: 1140px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --bg-canvas: #0e121a;
+    --bg-surface-1: #151b27;
+    --bg-surface-2: #1b2333;
+
+    --text-primary: #eef2fa;
+    --text-secondary: #d5dded;
+    --text-muted: #a7b3c9;
+
+    --border-subtle: #2a3448;
+    --border-strong: #405171;
+
+    --accent: #7ca6ff;
+    --accent-hover: #9abcfb;
+    --focus-ring: rgba(124, 166, 255, 0.52);
+
+    --surface-tint-soft: rgba(124, 166, 255, 0.08);
+    --surface-tint-strong: rgba(124, 166, 255, 0.13);
+    --hero-glow: rgba(124, 166, 255, 0.12);
+    --header-bg: rgba(14, 18, 26, 0.84);
+    --footer-bg: rgba(14, 18, 26, 0.72);
+    --link-underline: rgba(124, 166, 255, 0.48);
+    --rss-underline: rgba(206, 214, 232, 0.42);
+    --card-hover-bg: #1a2232;
+    --code-block-bg: #141d2c;
+    --repo-card-hover-bg: #1b2638;
+
+    --shadow-sm: 0 2px 8px rgba(4, 8, 16, 0.38);
+    --shadow-md: 0 12px 24px rgba(4, 8, 16, 0.46);
+    --shadow-lg: 0 24px 40px rgba(4, 8, 16, 0.56);
+  }
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg-canvas: #f5f7fb;
+  --bg-surface-1: #ffffff;
+  --bg-surface-2: #eef2fa;
+
+  --text-primary: #131928;
+  --text-secondary: #2a3246;
+  --text-muted: #5b6478;
+
+  --border-subtle: #d4dbe9;
+  --border-strong: #b2bfd8;
+
+  --accent: #1a56d6;
+  --accent-hover: #0f3fb6;
+  --focus-ring: rgba(26, 86, 214, 0.45);
+
+  --surface-tint-soft: rgba(26, 86, 214, 0.06);
+  --surface-tint-strong: rgba(26, 86, 214, 0.12);
+  --hero-glow: rgba(48, 92, 188, 0.15);
+  --header-bg: rgba(245, 247, 251, 0.8);
+  --footer-bg: rgba(255, 255, 255, 0.68);
+  --link-underline: rgba(26, 86, 214, 0.46);
+  --rss-underline: rgba(42, 50, 70, 0.4);
+  --card-hover-bg: #f9fbff;
+  --code-block-bg: #e5ecfa;
+  --repo-card-hover-bg: #f7faff;
+
+  --shadow-sm: 0 2px 8px rgba(14, 24, 46, 0.07);
+  --shadow-md: 0 10px 24px rgba(14, 24, 46, 0.1);
+  --shadow-lg: 0 20px 36px rgba(14, 24, 46, 0.14);
+}
+
+:root[data-theme='dark'] {
   color-scheme: dark;
 
-  --background-primary: #0b1020;
-  --background-secondary: #111833;
-  --accent-primary: #4f8cff;
-  --accent-glow: #6ba8ff;
-  --text-primary: #f5f7fa;
-  --text-secondary: #9aa3b2;
-  --border-subtle: #1e2747;
+  --bg-canvas: #0e121a;
+  --bg-surface-1: #151b27;
+  --bg-surface-2: #1b2333;
 
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --text-primary: #eef2fa;
+  --text-secondary: #d5dded;
+  --text-muted: #a7b3c9;
 
-  --transition-fast: 200ms ease;
+  --border-subtle: #2a3448;
+  --border-strong: #405171;
 
-  --content-max: 800px;
-  --container-max: 1120px;
+  --accent: #7ca6ff;
+  --accent-hover: #9abcfb;
+  --focus-ring: rgba(124, 166, 255, 0.52);
+
+  --surface-tint-soft: rgba(124, 166, 255, 0.08);
+  --surface-tint-strong: rgba(124, 166, 255, 0.13);
+  --hero-glow: rgba(124, 166, 255, 0.12);
+  --header-bg: rgba(14, 18, 26, 0.84);
+  --footer-bg: rgba(14, 18, 26, 0.72);
+  --link-underline: rgba(124, 166, 255, 0.48);
+  --rss-underline: rgba(206, 214, 232, 0.42);
+  --card-hover-bg: #1a2232;
+  --code-block-bg: #141d2c;
+  --repo-card-hover-bg: #1b2638;
+
+  --shadow-sm: 0 2px 8px rgba(4, 8, 16, 0.38);
+  --shadow-md: 0 12px 24px rgba(4, 8, 16, 0.46);
+  --shadow-lg: 0 24px 40px rgba(4, 8, 16, 0.56);
 }
