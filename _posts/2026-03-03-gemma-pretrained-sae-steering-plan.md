@@ -9,7 +9,7 @@ tags:
   - mechanistic-interpretability
   - gemma
 reading_time: "11 min read"
-og_image: "/img/posts/gemma-pretrained-sae-steering/gemma_hardening_code_controls_holdout.png"
+og_image: "/img/posts/gemma-pretrained-sae-steering/gemma-pretrained-sae-steering-comic.png"
 repo_card:
   url: "https://github.com/curtiscovington/sae-interpretability/tree/exp-2026-03-03-gemma-hardened"
   title: "SAE Interpretability (tag: exp-2026-03-03-gemma-hardened)"
@@ -21,6 +21,8 @@ I wanted to answer one practical question:
 **If I move from my small-model SAE experiments to Gemma + pretrained SAEs, do I get steering effects that survive stronger controls?**
 
 Short answer: **partially yes.** After hardening, **code** still shows a clear feature-specific signal. Most other categories are weak or inconclusive.
+
+![Gemma + pretrained SAE steering visual summary](/img/posts/gemma-pretrained-sae-steering/gemma-pretrained-sae-steering-comic.png)
 
 ### TL;DR (Layman Version)
 I tested whether specific “knobs” inside a bigger AI model really control behavior, or if we were just seeing noise. After adding tougher checks, one knob (code-related behavior) still worked in a meaningful way. Other knobs looked much less reliable, so I’m not claiming broad control yet.
