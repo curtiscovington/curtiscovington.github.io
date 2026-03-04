@@ -1,15 +1,15 @@
 .section-heading {
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 2.4rem;
   max-width: var(--content-max);
 }
 
 .section-heading__eyebrow {
-  margin: 0 0 0.75rem;
-  color: var(--text-secondary);
-  letter-spacing: 0.08em;
+  margin: 0 0 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .section-heading__title {
@@ -17,31 +17,34 @@
 }
 
 .section-heading__subtitle {
-  margin: 0.9rem 0 0;
+  margin: 0.82rem 0 0;
   color: var(--text-secondary);
 }
 
 .post-card {
-  background: var(--background-secondary);
+  background: var(--bg-surface-1);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
-  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), transform var(--transition-mid), box-shadow var(--transition-mid), background-color var(--transition-fast);
 }
 
 .post-card:hover,
 .post-card:focus-within {
-  border-color: rgba(107, 168, 255, 0.5);
-  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  background: var(--card-hover-bg);
 }
 
 .post-card__meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  color: var(--text-secondary);
-  font-size: 14px;
-  margin-bottom: 0.85rem;
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 0.82rem;
 }
 
 .post-card__title {
@@ -49,7 +52,7 @@
 }
 
 .post-card__excerpt {
-  margin: 0.8rem 0 0;
+  margin: 0.78rem 0 0;
   color: var(--text-secondary);
 }
 
@@ -64,51 +67,70 @@
 .post-card__tag,
 .post__tag {
   color: var(--text-secondary);
-  background: rgba(17, 24, 51, 0.65);
+  background: var(--bg-surface-2);
   border: 1px solid var(--border-subtle);
   border-radius: 999px;
-  font-size: 14px;
-  padding: 0.2rem 0.65rem;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.22rem 0.62rem;
 }
 
 .post-card__link,
 .hero__cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  margin-top: 1.1rem;
-  color: var(--accent-primary);
+  gap: 0.4rem;
+  margin-top: 1.18rem;
+  color: var(--accent);
   text-decoration: none;
-  transition: color var(--transition-fast);
+  font-weight: 600;
+  transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
 .post-card__link:hover,
 .post-card__link:focus,
 .hero__cta:hover,
 .hero__cta:focus {
-  color: var(--accent-glow);
+  color: var(--accent-hover);
+  transform: translateX(2px);
 }
 
 .post__content a {
-  color: var(--accent-primary);
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: var(--link-underline);
+  font-weight: 500;
+}
+
+.post__content a:visited {
+  color: var(--accent-hover);
+}
+
+.post__content a:hover,
+.post__content a:focus {
+  color: var(--accent-hover);
+  text-decoration-color: var(--accent-hover);
 }
 
 .post__content blockquote {
   margin: 0 0 2rem;
   padding: 1rem 1.1rem;
-  border-left: 3px solid var(--accent-primary);
-  background: rgba(79, 140, 255, 0.08);
+  border-left: 3px solid var(--accent);
+  background: var(--surface-tint-soft);
   border-radius: var(--radius-sm);
 }
 
 .post__content ul,
 .post__content ol {
-  margin: 0 0 1.6rem;
+  margin: 0 0 1.7rem;
   padding-left: 1.4rem;
 }
 
 .post__content li + li {
-  margin-top: 0.45rem;
+  margin-top: 0.48rem;
 }
 
 .post__content pre,
@@ -121,9 +143,9 @@
   overflow-x: auto;
   padding: 1rem 1.1rem;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(107, 168, 255, 0.2);
-  background: #0f1630;
-  color: #cdd8f3;
+  border: 1px solid var(--border-strong);
+  background: var(--code-block-bg);
+  color: var(--text-secondary);
 }
 
 .post__content pre code {
@@ -134,11 +156,11 @@
 }
 
 .post__content code {
-  background: rgba(79, 140, 255, 0.14);
-  border: 1px solid rgba(107, 168, 255, 0.3);
+  background: var(--surface-tint-soft);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   padding: 0.12em 0.35em;
-  color: #d5e4ff;
+  color: var(--text-primary);
   font-size: 0.92em;
 }
 
@@ -151,13 +173,13 @@
 .post__content figure {
   border: 1px solid var(--border-subtle);
   padding: 0.6rem;
-  background: rgba(17, 24, 51, 0.4);
+  background: var(--bg-surface-1);
 }
 
 .post__content figure figcaption {
   margin-top: 0.55rem;
-  color: var(--text-secondary);
-  font-size: 14px;
+  color: var(--text-muted);
+  font-size: 13px;
   text-align: center;
 }
 
@@ -165,16 +187,18 @@
   border-collapse: collapse;
   width: 100%;
   margin: 0 0 2rem;
+  background: var(--bg-surface-1);
 }
 
 .post__content th,
 .post__content td {
   border: 1px solid var(--border-subtle);
-  padding: 0.65rem 0.75rem;
+  padding: 0.7rem 0.75rem;
 }
 
 .post__content th {
-  background: rgba(79, 140, 255, 0.12);
+  background: var(--surface-tint-soft);
+  color: var(--text-primary);
 }
 
 .repo-card {
@@ -182,23 +206,26 @@
   align-items: center;
   gap: 1rem;
   margin: 0 0 2rem;
-  padding: 1rem;
+  padding: 1.1rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);
-  background: rgba(17, 24, 51, 0.6);
+  background: var(--bg-surface-1);
+  box-shadow: var(--shadow-sm);
   text-decoration: none;
   color: var(--text-primary);
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-mid), transform var(--transition-mid), background-color var(--transition-fast);
 }
 
 .repo-card:hover,
 .repo-card:focus {
-  border-color: rgba(107, 168, 255, 0.45);
-  background: rgba(17, 24, 51, 0.85);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  background: var(--repo-card-hover-bg);
 }
 
 .repo-card__icon {
-  color: var(--accent-primary);
+  color: var(--accent);
   line-height: 0;
 }
 
@@ -211,12 +238,13 @@
 .repo-card__body {
   flex: 1;
   display: grid;
-  gap: 0.35rem;
+  gap: 0.32rem;
 }
 
 .repo-card__eyebrow {
-  color: var(--text-secondary);
-  font-size: 14px;
+  color: var(--text-muted);
+  font-size: 13px;
+  letter-spacing: 0.02em;
 }
 
 .repo-card__title {
@@ -225,4 +253,11 @@
 
 .repo-card__description {
   color: var(--text-secondary);
+}
+
+@media (max-width: 720px) {
+  .post-card,
+  .repo-card {
+    padding: 1.15rem;
+  }
 }

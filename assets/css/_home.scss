@@ -1,42 +1,72 @@
 .hero {
-  padding: 7rem 0 4.5rem;
+  padding: 5.6rem 0 2.8rem;
 }
 
 .hero__content {
-  max-width: var(--content-max);
+  max-width: 940px;
+  padding: 1.9rem 2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 12% 6%, var(--surface-tint-strong), transparent 44%),
+    var(--bg-surface-1);
+  box-shadow: 0 10px 24px rgba(4, 8, 16, 0.24);
 }
 
 .hero__eyebrow {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-secondary);
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  font-weight: 600;
 }
 
 .hero__title {
-  margin: 1rem 0 1rem;
+  margin: 0.7rem 0 0.95rem;
+  max-width: 20ch;
+  font-size: clamp(2.2rem, 4.1vw, 4rem);
+  line-height: 1.08;
 }
 
 .hero__subtitle {
   margin: 0;
   color: var(--text-secondary);
-  max-width: 760px;
+  max-width: 66ch;
+  font-size: 1.08rem;
+  line-height: 1.55;
 }
 
 .posts {
-  padding: 2rem 0 1rem;
+  padding: 1rem 0 0.5rem;
 }
 
 .posts__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.25rem;
 }
 
 .research,
 .about {
-  padding: 3rem 0 1rem;
+  padding: 2.4rem 0 0;
+}
+
+.research .container,
+.about .container {
+  padding: 2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface-1);
+  box-shadow: var(--shadow-sm);
+}
+
+.research {
+  margin-top: 1.2rem;
+}
+
+.about {
+  margin-top: 1rem;
 }
 
 .research h2,
@@ -50,12 +80,33 @@
   color: var(--text-secondary);
 }
 
+@media (max-width: 920px) {
+  .hero__content,
+  .research .container,
+  .about .container {
+    padding: 1.6rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+}
+
 @media (max-width: 640px) {
   .hero {
-    padding-top: 5rem;
+    padding-top: 4.2rem;
+  }
+
+  .hero__content {
+    padding: 1.3rem;
   }
 
   .posts__grid {
     grid-template-columns: 1fr;
+  }
+
+  .research .container,
+  .about .container {
+    padding: 1.25rem;
   }
 }
