@@ -10,8 +10,8 @@ body {
 
 body {
   background:
-    radial-gradient(circle at 22% -12%, var(--hero-glow), transparent 46%),
-    radial-gradient(circle at 86% 6%, var(--surface-tint-soft), transparent 34%),
+    radial-gradient(circle at 18% -10%, var(--hero-glow), transparent 40%),
+    radial-gradient(circle at 86% 6%, var(--surface-tint-soft), transparent 30%),
     var(--bg-canvas);
   color: var(--text-primary);
   min-height: 100vh;
@@ -47,6 +47,10 @@ img {
 hr {
   border: 0;
   border-top: 1px solid var(--border-subtle);
+}
+
+main {
+  position: relative;
 }
 
 ::selection {

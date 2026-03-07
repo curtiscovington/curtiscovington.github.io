@@ -62,7 +62,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
@@ -84,7 +84,6 @@
         <a href="{{ '/' | relative_url }}" class="brand__name">{{ site.title }}</a>
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="{{ '/#latest' | relative_url }}" class="site-nav__link{% if page.layout == 'post' %} is-active{% endif %}">Posts</a>
-          <a href="{{ '/#research' | relative_url }}" class="site-nav__link">Research</a>
           <a href="{{ '/#about' | relative_url }}" class="site-nav__link">About</a>
         </nav>
       </div>
@@ -160,10 +159,44 @@
           nodes.forEach(autolinkTextNode);
         }
 
+        function buildPostToc() {
+          var content = document.querySelector(".post__content");
+          var toc = document.querySelector(".post__toc");
+          if (!content || !toc) return;
+
+          var headings = Array.prototype.slice.call(content.querySelectorAll("h2[id]"));
+          if (!headings.length) {
+            toc.remove();
+            return;
+          }
+
+          var list = document.createElement("ol");
+          list.className = "post__toc-list";
+
+          headings.forEach(function (heading) {
+            var item = document.createElement("li");
+            var link = document.createElement("a");
+            link.href = "#" + heading.id;
+            link.textContent = heading.textContent;
+            item.appendChild(link);
+            list.appendChild(item);
+          });
+
+          var label = document.createElement("p");
+          label.className = "post__toc-label";
+          label.textContent = "On this page";
+          toc.appendChild(label);
+          toc.appendChild(list);
+        }
+
         if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", autolinkPostContent);
+          document.addEventListener("DOMContentLoaded", function () {
+            autolinkPostContent();
+            buildPostToc();
+          });
         } else {
           autolinkPostContent();
+          buildPostToc();
         }
       })();
     </script>
