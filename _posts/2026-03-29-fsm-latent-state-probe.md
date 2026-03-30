@@ -1,7 +1,7 @@
 ---
 title: "Did My Tiny Transformer Learn an Internal FSM State?"
 description: "I trained a tiny decoder-only transformer from scratch on a finite-state-machine task, then probed its activations. The strongest evidence was a fragile mid-training next-state representation, not a robust learned state machine."
-date: 2026-03-28
+date: 2026-03-29
 tags:
   - ai
   - interpretability
@@ -9,7 +9,7 @@ tags:
   - mechanistic-interpretability
   - finite-state-machines
 reading_time: "8 min read"
-og_image: "/img/posts/fsm-latent-state/latent_state_probe_late_accuracy.png"
+og_image: "/img/posts/fsm-latent-state/fsm-latent-state-hook.png"
 repo_card:
   url: "https://github.com/curtiscovington/sae-interpretability/tree/exp-2026-03-28-fsm-state-probe"
   title: "SAE Interpretability (tag: exp-2026-03-28-fsm-state-probe)"
@@ -20,30 +20,28 @@ I wanted to answer one practical question:
 
 **If I train a tiny transformer from scratch on a synthetic finite-state-machine task, does it actually learn an internal state, or does it just learn to guess the final answer token?**
 
-Short answer: **partially, with real caveats.** I found some evidence of a linearly decodable transition representation, especially around the middle of training. I did **not** find strong evidence that the final model had learned a robust, generalizing FSM solver.
+Short answer: **weakly and transiently, but not convincingly.** The strongest internal signal showed up in a smoke run at a mid-training checkpoint, not in the larger multi-seed evaluation. I did **not** find evidence that the final model had learned a robust, generalizing FSM solver.
 
-![FSM latent-state probe beyond training horizon](/img/posts/fsm-latent-state/latent_state_probe_late_accuracy.png)
+![Did my tiny transformer learn an internal FSM state?](/img/posts/fsm-latent-state/fsm-latent-state-hook.png)
 
 ### TL;DR (Layman Version)
-I trained a very small AI model to keep track of a simple state machine. On a small smoke test, it looked surprisingly good. On a larger and more careful evaluation, that result mostly disappeared. When I looked inside the model, I found some evidence that it briefly learned a useful internal "next state" signal, but not enough to say it had really learned the whole state machine in a robust way.
+I trained a very small AI model to keep track of a simple state machine. On one small smoke test, it looked surprisingly good. On a larger and more careful multi-seed evaluation, that result mostly disappeared. The strongest thing I found was a temporary internal "next state" signal in the smoke run, not convincing evidence that the final model had really learned the whole state machine.
 
 ## Why This Post Exists
 
-This is the kind of experiment that can fool you twice.
+This experiment produced one reassuring result and one uncomfortable one.
 
-The first failure mode is external: a tiny synthetic benchmark can look solved when the eval set is small or lucky. The second is internal: even if end-task accuracy is unstable, the model might still learn a partially useful latent representation worth studying.
+The reassuring result was a smoke run that looked strong on longer traces. The uncomfortable result was that a larger three-seed evaluation pushed long-horizon accuracy back to roughly chance. That made the real question narrower: even if the final answer metric was weak, did any transient state-tracking signal appear inside the model during training?
 
-That made this a good local-first interpretability lab. I could train the whole stack from scratch, save checkpoints, run probes over hidden activations, and inspect what changed over training instead of only checking the final answer accuracy.
+Checkpointed probing was the only reasonable next step. It let me inspect intermediate models instead of pretending the final accuracy number was the whole story.
 
 ## What Changed And Why
 
 My earlier goal was to get a "pretty decent" FSM model. That did not really happen.
 
-I added a scratch-training path to the lab so I could train a small decoder-only transformer on a synthetic finite-state-machine task, then I ran a few rounds of tuning. Some smoke runs looked promising. But once I reran the experiment with larger long-trace eval sets and multiple seeds, the long-horizon accuracy mostly collapsed toward chance.
+I added a scratch-training path to the lab, trained a small decoder-only transformer on a synthetic finite-state-machine task, and tried a few tuning passes. The smoke run made it look like I had something. The broader evaluation said I mostly did not.
 
-That changed the question.
-
-Instead of asking, "Did the model solve the task?", the more useful question became, "Did the model learn any internally decodable state-tracking structure before the end-task metric fell apart?"
+So this post is not a victory post about solving the task. It is a narrower write-up about what, if anything, the checkpoints reveal internally once the headline accuracy result stops holding up.
 
 ## Setup
 
@@ -72,20 +70,16 @@ The first thing I had to disentangle was the smoke-run story from the broader ev
 
 ### Smoke Run: Looks Good
 
-On the original smoke config, the model went from essentially random performance at initialization to a surprisingly strong long-trace result:
+On the original smoke config, the model went from `0/128` correct on the long-trace eval at initialization to `75/128` correct by the halfway checkpoint, and it stayed there at the final checkpoint.
 
-- `base` unseen accuracy: `0.0000` on 128 long-trace examples
-- `frac_050` unseen accuracy: `0.5859`
-- `frac_100` unseen accuracy: `0.5859`
+The by-length buckets in that smoke run were also small enough to be easy to overread:
 
-The by-length smoke breakdown was also striking. At the halfway checkpoint, unseen accuracy was:
+- length 7: `17/34`
+- length 8: `20/32`
+- length 9: `17/34`
+- length 10: `21/28`
 
-- length 7: `0.500`
-- length 8: `0.625`
-- length 9: `0.500`
-- length 10: `0.750`
-
-If I had stopped there, I could have told a neat story about a tiny model learning to track latent state beyond the training horizon.
+That was enough to look exciting, but not enough to trust on its own.
 
 ### Larger Eval: Mostly Falls Apart
 
@@ -102,7 +96,6 @@ For a longer-training variant (`answer_state_aux_longer_40`):
 
 - final `unseen_eval` mean: `0.1289 +/- 0.0109`
 - selected checkpoint `unseen_eval` mean: `0.1234 +/- 0.0078`
-- oracle best mean across checkpoints: `0.1370 +/- 0.0117`
 
 That is the number that reset my confidence. Training longer did not rescue long-horizon generalization in any meaningful way.
 
@@ -112,7 +105,7 @@ So the answer metric said: **the final model is not a robust FSM solver.**
 
 ## What The Probe Found
 
-Even with the answer metric looking weak, the hidden states were still interesting.
+Even with the answer metric looking weak, the probe results were still worth checking.
 
 ### Current State Is Decodable, But Not Persuasive
 
@@ -142,9 +135,9 @@ At layer 3:
 - `frac_050`: `0.452`
 - `frac_100`: `0.372`
 
-The important caveat is that the majority baseline for this target is high: `0.427`. So not all of that apparent performance is impressive. Still, the halfway checkpoint does exceed that baseline in a way the base model does not, especially in the later layer.
+The important caveat is that the majority baseline for this target is high: `0.427`. So not all of that apparent performance is impressive. The clearest improvement is at layer 0, where the halfway checkpoint reaches `0.526`. At layer 3, the halfway checkpoint only gets to `0.452`, which is positive but not by much.
 
-That is the narrow claim I am willing to make:
+That is the narrow claim I am willing to make from this smoke run:
 
 **mid-training, the model appears to form a more linearly decodable representation of the next transition state, especially on steps beyond the training horizon.**
 
@@ -168,18 +161,9 @@ My current read is:
 
 - the smoke task was easy to overread,
 - the larger long-trace evaluation says the model is not robustly solving the FSM problem,
-- but the probes still show some transient internal structure that looks more like state-transition tracking than pure answer memorization.
+- and the best internal signal I found is a temporary increase in next-state decodability at a smoke-run checkpoint, not a stable mechanistic result.
 
-That is a useful result even though it is not the clean win I originally wanted.
-
-It suggests the training process may briefly pass through a regime where the model's hidden states contain a more explicit transition representation, and then fail to stabilize that into reliable long-horizon behavior. If that is right, the next round should probably focus less on brute-force tuning and more on inductive bias or curriculum.
-
-This also matches the general spirit of two related lines of work:
-
-- `Thinking Like Transformers` argues that transformer computations can often be usefully described in more structured algorithmic terms.
-- `Finite State Automata Inside Transformers with Chain-of-Thought` reports explicit state-tracking circuits in transformer models on automaton-style tasks.
-
-My result is much smaller and weaker than either of those stories. But it points in the same qualitative direction: there can be latent state-like structure inside the network even when end-task behavior is not fully convincing.
+The narrow conclusion is that, in this smoke-run setup, training may briefly pass through a regime where next-state information is more linearly recoverable from the hidden states, then fail to stabilize that into reliable long-horizon behavior. That is weaker than showing a stable internal FSM, and much weaker than the mechanistic evidence in the papers I cite below.
 
 ## Limitations
 
