@@ -81,7 +81,9 @@
   <body{% if body_class %} class="{{ body_class }}"{% endif %}>
     <header class="site-header">
       <div class="container">
-        <a href="{{ '/' | relative_url }}" class="brand__name">{{ site.title }}</a>
+        <a href="{{ '/' | relative_url }}" class="brand" aria-label="{{ site.title }} home">
+          <span class="brand__name">{{ site.title }}</span>
+        </a>
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="{{ '/#latest' | relative_url }}" class="site-nav__link{% if page.layout == 'post' %} is-active{% endif %}">Posts</a>
           <a href="{{ '/#about' | relative_url }}" class="site-nav__link">About</a>

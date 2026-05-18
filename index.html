@@ -10,15 +10,25 @@ body_class: home-page
   <section id="latest" class="posts">
     <div class="container">
       <div class="section-heading">
-        <p class="section-heading__eyebrow">Curtis Covington</p>
         <h2 class="section-heading__title">Experiment reports and implementation notes with an explicit protocol.</h2>
         <p class="section-heading__subtitle">
           Metrics first, caveats included, and enough context to understand the result instead of just the headline.
         </p>
       </div>
       {% if featured_post %}
+        {% assign featured_image = featured_post.og_image | default: featured_post.image %}
         <article class="post-card post-card--featured">
           <div class="post-card__featured-main">
+            {% if featured_image %}
+              <a class="post-card__media" href="{{ featured_post.url | relative_url }}" aria-label="Read {{ featured_post.title }}">
+                <img
+                  src="{{ featured_image | relative_url }}"
+                  alt="{{ featured_post.title | escape }}"
+                  loading="eager"
+                  decoding="async"
+                />
+              </a>
+            {% endif %}
             <div class="post-card__meta post-card__meta--rail">
               <span class="post-card__date">{{ featured_post.date | date: '%B %-d, %Y' }}</span>
               {% if featured_post.reading_time %}
