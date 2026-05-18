@@ -1,4 +1,4 @@
-name: Build and Deploy Pages on Tag
+name: Build Pages on Tag
 
 on:
   push:
@@ -7,18 +7,14 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: github-pages
+  group: pages-tag-build
   cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      should_deploy: ${{ steps.verify.outputs.on_main }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -34,14 +30,9 @@ jobs:
           if git merge-base --is-ancestor "origin/$DEFAULT_BRANCH" "$GITHUB_SHA"; then
             echo "on_main=true" >> "$GITHUB_OUTPUT"
           else
-            echo "Tag does not reference $DEFAULT_BRANCH; skipping deploy."
+            echo "Tag does not reference $DEFAULT_BRANCH; skipping build."
             echo "on_main=false" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Configure Pages
-        if: steps.verify.outputs.on_main == 'true'
-        id: pages
-        uses: actions/configure-pages@v5
 
       - name: Setup Ruby
         if: steps.verify.outputs.on_main == 'true'
@@ -54,22 +45,4 @@ jobs:
         if: steps.verify.outputs.on_main == 'true'
         env:
           JEKYLL_ENV: production
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-
-      - name: Upload artifact
-        if: steps.verify.outputs.on_main == 'true'
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./_site
-
-  deploy:
-    needs: build
-    if: needs.build.outputs.should_deploy == 'true'
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        run: bundle exec jekyll build --baseurl ""
