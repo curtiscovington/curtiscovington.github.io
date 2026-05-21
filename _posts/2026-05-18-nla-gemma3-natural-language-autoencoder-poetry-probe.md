@@ -31,6 +31,8 @@ I tested whether a model explanation written in English could be edited, convert
 
 Most of my interpretability work so far has been SAE-based: find a feature, intervene on that feature, and test whether behavior changes under controls.
 
+This run was inspired by Anthropic's Transformer Circuits post, [*Natural Language Autoencoders Produce Unsupervised Explanations of LLM Activations*](https://transformer-circuits.pub/2026/nla/index.html#introduction). I wanted to see how much of that explanation/edit loop I could reproduce locally with the released open-weight Gemma checkpoints.
+
 Natural Language Autoencoders offer a different interface. Instead of editing a sparse feature index, the workflow is:
 
 1. Extract a residual activation from the model.
@@ -235,6 +237,10 @@ The next run should be stricter, not bigger for its own sake.
 I would first filter to prompts where the AV explanation explicitly names an editable plan or rhyme term. Then I would run more explanation samples and more completion seeds on that smaller, cleaner set.
 
 The decision rule should be simple: if target edits beat no-op, unrelated, random, and wrong-position controls on both logprob and completion samples, the post can make a stronger causal claim. If not, the post should stay framed as an inference-side replication with a weak causal probe.
+
+## References
+
+1. Fraser-Taliente, Kantamneni, Ong, et al. (2026), [*Natural Language Autoencoders Produce Unsupervised Explanations of LLM Activations*](https://transformer-circuits.pub/2026/nla/index.html#introduction), Transformer Circuits.
 
 ## TL;DR
 
