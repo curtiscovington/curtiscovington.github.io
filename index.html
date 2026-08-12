@@ -6,54 +6,51 @@ body_class: home-page
 ---
 <main>
   {% assign latest_posts = site.posts | sort: 'date' | reverse %}
-  {% assign featured_post = latest_posts | first %}
+  {% assign latest_post = latest_posts | first %}
   <section id="latest" class="posts">
     <div class="container">
       <div class="section-heading">
-        <h2 class="section-heading__title">Experiment reports and implementation notes with an explicit protocol.</h2>
+        <p class="section-heading__eyebrow">Latest post</p>
+        <h2 class="section-heading__title">Experiment reports and implementation notes.</h2>
         <p class="section-heading__subtitle">
           Metrics first, caveats included, and enough context to understand the result instead of just the headline.
         </p>
       </div>
-      {% if featured_post %}
-        {% assign featured_image = featured_post.og_image | default: featured_post.image %}
-        <article class="post-card post-card--featured">
-          <div class="post-card__featured-main">
-            {% if featured_image %}
-              <a class="post-card__media" href="{{ featured_post.url | relative_url }}" aria-label="Read {{ featured_post.title }}">
-                <img
-                  src="{{ featured_image | relative_url }}"
-                  alt="{{ featured_post.title | escape }}"
-                  loading="eager"
-                  decoding="async"
-                />
-              </a>
-            {% endif %}
+      {% if latest_post %}
+        {% assign latest_image = latest_post.og_image | default: latest_post.image %}
+        <article class="post-card post-card--latest">
+          {% if latest_image %}
+            <a class="post-card__media" href="{{ latest_post.url | relative_url }}" aria-label="Read {{ latest_post.title }}">
+              <img
+                src="{{ latest_image | relative_url }}"
+                alt="{{ latest_post.title | escape }}"
+                loading="eager"
+                decoding="async"
+              />
+            </a>
+          {% endif %}
+          <div class="post-card__latest-content">
             <div class="post-card__meta post-card__meta--rail">
-              <span class="post-card__date">{{ featured_post.date | date: '%B %-d, %Y' }}</span>
-              {% if featured_post.reading_time %}
-                <span class="post-card__reading">{{ featured_post.reading_time }}</span>
+              <span class="post-card__date">{{ latest_post.date | date: '%B %-d, %Y' }}</span>
+              {% if latest_post.reading_time %}
+                <span class="post-card__reading">{{ latest_post.reading_time }}</span>
               {% endif %}
             </div>
-            <h3 class="post-card__title">{{ featured_post.title }}</h3>
+            <h3 class="post-card__title">{{ latest_post.title }}</h3>
             <p class="post-card__excerpt">
-              {{ featured_post.description | default: featured_post.excerpt | strip_html }}
+              {{ latest_post.description | default: latest_post.excerpt | strip_html }}
             </p>
-            <a class="post-card__link" href="{{ featured_post.url | relative_url }}">
-              Read featured post
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-
-          <div class="post-card__featured-side">
-            {% if featured_post.tags %}
+            {% if latest_post.tags %}
               <div class="post-card__tags">
-                {% for tag in featured_post.tags %}
+                {% for tag in latest_post.tags limit:4 %}
                   <span class="post-card__tag">{{ tag }}</span>
                 {% endfor %}
               </div>
             {% endif %}
-            <p class="post-card__note">Latest field note from the lab archive.</p>
+            <a class="post-card__link" href="{{ latest_post.url | relative_url }}">
+              Read post
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
         </article>
       {% endif %}
