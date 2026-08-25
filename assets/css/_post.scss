@@ -138,7 +138,13 @@
 }
 
 .post__rail-link {
+  display: flex;
+  width: fit-content;
   margin-top: 1rem;
+}
+
+.post__rail-link + .post__rail-link {
+  margin-top: 0.65rem;
 }
 
 @media (max-width: 1080px) {

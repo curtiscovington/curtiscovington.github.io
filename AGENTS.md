@@ -75,8 +75,15 @@ repo_card:
   url: "..."
   title: "..."
   description: "..."
+huggingface_card:
+  url: "..."
+  title: "..."
+  description: "..."
 ---
 ```
+
+`huggingface_card` is optional. Use it when a post has reusable model, lens, adapter, or dataset
+artifacts on the Hugging Face Hub; it renders beside the project repository card in the post header.
 
 ## Drafting Workflow (Preferred)
 
