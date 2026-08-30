@@ -97,7 +97,10 @@
 
     <footer class="site-footer">
       <div class="container">
-        <p>&copy; {{ 'now' | date: '%Y' }} Curtis Covington. Reproducible ML experiments, interpretability notes, and runnable artifacts.</p>
+        <div class="site-footer__copy">
+          <p>&copy; {{ 'now' | date: '%Y' }} Curtis Covington. Reproducible ML experiments, interpretability notes, and runnable artifacts.</p>
+          <p class="site-footer__disclaimer">Views expressed here are my own and do not represent those of any current or former employer or other organization. Content is provided for informational purposes only.</p>
+        </div>
         <a class="rss-link" href="{{ '/feed.xml' | relative_url }}">RSS</a>
       </div>
     </footer>

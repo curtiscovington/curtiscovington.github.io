@@ -122,7 +122,7 @@
 }
 
 .site-footer .container {
-  min-height: 96px;
+  min-height: 112px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,6 +135,17 @@
 
 .site-footer p {
   margin: 0;
+}
+
+.site-footer__copy {
+  display: grid;
+  gap: 0.32rem;
+  max-width: 760px;
+}
+
+.site-footer__disclaimer {
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .rss-link {
