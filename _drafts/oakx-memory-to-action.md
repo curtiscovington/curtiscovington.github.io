@@ -1,6 +1,6 @@
 ---
-title: "I Gave AI Agents a Shared Knowledge Repo. They Found the Rule—and Still Got the Math Wrong."
-description: "A local OAKX experiment on 12 synthetic repository incidents improved bounded task success from 0/12 to 6/12; adding an answer-blind calculator reached 11/12."
+title: "I Gave Qwen3.8 27B a Shared Knowledge Repo. It Found the Rule—and Still Got the Math Wrong."
+description: "A local Qwen3.8 27B OAKX experiment on 12 synthetic repository incidents improved bounded task success from 0/12 to 6/12; adding an answer-blind calculator reached 11/12."
 date: 2026-08-30
 tags:
   - ai
@@ -25,7 +25,7 @@ Knowledge Exchange**, or **OAKX**.
 
 The short answer is **yes—with an important qualification**.
 
-On twelve held-out synthetic repository incidents, the same local model went from **0/12 strict
+On twelve held-out synthetic repository incidents, Qwen3.8 27B went from **0/12 strict
 successes without OAKX to 6/12 with it**. The OAKX-enabled agent found the correct root cause and
 authoritative source in all twelve tasks. But in half of them, it still applied the right rule
 incorrectly.
@@ -41,9 +41,9 @@ right rule. It does not guarantee that the model will execute that rule correctl
 
 ### TL;DR (Layman Version)
 
-I gave a local AI agent access to a small library of previously reviewed solutions. That library
-helped it identify the right problem and find the file that proved the answer, but the model still
-made arithmetic mistakes while applying the correct instructions. A basic calculator fixed almost
+I gave a local Qwen3.8 27B model access to a small library of previously reviewed solutions. That
+library helped it identify the right problem and find the file that proved the answer, but the model
+still made arithmetic mistakes while applying the correct instructions. A basic calculator fixed almost
 all of those remaining failures. The result was not simply 11/12: **“agent memory” is not one
 capability. Retrieval, evidence checking, deterministic execution, and answer normalization can
 fail independently.**
