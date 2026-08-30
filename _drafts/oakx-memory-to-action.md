@@ -9,11 +9,11 @@ tags:
   - local-ai
   - knowledge-management
   - dgx-spark
-reading_time: "11 min read"
+reading_time: "12 min read"
 og_image: "/img/posts/oakx-memory-to-action/oakx-memory-to-action-cover.png"
 repo_card:
-  url: "https://github.com/curtiscovington/oakx-memory-to-action"
-  title: "OAKX Memory-to-Action Study"
+  url: "https://github.com/curtiscovington/oakx-memory-to-action/tree/v0.1.0"
+  title: "OAKX Memory-to-Action Study (v0.1.0)"
   description: "Frozen protocols, synthetic task generators, immutable result bundles, analysis scripts, and publication figures."
 ---
 
@@ -35,7 +35,7 @@ Adding a small, deterministic, answer-blind calculator raised the combined condi
 That result changed how I think about agent memory. Persistent knowledge can get an agent to the
 right rule. It does not guarantee that the model will execute that rule correctly.
 
-[Code, frozen protocols, and result bundles](https://github.com/curtiscovington/oakx-memory-to-action)
+[Code, frozen protocols, and result bundles (v0.1.0)](https://github.com/curtiscovington/oakx-memory-to-action/tree/v0.1.0)
 
 ![Strict success across the OAKX and calculator ablation](/img/posts/oakx-memory-to-action/oakx-ablation-strict-success.png)
 
@@ -127,6 +127,48 @@ The protocol and task-bank hashes were recorded in the run manifest before the f
 call. The developmental pilots remain documented, but they are excluded from the reported results.
 Bootstrap intervals resampled the twelve tasks as paired units, preserving the within-task condition
 comparisons.
+
+## One Synthetic Task, End to End
+
+The tasks were small repository investigations, not trivia questions. For example, the Granite
+Allocator task began with this incident log:
+
+```text
+2026-08-30T12:00:00Z ERROR GRANITE-817
+demand_units=83 lane_width=12 guard_units=3 observed_allocation=85
+Determine the stable allocation.
+```
+
+The operational repository also contained six policy capsules with opaque filenames. Five were
+distractors. The matching OAKX condition could search by the incident code and retrieve this
+accepted entry:
+
+```text
+Signature: GRANITE-817
+Reusable diagnosis: aligned_capacity_required
+Rule: Round demand upward to a complete lane, then add the guard.
+Verification: read ops/src/capsules/kappa-17.txt and calculate or
+select from the live incident values.
+```
+
+That entry supplied neither the values `83`, `12`, and `3` nor the final answer. It gave the agent a
+reusable diagnosis, the shape of the rule, and a pointer to the evidence it still had to inspect.
+The referenced operational file said:
+
+```text
+Policy name: aligned_capacity_required
+Stable allocation = ceil(demand_units / lane_width) * lane_width
+                    + guard_units.
+This capsule is authoritative for the current fixture.
+```
+
+Strict success therefore required the agent to combine three things: live values from the incident,
+the authoritative formula from the operational repository, and a trace showing that it had actually
+read that file. The correct calculation was `ceil(83 / 12) * 12 + 3 = 87`.
+
+The baseline agent received the same incident and operational repository but no OAKX search. The
+placebo agent could search an identically structured exchange whose entries shared none of the
+incident identifiers, diagnoses, formulas, or answers.
 
 ## Core Result: OAKX Found the Rule
 
@@ -246,11 +288,11 @@ The percentages should not be ranked against each other. The model versions, tas
 interventions, and replication counts are different, and I did not run WikiSkill on this task bank.
 This study is inspired by the same broad research area, not a replication or head-to-head result.
 
-There is still a useful parallel. WikiSkill reports that giving its inference agent wiki access
-during training reduced average performance relative to keeping the wiki behind the skill proposer.
-My developmental placebo likewise showed that unconstrained access to irrelevant entries can consume
-the entire task budget. In both cases, accumulated knowledge needs a controlled path into active
-behavior.
+There is still a useful parallel. WikiSkill reports that letting its inference agent query the wiki
+directly during skill evolution reduced average performance relative to keeping the wiki behind the
+skill proposer. My developmental placebo likewise showed that unconstrained access to irrelevant
+entries can consume the entire task budget. In both cases, accumulated knowledge needs a controlled
+path into active behavior.
 
 I do not see the approaches as mutually exclusive. OAKX could hold reviewed institutional knowledge.
 A WikiSkill-like process could compile recurring accepted patterns into narrow procedural skills.
@@ -316,4 +358,4 @@ was only one part of getting the task right.
 - Tang, L., Rashtchian, C., Ferng, C.-S., Tomkins, A., Juan, D.-C., & Vu, T.
   [“WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution.”](https://arxiv.org/abs/2608.27454)
   arXiv:2608.27454, 2026.
-- [OAKX Memory-to-Action Study repository](https://github.com/curtiscovington/oakx-memory-to-action)
+- [OAKX Memory-to-Action Study v0.1.0](https://github.com/curtiscovington/oakx-memory-to-action/tree/v0.1.0)
