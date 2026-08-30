@@ -10,7 +10,7 @@ tags:
   - knowledge-management
   - dgx-spark
 reading_time: "11 min read"
-og_image: "/img/posts/oakx-memory-to-action/oakx-ablation-strict-success.png"
+og_image: "/img/posts/oakx-memory-to-action/oakx-memory-to-action-cover.png"
 repo_card:
   url: "https://github.com/curtiscovington/oakx-memory-to-action"
   title: "OAKX Memory-to-Action Study"
