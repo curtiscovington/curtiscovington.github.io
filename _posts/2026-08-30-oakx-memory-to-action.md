@@ -359,6 +359,8 @@ was only one part of getting the task right.
 
 ## References
 
+- OpenAI. [“The Hugging Face incident and the road
+  ahead.”](https://openai.com/index/hugging-face-incident-and-the-road-ahead/) August 26, 2026.
 - Tang, L., Rashtchian, C., Ferng, C.-S., Tomkins, A., Juan, D.-C., & Vu, T.
   [“WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution.”](https://arxiv.org/abs/2608.27454)
   arXiv:2608.27454, 2026.
