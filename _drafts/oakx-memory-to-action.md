@@ -1,6 +1,6 @@
 ---
 title: "I Gave Qwen3.8 27B a Shared Knowledge Repo. It Found the Rule—and Still Got the Math Wrong."
-description: "A local Qwen3.8 27B OAKX experiment on 12 synthetic repository incidents improved bounded task success from 0/12 to 6/12; adding an answer-blind calculator reached 11/12."
+description: "On 12 synthetic repository incidents, OAKX raised Qwen3.8 27B from 0/12 to 6/12 strict success; an answer-blind calculator raised it to 11/12."
 date: 2026-08-30
 tags:
   - ai
@@ -14,7 +14,7 @@ og_image: "/img/posts/oakx-memory-to-action/oakx-memory-to-action-cover.png"
 repo_card:
   url: "https://github.com/curtiscovington/oakx-memory-to-action/tree/v0.1.0"
   title: "OAKX Memory-to-Action Study (v0.1.0)"
-  description: "Frozen protocols, synthetic task generators, immutable result bundles, analysis scripts, and publication figures."
+  description: "Frozen protocols, synthetic task generators, result bundles, analysis scripts, and publication figures."
 ---
 
 Can a fresh coding agent solve an unfamiliar repository problem more reliably if it can search a
