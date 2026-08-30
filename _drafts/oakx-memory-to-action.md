@@ -44,57 +44,41 @@ right rule. It does not guarantee that the model will execute that rule correctl
 I gave a local AI agent access to a small library of previously reviewed solutions. That library
 helped it identify the right problem and find the file that proved the answer, but the model still
 made arithmetic mistakes while applying the correct instructions. A basic calculator fixed almost
-all of those remaining failures. The practical lesson is that useful agent systems may need three
-separate layers: **memory to find the rule, evidence to verify it, and deterministic tools to carry
-it out**.
+all of those remaining failures. The result was not simply 11/12: **“agent memory” is not one
+capability. Retrieval, evidence checking, deterministic execution, and answer normalization can
+fail independently.**
 
 ## Why This Post Exists
 
-Most coding-agent sessions start nearly from zero. A person may have diagnosed the same deployment
-failure last week, another agent may have found the same undocumented policy yesterday, and the
-next session will often investigate the whole thing again.
-
-Chat history is not a satisfying answer. It is hard to search, hard to review, easy to make stale,
-and usually tied to one user or one session. Simply pasting old agent traces into a prompt creates a
-different problem: more context, more irrelevant instructions, and no clear boundary between
-advice and authority.
+Most coding-agent sessions start nearly from zero. A person or another agent may have diagnosed the
+same failure last week, yet the next session often investigates it again. Chat history is hard to
+search and review, easy to make stale, and rarely distinguishes advice from authority.
 
 OAKX is my attempt to make reusable agent knowledge behave more like maintained engineering
 knowledge. Accepted findings live in a Git repository. They have evidence, scope, revision history,
 and a review path. Agents search the accepted corpus before investigating a material unknown, then
 verify anything they use against the current authoritative source.
 
-One of the concrete inspirations came from a Hugging Face hack where the agents created their own
-message board. The interesting part was not the board as a product feature. It was that the agents
-had independently externalized useful state into a shared place that later agents could read.
-
-That felt like a glimpse of something larger than inter-agent messaging. What if the shared artifact
-were durable across runs, searchable before duplicated investigation, and governed well enough that
-an agent could distinguish a reviewed finding from an untrusted note? OAKX grew out of that line of
-thinking: keep the collective memory, then add provenance, evidence, revisions, and review.
+One concrete inspiration came from a Hugging Face hack where agents created their own message board.
+They had externalized useful state into a shared place that later agents could read. OAKX grew from
+asking what would happen if that artifact persisted across runs and added search, provenance,
+evidence, revisions, and review.
 
 The knowledge remains advisory. An entry cannot grant credentials, authorize a command, expand the
 task, or override a current policy file. That distinction matters because shared memory is useful
 only if an old or malicious entry cannot silently become operational authority.
 
 I had already been building OAKX when I later found
-[WikiSkill](https://arxiv.org/abs/2608.27454), a paper about compiling agent experience into a
-persistent wiki and then into reusable skills. WikiSkill did not inspire OAKX. It gave me a useful
-comparison point after the fact and made the evaluation question sharper: what does direct access
-to governed knowledge actually improve during a task?
+[WikiSkill](https://arxiv.org/abs/2608.27454), which compiles agent experience into a persistent wiki
+and then into reusable skills. WikiSkill did not inspire OAKX; it gave me a useful comparison point
+and sharpened the question: what does direct access to governed knowledge improve during a task?
 
 ## What Changed And Why
 
-I started with a six-task developmental pilot. It failed twice in useful ways.
-
-The first run gave the agent six tool calls. That was enough to investigate but, in several cases,
-not enough to submit an answer. I invalidated the run instead of treating exhausted agents as
-scientific failures, then froze an eight-call budget for the scaled study.
-
-The first placebo corpus was also wrong. It used different incident identifiers but accidentally
-retained treatment formulas. That was not unrelated knowledge; it was a disguised version of the
-treatment. I invalidated that run too and added a test that rejects placebo entries containing task
-signatures, root-cause labels, expected values, or applicable formulas.
+I started with a six-task developmental pilot. A six-call limit sometimes left no call for the final
+answer, so I invalidated that run and froze an eight-call budget. The first placebo also retained
+treatment formulas under different identifiers, so I invalidated it and added a test that rejects
+placebo entries containing task signatures, root-cause labels, expected values, or applicable rules.
 
 The corrected pilot exposed the most important design issue. When I let the agent enumerate an
 irrelevant knowledge directory, it dutifully opened every entry and used its entire budget.
@@ -141,6 +125,8 @@ Strict success required all four of the following:
 
 The protocol and task-bank hashes were recorded in the run manifest before the first scaled model
 call. The developmental pilots remain documented, but they are excluded from the reported results.
+Bootstrap intervals resampled the twelve tasks as paired units, preserving the within-task condition
+comparisons.
 
 ## Core Result: OAKX Found the Rule
 
@@ -154,8 +140,9 @@ exchange, and matching OAKX knowledge.
 | Matching OAKX | 12/12 | **6/12** | **12/12** | 6/12 | **12/12** | **6.58** |
 
 Under the frozen eight-call budget, OAKX improved strict success by 50 percentage points over both
-comparators. The paired-bootstrap interval was +25 to +75 points. Against baseline, there were six
-paired wins and no losses, for a two-sided exact paired sign-test p-value of `0.03125`.
+comparators. The 95% paired-bootstrap confidence interval was +25 to +75 percentage points. Against
+baseline, there were six paired wins and no losses, for a two-sided exact paired sign-test p-value
+of `0.03125`.
 
 ![OAKX separated retrieval from execution](/img/posts/oakx-memory-to-action/oakx-retrieval-and-execution.png)
 
@@ -205,6 +192,11 @@ files, OAKX entries, expected answers, or grader state.
 | Yes | No | 6/12 | 12/12 | 6/12 | 12/12 |
 | Yes | Yes | **11/12** | **12/12** | **11/12** | **12/12** |
 
+The calculator-only cell also found two root causes that the no-calculator cell missed. That should
+not be read as evidence that arithmetic reveals diagnoses. Exposing another tool changes the
+agent's action space and trajectory, so the four cells are whole-agent configurations rather than a
+perfectly isolated manipulation of arithmetic ability.
+
 The combined condition used the calculator exactly once on each of the nine numeric tasks. All nine
 deterministic calculations matched ground truth. It correctly avoided the calculator on the three
 categorical tasks.
@@ -213,9 +205,9 @@ Adding the calculator improved OAKX from **50.0% to 91.7%** strict success. OAKX
 calculator-only on nine paired tasks and lost none, for a two-sided exact paired sign-test p-value of
 `0.0039`.
 
-The estimated factorial interaction was +25 percentage points, but the paired-bootstrap interval
-ran from -8.3 to +58.3 points. With twelve tasks, that is evidence worth following up, not a
-conclusive synergy estimate.
+The estimated factorial interaction was +25 percentage points, but its 95% paired-bootstrap
+confidence interval ran from -8.3 to +58.3 points. With twelve tasks, that is evidence worth
+following up, not a conclusive synergy estimate.
 
 The one combined-condition failure was useful too. The expected sequence was
 `seal>index>publish`; the agent returned `forge -> seal>index>publish`. The rule had been found and
