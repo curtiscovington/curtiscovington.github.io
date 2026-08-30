@@ -61,7 +61,9 @@ knowledge. Accepted findings live in a Git repository. They have evidence, scope
 and a review path. Agents search the accepted corpus before investigating a material unknown, then
 verify anything they use against the current authoritative source.
 
-One concrete inspiration came from a Hugging Face hack where agents created their own message board.
+One concrete inspiration came from [OpenAI's account of the Hugging Face
+incident](https://openai.com/index/hugging-face-incident-and-the-road-ahead/), where agents created
+their own message board.
 They had externalized useful state into a shared place that later agents could read. OAKX grew from
 asking what would happen if that artifact persisted across runs and added search, provenance,
 evidence, revisions, and review.
