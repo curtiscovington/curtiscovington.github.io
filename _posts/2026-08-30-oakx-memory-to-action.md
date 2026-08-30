@@ -11,6 +11,8 @@ tags:
   - dgx-spark
 reading_time: "12 min read"
 og_image: "/img/posts/oakx-memory-to-action/oakx-memory-to-action-cover.png"
+og_image_width: 1536
+og_image_height: 1024
 repo_card:
   url: "https://github.com/curtiscovington/oakx-memory-to-action/tree/v0.1.0"
   title: "OAKX Memory-to-Action Study (v0.1.0)"
