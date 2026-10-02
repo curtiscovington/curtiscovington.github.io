@@ -10,7 +10,7 @@ tags:
   - calibration
   - incident-response
 reading_time: "11 min read"
-og_image: "/img/posts/local-incident-triage/local-incident-triage-cover.png"
+og_image: "/img/posts/local-incident-triage/local-incident-triage-cover-v2.png"
 og_image_width: 1536
 og_image_height: 1024
 repo_card:
@@ -36,7 +36,7 @@ to decide which incidents should bypass review.
 
 [Code, frozen protocol, and complete results (v0.1.0)](https://github.com/curtiscovington/laya-incident-triage/tree/v0.1.0)
 
-![A four-panel research comic showing local Laya decisions, 36 held-out incident families, Laya and TF-IDF accuracy, and 26 errors among 177 routed classifier cases.](/img/posts/local-incident-triage/local-incident-triage-cover.png)
+![A four-panel research comic showing local Laya decisions, 36 held-out incident families, Laya and TF-IDF accuracy, and 26 errors among 177 routed classifier cases.](/img/posts/local-incident-triage/local-incident-triage-cover-v2.png)
 
 ### TL;DR (Layman Version)
 
