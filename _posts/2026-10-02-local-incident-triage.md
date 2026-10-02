@@ -148,6 +148,10 @@ That produced **576 records**, split by family:
 All eight variants of a mechanism stayed in the same split. Labels came from the explicit
 runbook rules and controlled transformations, rather than another model acting as judge.
 
+Keeping related examples together follows the rationale in scikit-learn’s
+[grouped evaluation guidance](https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation-iterators-for-grouped-data): performance on a new group is a different question
+from performance on another record from a group already seen during training.
+
 The inference runner read label-free inputs. After all test predictions were saved, the analysis
 joined them to the expected labels. The protocol, source files, data, and weights were bound by
 content hashes. The development selection file was written before test inference began.
@@ -254,13 +258,19 @@ make that attribution.
 The example is still useful. The practical behavior I wanted was stable handling of a short,
 explicit staging-only incident. That behavior did not survive the combined rewrite.
 
+This kind of targeted behavioral evaluation has a useful precedent in
+[Ribeiro et al.’s CheckList (ACL 2020)](https://aclanthology.org/2020.acl-main.442/),
+which tests specific linguistic capabilities and behaviors beyond aggregate accuracy. I did not
+use the CheckList software; the connection is the evaluation approach.
+
 ## Calibration Helped The Probabilities, Not The Answers
 
 I also tested whether Laya's reported probabilities could be improved without changing its
 weights or chosen labels.
 
 For each of the three outputs, I fitted a single temperature on development data. Temperature
-scaling sharpens or softens a distribution while preserving its class ranking. Here it operated
+scaling sharpens or softens a distribution while preserving its class ranking, as described by
+[Guo et al. (ICML 2017)](https://proceedings.mlr.press/v70/guo17a.html). Here it operated
 on the checkpoint's rounded output probabilities, not its original logits.
 
 | Laya Condition | Mean Field Brier Score | Mean Field Negative Log-Likelihood | Exact Accuracy |
@@ -286,6 +296,11 @@ whether a routing policy could use those probabilities successfully.
 
 A useful triage component needs more than a high average score. It needs a workable rule for
 which decisions to accept and which to send for review.
+
+This is the selective-classification setting: trade coverage for lower error among accepted
+predictions. [Geifman and El-Yaniv (NeurIPS 2017)](https://papers.neurips.cc/paper_files/paper/2017/hash/4a8423d5e91fda00bb7e46540e2b0cf1-Abstract.html)
+study that tradeoff with a procedure that provides probabilistic risk guarantees. My empirical
+development-threshold rule below does not implement their procedure or inherit those guarantees.
 
 My routing rule first required known owner and impact labels, plus sufficient evidence. Then
 it gated on the minimum of the three selected-label probabilities. That minimum was a routing
