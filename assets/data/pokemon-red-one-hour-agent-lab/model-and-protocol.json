@@ -1,0 +1,59 @@
+{
+  "provenance": "Configuration from frozen v2.21 experiment; selected read-only local Ollama /api/show metadata inspected 2026-10-13. No inference requested.",
+  "local_model_tag": "qwen3.8-flash-next:iq4_nl",
+  "pinned_model_digest": "c199754018551c93600ba403c70381210ec64f7f4695b95176e92ef5efb0a830",
+  "reported_details": {
+    "parent_model": "Qwen3.8-Flash-Next-IQ4_NL.gguf",
+    "format": "gguf",
+    "family": "qwen4exp",
+    "families": [
+      "qwen4exp"
+    ],
+    "parameter_size": "176.9B",
+    "quantization_level": "IQ4_NL"
+  },
+  "public_weights_url": "https://huggingface.co/ggml-org/Qwen3.8-Flash-Next-GGUF/tree/052beeaca7bec4a303e59cc7bc630c4f3a1b845d",
+  "protocol": "lab-v2.21-confirmation",
+  "duration_seconds": 3600,
+  "paired_seeds": [
+    8000,
+    8001,
+    8002,
+    8003
+  ],
+  "start_sha256": "624de2ee73ffc4fb297aeaa8c11c601b3fb5e2db57e58e760084ad38971e4e3c",
+  "comparison": "Both arms keep destinations through battles; treatment additionally adds healing and repeated-map/NPC restrictions.",
+  "source_freeze": "confirmation-v221-freeze.json",
+  "public_source": {
+    "repository": "ggml-org/Qwen3.8-Flash-Next-GGUF",
+    "revision": "052beeaca7bec4a303e59cc7bc630c4f3a1b845d",
+    "upstream_repository": "Qwen/Qwen3.8-Flash-Next",
+    "upstream_revision": "de4b8e4d43b917e7706784d8bb445c9af86a3540",
+    "upstream_revision_evidence": ".src_sha at pinned conversion revision",
+    "verified_files": [
+      {
+        "filename": "Qwen3.8-Flash-Next-IQ4_NL-00001-of-00002.gguf",
+        "size": 10945440,
+        "sha256": "851652eef30d117a34fdc0d13e05da4c488a8cdad3654d38c4aa69a2d8a1fabc",
+        "local_sha256_matches": true
+      },
+      {
+        "filename": "Qwen3.8-Flash-Next-IQ4_NL-00002-of-00002.gguf",
+        "size": 102037973504,
+        "sha256": "0299b147e42517ff8fa3a4fa66d370c77ce01c44ed8cbc3451b7a42caad5fc10",
+        "local_sha256_matches": true
+      },
+      {
+        "filename": "mmproj-Qwen3.8-Flash-Next-Q8_0.gguf",
+        "size": 616703104,
+        "sha256": "b2e9b5e4a44c107f8867e67dbf09b607fd99ae33c1a97a60a6720aeb252a9dad",
+        "local_sha256_matches": true
+      }
+    ],
+    "verification_date": "2026-10-13",
+    "method": "Read-only public Hub metadata, local download metadata and full local file SHA-256 checks. No model loaded.",
+    "local_import": "Two GGUF shards merged to Qwen3.8-Flash-Next-IQ4_NL.gguf; local Ollama manifest records model blob sha256:dc95121effdfd439fdb8f1edc2fc8b399be3abe91460ec3e846b651118bab816 and the matching Q8_0 projector.",
+    "merged_tensor_directory_verification": "All 1224 tensor names, shapes, quantization types, sizes and relative offsets match the downloaded tensor shard.",
+    "merged_payload_verification": "Full byte-for-byte comparison of downloaded tensor payload (offset 77824) with imported Ollama model blob payload (offset 11023136) succeeded. Source metadata matches merged metadata excluding expected GGUF/split bookkeeping."
+  }
+}

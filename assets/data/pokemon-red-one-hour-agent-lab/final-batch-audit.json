@@ -1,0 +1,888 @@
+{
+  "batch": "20261013-105028-575ffb",
+  "freeze_mismatches": [],
+  "audit_scope": "Same streaming checks for all eight runs: badge state and dialogue, Brock/Onix encounter evidence, named gym-guide actions, center HP increases, navigation termination reasons, errors/recoveries and last main observation. Not exhaustive manual frame review. HP increases are observation events, not necessarily unique nurse visits; guide calls exclude direct confirm reopenings.",
+  "runs": [
+    {
+      "run": "01-reactive-299e5504",
+      "recovery": false,
+      "seed": 8000,
+      "status": "completed",
+      "first": {
+        "starter_observed": 133.83960087504238,
+        "parcel_in_bag": 427.41441949101863,
+        "parcel_delivery_text": 647.0346081290045,
+        "pokedex_receipt_text": 683.8974394660327,
+        "forest_entered": 988.0311959610553,
+        "forest_north_gate": 2120.7296105730347,
+        "pewter_reached": 2184.586787401,
+        "pewter_gym_entered": 2311.417101264
+      },
+      "badge_evidence": null,
+      "badge_dialogue": [],
+      "brock_dialogue": [
+        {
+          "elapsed": 2425.5272563650506,
+          "text": "years from facing BROCK!"
+        },
+        {
+          "elapsed": 2657.899293726019,
+          "text": "years from facing BROCK!"
+        },
+        {
+          "elapsed": 2947.8455178030417,
+          "text": "I  BROCK! I  PEWTER  GYM"
+        }
+      ],
+      "onix_min_hp": 31,
+      "named_guide_calls": 3,
+      "observed_center_hp_increases": 2,
+      "navigation_reasons": {
+        "primitive": 244,
+        "map_changed": 40,
+        "blocked": 1,
+        "dialogue_or_battle": 19,
+        "decision_boundary": 47,
+        "limit": 7,
+        "interacted": 9,
+        "unchanged": 20,
+        "confirmed_once": 69,
+        "menu_changed": 12
+      },
+      "interaction_block_decisions": 0,
+      "repeated_dialogue_pages": 79,
+      "latency_median": 1.7340684980154037,
+      "last": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 7,
+            "max_hp": 34,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 17,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 19,
+              "defense": 19,
+              "speed": 25,
+              "special": 20
+            },
+            "ot_id": 12663,
+            "experience": 1455
+          }
+        ],
+        "badges": []
+      },
+      "errors": 0,
+      "recoveries": 0,
+      "resource_affected": false
+    },
+    {
+      "run": "02-reactive-1f47de99",
+      "recovery": true,
+      "seed": 8000,
+      "status": "completed",
+      "first": {
+        "starter_observed": 128.55324801197276,
+        "parcel_in_bag": 581.3690501399687,
+        "parcel_delivery_text": 1007.2029626399744,
+        "pokedex_receipt_text": 1044.3657596849953,
+        "forest_entered": 1883.019459869014,
+        "forest_north_gate": 2198.8766523230006,
+        "pewter_reached": 2322.2931207629736,
+        "pewter_gym_entered": 2503.610393890005
+      },
+      "badge_evidence": null,
+      "badge_dialogue": [],
+      "brock_dialogue": [
+        {
+          "elapsed": 2587.070566718001,
+          "text": "years from facing BROCK!"
+        },
+        {
+          "elapsed": 2842.1775933689787,
+          "text": "years from facing BROCK!"
+        },
+        {
+          "elapsed": 3141.642591094016,
+          "text": "I  BROCK! I  PEWTER  GYM"
+        }
+      ],
+      "onix_min_hp": 5,
+      "named_guide_calls": 3,
+      "observed_center_hp_increases": 3,
+      "navigation_reasons": {
+        "map_changed": 66,
+        "dialogue_or_battle": 24,
+        "primitive": 145,
+        "decision_boundary": 58,
+        "limit": 7,
+        "interacted": 13,
+        "unchanged": 24,
+        "confirmed_once": 64
+      },
+      "interaction_block_decisions": 7,
+      "repeated_dialogue_pages": 116,
+      "latency_median": 1.848615187976975,
+      "last": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 36,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 24,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "badges": []
+      },
+      "errors": 0,
+      "recoveries": 0,
+      "resource_affected": false
+    },
+    {
+      "run": "03-reactive-a9da5339",
+      "recovery": true,
+      "seed": 8001,
+      "status": "completed",
+      "first": {
+        "starter_observed": 127.0692640300258,
+        "parcel_in_bag": 483.0076018969994,
+        "parcel_delivery_text": 693.7172883290332,
+        "pokedex_receipt_text": 730.6787118150387,
+        "forest_entered": 1012.9230066990131,
+        "forest_north_gate": 2243.8661105490173,
+        "pewter_reached": 2308.4737814150285,
+        "pewter_gym_entered": 2402.4482600010233,
+        "first_badge": 3502.89066619199
+      },
+      "badge_evidence": {
+        "elapsed": 3502.89066619199,
+        "badges": [
+          "Boulder"
+        ],
+        "text": "",
+        "capture": null,
+        "type": "skill_observation"
+      },
+      "badge_dialogue": [
+        {
+          "elapsed": 3455.9106638320372,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "elapsed": 3458.0950141290086,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "brock_dialogue": [
+        {
+          "elapsed": 2485.951271002996,
+          "text": "years from facing BROCK!"
+        },
+        {
+          "elapsed": 2803.116405333043,
+          "text": "I  BROCK! I  PEWTER  GYM"
+        },
+        {
+          "elapsed": 2805.4046347590047,
+          "text": "I  BROCK! I  PEWTER  GYM"
+        }
+      ],
+      "onix_min_hp": 5,
+      "named_guide_calls": 4,
+      "observed_center_hp_increases": 2,
+      "navigation_reasons": {
+        "map_changed": 68,
+        "dialogue_or_battle": 17,
+        "primitive": 137,
+        "decision_boundary": 54,
+        "limit": 9,
+        "interacted": 16,
+        "unchanged": 29,
+        "confirmed_once": 74
+      },
+      "interaction_block_decisions": 10,
+      "repeated_dialogue_pages": 77,
+      "latency_median": 1.8607574629713781,
+      "last": {
+        "map": {
+          "map_id": 2,
+          "map_name": "Pewter City"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 14,
+            "hp": 20,
+            "max_hp": 38,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 20,
+              "defense": 20,
+              "speed": 24,
+              "special": 22
+            },
+            "ot_id": 12663,
+            "experience": 1910
+          }
+        ],
+        "badges": [
+          "Boulder"
+        ]
+      },
+      "errors": 0,
+      "recoveries": 0,
+      "resource_affected": false
+    },
+    {
+      "run": "04-reactive-bafee48d",
+      "recovery": false,
+      "seed": 8001,
+      "status": "completed",
+      "first": {
+        "starter_observed": 126.38338133698562,
+        "parcel_in_bag": 536.6320167700178,
+        "parcel_delivery_text": 737.8538984559709,
+        "pokedex_receipt_text": 774.9196697130101,
+        "forest_entered": 1349.7139607269783,
+        "forest_north_gate": 1814.5213515369687,
+        "pewter_reached": 1890.6794712669798,
+        "pewter_gym_entered": 2602.2355408549774
+      },
+      "badge_evidence": null,
+      "badge_dialogue": [],
+      "brock_dialogue": [],
+      "onix_min_hp": null,
+      "named_guide_calls": 17,
+      "observed_center_hp_increases": 1,
+      "navigation_reasons": {
+        "map_changed": 55,
+        "dialogue_or_battle": 18,
+        "primitive": 96,
+        "decision_boundary": 79,
+        "limit": 20,
+        "interacted": 20,
+        "unchanged": 14,
+        "confirmed_once": 70,
+        "step_limit": 1
+      },
+      "interaction_block_decisions": 0,
+      "repeated_dialogue_pages": 433,
+      "latency_median": 1.7472039450076409,
+      "last": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 10,
+            "hp": 29,
+            "max_hp": 29,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 25,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 16,
+              "defense": 16,
+              "speed": 18,
+              "special": 16
+            },
+            "ot_id": 12663,
+            "experience": 703
+          }
+        ],
+        "badges": []
+      },
+      "errors": 0,
+      "recoveries": 0,
+      "resource_affected": false
+    },
+    {
+      "run": "05-reactive-8df9229a",
+      "recovery": false,
+      "seed": 8002,
+      "status": "completed",
+      "first": {
+        "starter_observed": 131.62334652798017,
+        "parcel_in_bag": 709.1840962449787,
+        "parcel_delivery_text": 952.7425254890113,
+        "pokedex_receipt_text": 989.6498160160263,
+        "forest_entered": 1273.2762759110192,
+        "forest_north_gate": 2846.9158786939806,
+        "pewter_reached": 2957.254944248998,
+        "pewter_gym_entered": 3083.8242935989983
+      },
+      "badge_evidence": null,
+      "badge_dialogue": [],
+      "brock_dialogue": [
+        {
+          "elapsed": 3197.567352100974,
+          "text": "years from facing BROCK!"
+        },
+        {
+          "elapsed": 3572.8607202109997,
+          "text": "I  BROCK! I  PEWTER  GYM"
+        },
+        {
+          "elapsed": 3574.9932948389906,
+          "text": "I  BROCK! I  PEWTER  GYM"
+        }
+      ],
+      "onix_min_hp": null,
+      "named_guide_calls": 4,
+      "observed_center_hp_increases": 2,
+      "navigation_reasons": {
+        "map_changed": 65,
+        "blocked": 1,
+        "dialogue_or_battle": 25,
+        "primitive": 122,
+        "decision_boundary": 46,
+        "limit": 8,
+        "interacted": 10,
+        "unchanged": 19,
+        "confirmed_once": 60,
+        "step_limit": 1
+      },
+      "interaction_block_decisions": 0,
+      "repeated_dialogue_pages": 99,
+      "latency_median": 1.751213853014633,
+      "last": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 12,
+            "hp": 32,
+            "max_hp": 32,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 25,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 18,
+              "defense": 16,
+              "speed": 21,
+              "special": 20
+            },
+            "ot_id": 12663,
+            "experience": 1043
+          }
+        ],
+        "badges": []
+      },
+      "errors": 0,
+      "recoveries": 0,
+      "resource_affected": false
+    },
+    {
+      "run": "06-reactive-b82a12d0",
+      "recovery": true,
+      "seed": 8002,
+      "status": "completed",
+      "first": {
+        "starter_observed": 127.07769904204179,
+        "parcel_in_bag": 549.393663669005,
+        "parcel_delivery_text": 751.6496934340103,
+        "pokedex_receipt_text": 788.8639784740517,
+        "forest_entered": 1390.8071338900481,
+        "forest_north_gate": 1715.544145421998,
+        "pewter_reached": 1806.3695138900075,
+        "pewter_gym_entered": 1934.2277963520028,
+        "first_badge": 2978.970794024004
+      },
+      "badge_evidence": {
+        "elapsed": 2978.970794024004,
+        "badges": [
+          "Boulder"
+        ],
+        "text": "",
+        "capture": null,
+        "type": "skill_observation"
+      },
+      "badge_dialogue": [
+        {
+          "elapsed": 2931.693659968034,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "elapsed": 2933.8914649100043,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "brock_dialogue": [
+        {
+          "elapsed": 1950.935040078999,
+          "text": "years from facing BROCK!"
+        },
+        {
+          "elapsed": 2218.273862016038,
+          "text": "years from facing BROCK!"
+        },
+        {
+          "elapsed": 2397.4758893160033,
+          "text": "but not as hot as BROCK!"
+        }
+      ],
+      "onix_min_hp": 1,
+      "named_guide_calls": 2,
+      "observed_center_hp_increases": 3,
+      "navigation_reasons": {
+        "map_changed": 73,
+        "dialogue_or_battle": 19,
+        "primitive": 106,
+        "decision_boundary": 48,
+        "limit": 8,
+        "interacted": 13,
+        "unchanged": 29,
+        "confirmed_once": 67
+      },
+      "interaction_block_decisions": 9,
+      "repeated_dialogue_pages": 62,
+      "latency_median": 1.8546540759853087,
+      "last": {
+        "map": {
+          "map_id": 2,
+          "map_name": "Pewter City"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 14,
+            "hp": 36,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 25,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 24,
+              "defense": 21,
+              "speed": 27,
+              "special": 22
+            },
+            "ot_id": 12663,
+            "experience": 1698
+          }
+        ],
+        "badges": [
+          "Boulder"
+        ]
+      },
+      "errors": 0,
+      "recoveries": 0,
+      "resource_affected": false
+    },
+    {
+      "run": "07-reactive-61ce49e4",
+      "recovery": true,
+      "seed": 8003,
+      "status": "completed",
+      "first": {
+        "starter_observed": 127.537868822983,
+        "parcel_in_bag": 606.958847980015,
+        "parcel_delivery_text": 868.033576191985,
+        "pokedex_receipt_text": 905.1622209859779,
+        "forest_entered": 1766.3025580619578,
+        "forest_north_gate": 2183.619909667992,
+        "pewter_reached": 2280.53216852498,
+        "pewter_gym_entered": 2380.058187928982,
+        "first_badge": 3598.594958133006
+      },
+      "badge_evidence": {
+        "elapsed": 3598.594958133006,
+        "badges": [
+          "Boulder"
+        ],
+        "text": "",
+        "capture": null,
+        "type": "skill_observation"
+      },
+      "badge_dialogue": [
+        {
+          "elapsed": 3551.58446163201,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "elapsed": 3553.8105541929835,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "brock_dialogue": [
+        {
+          "elapsed": 2396.642184178985,
+          "text": "years from facing BROCK!"
+        },
+        {
+          "elapsed": 2646.951980179001,
+          "text": "years from facing BROCK!"
+        },
+        {
+          "elapsed": 2934.4498820499866,
+          "text": "I  BROCK! I  PEWTER  GYM"
+        }
+      ],
+      "onix_min_hp": 2,
+      "named_guide_calls": 1,
+      "observed_center_hp_increases": 3,
+      "navigation_reasons": {
+        "map_changed": 55,
+        "dialogue_or_battle": 22,
+        "primitive": 153,
+        "decision_boundary": 49,
+        "limit": 9,
+        "interacted": 10,
+        "unchanged": 30,
+        "confirmed_once": 75
+      },
+      "interaction_block_decisions": 2,
+      "repeated_dialogue_pages": 56,
+      "latency_median": 1.8411795240244828,
+      "last": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 14,
+            "hp": 10,
+            "max_hp": 37,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 22,
+              "defense": 19,
+              "speed": 24,
+              "special": 22
+            },
+            "ot_id": 12663,
+            "experience": 1996
+          }
+        ],
+        "badges": [
+          "Boulder"
+        ]
+      },
+      "errors": 0,
+      "recoveries": 0,
+      "resource_affected": false
+    },
+    {
+      "run": "08-reactive-dd1aa736",
+      "recovery": false,
+      "seed": 8003,
+      "status": "completed",
+      "first": {
+        "starter_observed": 130.75405286898604,
+        "parcel_in_bag": 485.51859009900363,
+        "parcel_delivery_text": 725.334694198973,
+        "pokedex_receipt_text": 762.1714560969849,
+        "forest_entered": 1102.6596135929576,
+        "forest_north_gate": 2147.7482982949587,
+        "pewter_reached": 2292.9581865709624,
+        "pewter_gym_entered": 2390.490657794988,
+        "first_badge": 3305.8994629170047
+      },
+      "badge_evidence": {
+        "elapsed": 3305.8994629170047,
+        "badges": [
+          "Boulder"
+        ],
+        "text": "",
+        "capture": null,
+        "type": "skill_observation"
+      },
+      "badge_dialogue": [
+        {
+          "elapsed": 3259.695361641003,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "elapsed": 3261.891135333979,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "brock_dialogue": [
+        {
+          "elapsed": 2504.5325316349627,
+          "text": "years from facing BROCK!"
+        },
+        {
+          "elapsed": 2926.362875206978,
+          "text": "I  BROCK! I  PEWTER  GYM"
+        },
+        {
+          "elapsed": 2928.553437141003,
+          "text": "I  BROCK! I  PEWTER  GYM"
+        }
+      ],
+      "onix_min_hp": 1,
+      "named_guide_calls": 4,
+      "observed_center_hp_increases": 2,
+      "navigation_reasons": {
+        "map_changed": 60,
+        "blocked": 1,
+        "dialogue_or_battle": 22,
+        "primitive": 137,
+        "decision_boundary": 61,
+        "limit": 9,
+        "interacted": 19,
+        "unchanged": 27,
+        "confirmed_once": 72
+      },
+      "interaction_block_decisions": 0,
+      "repeated_dialogue_pages": 145,
+      "latency_median": 1.737135538016446,
+      "last": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 14,
+            "hp": 11,
+            "max_hp": 35,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 10,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 21,
+              "defense": 18,
+              "speed": 24,
+              "special": 23
+            },
+            "ot_id": 12663,
+            "experience": 1656
+          }
+        ],
+        "badges": [
+          "Boulder"
+        ]
+      },
+      "errors": 0,
+      "recoveries": 0,
+      "resource_affected": false
+    }
+  ]
+}

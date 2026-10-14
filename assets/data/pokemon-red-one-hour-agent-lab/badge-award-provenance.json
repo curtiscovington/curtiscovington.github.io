@@ -1,0 +1,13 @@
+{
+  "batch": "20261013-105028-575ffb",
+  "run": "08-reactive-dd1aa736",
+  "condition": "keep destination after battle (baseline)",
+  "seed": 8003,
+  "source_frame": "frames/000579.png",
+  "observation_elapsed_seconds": 3263.0503653349588,
+  "first_receipt_dialogue_elapsed_seconds": 3261.891135333979,
+  "first_badge_state_elapsed_seconds": 3305.8994629170047,
+  "sha256": "d1047cd6bba4404ba8d1e5ae506efcdd47682ede89be86e137b666146b7ea19a",
+  "transformations": "None. Original 160x144 PNG copied byte-for-byte; displayed larger using pixel-preserving CSS.",
+  "text": "AAAAAAA received the BOULDERBADGE!"
+}

@@ -1,0 +1,1078 @@
+{
+  "batch": "20261013-105028-575ffb",
+  "run": "02-reactive-1f47de99",
+  "selection": "Observation state fields from3380\u20133413seconds. Outcome: no badge.",
+  "events": [
+    {
+      "type": "skill_observation",
+      "elapsed": 3380.3181554569746,
+      "state": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 12,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 14,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "battle": {
+          "in_battle": true,
+          "type": "trainer",
+          "enemy": {
+            "species_id": 34,
+            "dex_number": 95,
+            "species": "Onix",
+            "level": 14,
+            "hp": 10,
+            "max_hp": 36,
+            "status": "OK",
+            "moves": [
+              "Tackle",
+              "Screech",
+              "Bide"
+            ]
+          }
+        },
+        "interface": {
+          "menu_options": [
+            {
+              "label": "SCRATCH",
+              "x": 5,
+              "y": 13
+            },
+            {
+              "label": "GROWL",
+              "x": 5,
+              "y": 14
+            },
+            {
+              "label": "EMBER",
+              "x": 5,
+              "y": 15
+            }
+          ],
+          "menu_cursor": {
+            "x": 5,
+            "y": 15
+          },
+          "kind": "battle",
+          "text": [
+            "ONIX",
+            "CHARMANDER",
+            "TYPE",
+            "FIRE",
+            "SCRATCH",
+            "GROWL",
+            "EMBER"
+          ],
+          "navigation_available": false,
+          "controls": "Use battle controls."
+        }
+      }
+    },
+    {
+      "type": "observation",
+      "elapsed": 3381.492225613969,
+      "state": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 12,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "battle": {
+          "in_battle": true,
+          "type": "trainer",
+          "enemy": {
+            "species_id": 34,
+            "dex_number": 95,
+            "species": "Onix",
+            "level": 14,
+            "hp": 10,
+            "max_hp": 36,
+            "status": "OK",
+            "moves": [
+              "Tackle",
+              "Screech",
+              "Bide"
+            ]
+          }
+        },
+        "interface": {
+          "kind": "battle",
+          "text": [
+            "ONIX",
+            "CHARMANDER",
+            "CHARMANDER",
+            "used EMBER!"
+          ],
+          "navigation_available": false,
+          "controls": "Use battle controls."
+        }
+      }
+    },
+    {
+      "type": "observation",
+      "elapsed": 3384.0613075169967,
+      "state": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 12,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "battle": {
+          "in_battle": true,
+          "type": "trainer",
+          "enemy": {
+            "species_id": 34,
+            "dex_number": 95,
+            "species": "Onix",
+            "level": 14,
+            "hp": 5,
+            "max_hp": 36,
+            "status": "OK",
+            "moves": [
+              "Tackle",
+              "Screech",
+              "Bide"
+            ]
+          }
+        },
+        "interface": {
+          "kind": "battle",
+          "text": [
+            "ONIX",
+            "CHARMANDER",
+            "CHARMANDER",
+            "used EMBER!"
+          ],
+          "navigation_available": false,
+          "controls": "Use battle controls."
+        }
+      }
+    },
+    {
+      "type": "observation",
+      "elapsed": 3386.31172012398,
+      "state": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 12,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "battle": {
+          "in_battle": true,
+          "type": "trainer",
+          "enemy": {
+            "species_id": 34,
+            "dex_number": 95,
+            "species": "Onix",
+            "level": 14,
+            "hp": 5,
+            "max_hp": 36,
+            "status": "OK",
+            "moves": [
+              "Tackle",
+              "Screech",
+              "Bide"
+            ]
+          }
+        },
+        "interface": {
+          "kind": "battle",
+          "text": [
+            "ONIX",
+            "CHARMANDER",
+            "It  not very",
+            "effective..."
+          ],
+          "navigation_available": false,
+          "controls": "Use battle controls."
+        }
+      }
+    },
+    {
+      "type": "observation",
+      "elapsed": 3390.626555412018,
+      "state": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 12,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "battle": {
+          "in_battle": true,
+          "type": "trainer",
+          "enemy": {
+            "species_id": 34,
+            "dex_number": 95,
+            "species": "Onix",
+            "level": 14,
+            "hp": 5,
+            "max_hp": 36,
+            "status": "OK",
+            "moves": [
+              "Tackle",
+              "Screech",
+              "Bide"
+            ]
+          }
+        },
+        "interface": {
+          "menu_options": [
+            {
+              "label": "FIGHT",
+              "x": 9,
+              "y": 14
+            },
+            {
+              "label": "ITEM",
+              "x": 9,
+              "y": 16
+            },
+            {
+              "label": "RUN",
+              "x": 15,
+              "y": 16
+            }
+          ],
+          "menu_cursor": {
+            "x": 9,
+            "y": 14
+          },
+          "kind": "battle",
+          "text": [
+            "ONIX",
+            "CHARMANDER",
+            "FIGHT",
+            "ITEM  RUN"
+          ],
+          "navigation_available": false,
+          "controls": "Use battle controls."
+        }
+      }
+    },
+    {
+      "type": "skill_observation",
+      "elapsed": 3393.250403283979,
+      "state": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 12,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "battle": {
+          "in_battle": true,
+          "type": "trainer",
+          "enemy": {
+            "species_id": 34,
+            "dex_number": 95,
+            "species": "Onix",
+            "level": 14,
+            "hp": 5,
+            "max_hp": 36,
+            "status": "OK",
+            "moves": [
+              "Tackle",
+              "Screech",
+              "Bide"
+            ]
+          }
+        },
+        "interface": {
+          "menu_options": [
+            {
+              "label": "FIGHT",
+              "x": 9,
+              "y": 14
+            },
+            {
+              "label": "ITEM",
+              "x": 9,
+              "y": 16
+            },
+            {
+              "label": "RUN",
+              "x": 15,
+              "y": 16
+            }
+          ],
+          "menu_cursor": {
+            "x": 9,
+            "y": 14
+          },
+          "kind": "battle",
+          "text": [
+            "ONIX",
+            "CHARMANDER",
+            "FIGHT",
+            "ITEM  RUN"
+          ],
+          "navigation_available": false,
+          "controls": "Use battle controls."
+        }
+      }
+    },
+    {
+      "type": "skill_observation",
+      "elapsed": 3394.1671516060014,
+      "state": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 12,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "battle": {
+          "in_battle": true,
+          "type": "trainer",
+          "enemy": {
+            "species_id": 34,
+            "dex_number": 95,
+            "species": "Onix",
+            "level": 14,
+            "hp": 5,
+            "max_hp": 36,
+            "status": "OK",
+            "moves": [
+              "Tackle",
+              "Screech",
+              "Bide"
+            ]
+          }
+        },
+        "interface": {
+          "menu_options": [
+            {
+              "label": "SCRATCH",
+              "x": 5,
+              "y": 13
+            },
+            {
+              "label": "GROWL",
+              "x": 5,
+              "y": 14
+            },
+            {
+              "label": "EMBER",
+              "x": 5,
+              "y": 15
+            }
+          ],
+          "menu_cursor": {
+            "x": 5,
+            "y": 15
+          },
+          "kind": "battle",
+          "text": [
+            "ONIX",
+            "CHARMANDER",
+            "TYPE",
+            "FIRE",
+            "SCRATCH",
+            "GROWL",
+            "EMBER"
+          ],
+          "navigation_available": false,
+          "controls": "Use battle controls."
+        }
+      }
+    },
+    {
+      "type": "observation",
+      "elapsed": 3395.688244846009,
+      "state": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 12,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "battle": {
+          "in_battle": true,
+          "type": "trainer",
+          "enemy": {
+            "species_id": 34,
+            "dex_number": 95,
+            "species": "Onix",
+            "level": 14,
+            "hp": 5,
+            "max_hp": 36,
+            "status": "OK",
+            "moves": [
+              "Tackle",
+              "Screech",
+              "Bide"
+            ]
+          }
+        },
+        "interface": {
+          "kind": "battle",
+          "text": [
+            "ONIX",
+            "CHARMANDER",
+            "Enemy ONIX",
+            "unleashed energy!"
+          ],
+          "navigation_available": false,
+          "controls": "Use battle controls."
+        }
+      }
+    },
+    {
+      "type": "observation",
+      "elapsed": 3400.0331573779695,
+      "state": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 12,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "battle": {
+          "in_battle": true,
+          "type": "trainer",
+          "enemy": {
+            "species_id": 34,
+            "dex_number": 95,
+            "species": "Onix",
+            "level": 14,
+            "hp": 5,
+            "max_hp": 36,
+            "status": "OK",
+            "moves": [
+              "Tackle",
+              "Screech",
+              "Bide"
+            ]
+          }
+        },
+        "interface": {
+          "kind": "battle",
+          "text": [
+            "ONIX",
+            "CHARMANDER",
+            "Enemy ONIX",
+            "unleashed energy!"
+          ],
+          "navigation_available": false,
+          "controls": "Use battle controls."
+        }
+      }
+    },
+    {
+      "type": "observation",
+      "elapsed": 3402.8885063789785,
+      "state": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 0,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "battle": {
+          "in_battle": true,
+          "type": "trainer",
+          "enemy": {
+            "species_id": 34,
+            "dex_number": 95,
+            "species": "Onix",
+            "level": 14,
+            "hp": 5,
+            "max_hp": 36,
+            "status": "OK",
+            "moves": [
+              "Tackle",
+              "Screech",
+              "Bide"
+            ]
+          }
+        },
+        "interface": {
+          "kind": "battle",
+          "text": [
+            "ONIX",
+            "CHARMANDER",
+            "fainted!"
+          ],
+          "navigation_available": false,
+          "controls": "Use battle controls."
+        }
+      }
+    },
+    {
+      "type": "observation",
+      "elapsed": 3407.3131084479974,
+      "state": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 0,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "battle": {
+          "in_battle": true,
+          "type": "trainer",
+          "enemy": {
+            "species_id": 34,
+            "dex_number": 95,
+            "species": "Onix",
+            "level": 14,
+            "hp": 5,
+            "max_hp": 36,
+            "status": "OK",
+            "moves": [
+              "Tackle",
+              "Screech",
+              "Bide"
+            ]
+          }
+        },
+        "interface": {
+          "kind": "battle",
+          "text": [
+            "ONIX",
+            "AAAAAAA is out of",
+            "useable POK\u00e9MON!"
+          ],
+          "navigation_available": false,
+          "controls": "Use battle controls."
+        }
+      }
+    },
+    {
+      "type": "observation",
+      "elapsed": 3411.526847942965,
+      "state": {
+        "map": {
+          "map_id": 54,
+          "map_name": "Pewter Gym"
+        },
+        "party": [
+          {
+            "species_id": 176,
+            "dex_number": 4,
+            "species": "Charmander",
+            "nickname": "CHARMANDER",
+            "level": 13,
+            "hp": 0,
+            "max_hp": 36,
+            "status": "OK",
+            "types": [
+              "Fire"
+            ],
+            "moves": [
+              {
+                "id": 10,
+                "name": "Scratch",
+                "pp": 35,
+                "pp_up": 0
+              },
+              {
+                "id": 45,
+                "name": "Growl",
+                "pp": 40,
+                "pp_up": 0
+              },
+              {
+                "id": 52,
+                "name": "Ember",
+                "pp": 13,
+                "pp_up": 0
+              }
+            ],
+            "stats": {
+              "attack": 23,
+              "defense": 18,
+              "speed": 26,
+              "special": 19
+            },
+            "ot_id": 12663,
+            "experience": 1531
+          }
+        ],
+        "battle": {
+          "in_battle": true,
+          "type": "trainer",
+          "enemy": {
+            "species_id": 34,
+            "dex_number": 95,
+            "species": "Onix",
+            "level": 14,
+            "hp": 5,
+            "max_hp": 36,
+            "status": "OK",
+            "moves": [
+              "Tackle",
+              "Screech",
+              "Bide"
+            ]
+          }
+        },
+        "interface": {
+          "kind": "battle",
+          "text": [
+            "ONIX",
+            "AAAAAAA blacked",
+            "out!"
+          ],
+          "navigation_available": false,
+          "controls": "Use battle controls."
+        }
+      }
+    }
+  ]
+}

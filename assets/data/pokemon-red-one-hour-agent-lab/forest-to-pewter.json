@@ -1,0 +1,62 @@
+{
+  "batch": "20261012-170425-432bbf",
+  "run": "06-reactive-473bdd13",
+  "status": "completed",
+  "navigation_revision": "boundary-warps-v2",
+  "selection": "First main observation in map47 and map2; only map/player state fields retained. This is a selected successful run, not a success-rate estimate.",
+  "source_events_sha256": "19c2e29ae1ec9c3f0e6c6c900d3e65122e02db935f800f25799c05f5d26fa373",
+  "events": [
+    {
+      "type": "observation",
+      "run_id": "06-reactive-473bdd13",
+      "ts": 1791870196.9032202,
+      "elapsed": 2181.96866557101,
+      "capture": "frames/000349.png",
+      "state": {
+        "map": {
+          "map_id": 47,
+          "map_name": "Viridian Forest North Gate"
+        },
+        "player": {
+          "name": "AAAAAAA",
+          "rival_name": "AAAAAAA",
+          "money": 1677,
+          "badges": [],
+          "badge_count": 0,
+          "position": {
+            "y": 7,
+            "x": 4
+          },
+          "facing": "up",
+          "play_time": "0:00:37"
+        }
+      }
+    },
+    {
+      "type": "observation",
+      "run_id": "06-reactive-473bdd13",
+      "ts": 1791870395.529232,
+      "elapsed": 2380.5946776290075,
+      "capture": "frames/000372.png",
+      "state": {
+        "map": {
+          "map_id": 2,
+          "map_name": "Pewter City"
+        },
+        "player": {
+          "name": "AAAAAAA",
+          "rival_name": "AAAAAAA",
+          "money": 1677,
+          "badges": [],
+          "badge_count": 0,
+          "position": {
+            "y": 35,
+            "x": 19
+          },
+          "facing": "up",
+          "play_time": "0:00:40"
+        }
+      }
+    }
+  ]
+}
