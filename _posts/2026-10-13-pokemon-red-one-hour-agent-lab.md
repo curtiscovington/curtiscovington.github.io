@@ -27,6 +27,8 @@ The most useful finding came from investigating the failures in between. **Some 
 
 Replaying saved games and checking the records helped distinguish bad decisions from broken ways to carry them out.
 
+![A four-panel black-and-white research comic showing a slow start, repairs to the controls, reaching the gym, and four badge wins across eight runs.](/img/posts/pokemon-red-one-hour-agent-lab/social-preview.png)
+
 ### TL;DR
 
 Investigating a local Pokémon agent’s stalls exposed broken controls and misleading game-state labels. In this small batch, all eight runs entered Pewter Gym; three of four with extra recovery controls earned a badge, versus one of four without. **Checking what the agent can actually see and do became as important as checking what it decides.**
