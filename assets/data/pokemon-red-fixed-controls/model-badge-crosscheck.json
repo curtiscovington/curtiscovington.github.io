@@ -1,0 +1,644 @@
+[
+  {
+    "batch": "20261013-105028-575ffb",
+    "run": "01-reactive-299e5504",
+    "recovery": false,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 8000,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 663,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261013-105028-575ffb",
+    "run": "02-reactive-1f47de99",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 8000,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 575,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261013-105028-575ffb",
+    "run": "03-reactive-a9da5339",
+    "recovery": true,
+    "badge_event": {
+      "elapsed": 3502.89066619199,
+      "line": 5822
+    },
+    "receipt": [
+      {
+        "elapsed": 3455.9106638320372,
+        "text": "victory, here the BOULDERBADGE!"
+      },
+      {
+        "elapsed": 3458.0950141290086,
+        "text": "AAAAAAA received the BOULDERBADGE!"
+      }
+    ],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 8001,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 611,
+    "final_badges": [
+      "Boulder"
+    ],
+    "save_badges": [
+      "Boulder"
+    ]
+  },
+  {
+    "batch": "20261013-105028-575ffb",
+    "run": "04-reactive-bafee48d",
+    "recovery": false,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 8001,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 504,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261013-105028-575ffb",
+    "run": "05-reactive-8df9229a",
+    "recovery": false,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 8002,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 539,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261013-105028-575ffb",
+    "run": "06-reactive-b82a12d0",
+    "recovery": true,
+    "badge_event": {
+      "elapsed": 2978.970794024004,
+      "line": 4944
+    },
+    "receipt": [
+      {
+        "elapsed": 2931.693659968034,
+        "text": "victory, here the BOULDERBADGE!"
+      },
+      {
+        "elapsed": 2933.8914649100043,
+        "text": "AAAAAAA received the BOULDERBADGE!"
+      }
+    ],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 8002,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 560,
+    "final_badges": [
+      "Boulder"
+    ],
+    "save_badges": [
+      "Boulder"
+    ]
+  },
+  {
+    "batch": "20261013-105028-575ffb",
+    "run": "07-reactive-61ce49e4",
+    "recovery": true,
+    "badge_event": {
+      "elapsed": 3598.594958133006,
+      "line": 5921
+    },
+    "receipt": [
+      {
+        "elapsed": 3551.58446163201,
+        "text": "victory, here the BOULDERBADGE!"
+      },
+      {
+        "elapsed": 3553.8105541929835,
+        "text": "AAAAAAA received the BOULDERBADGE!"
+      }
+    ],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 8003,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 599,
+    "final_badges": [
+      "Boulder"
+    ],
+    "save_badges": [
+      "Boulder"
+    ]
+  },
+  {
+    "batch": "20261013-105028-575ffb",
+    "run": "08-reactive-dd1aa736",
+    "recovery": false,
+    "badge_event": {
+      "elapsed": 3305.8994629170047,
+      "line": 5643
+    },
+    "receipt": [
+      {
+        "elapsed": 3259.695361641003,
+        "text": "victory, here the BOULDERBADGE!"
+      },
+      {
+        "elapsed": 3261.891135333979,
+        "text": "AAAAAAA received the BOULDERBADGE!"
+      }
+    ],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 8003,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 614,
+    "final_badges": [
+      "Boulder"
+    ],
+    "save_badges": [
+      "Boulder"
+    ]
+  },
+  {
+    "batch": "20261013-224756-83c7c2",
+    "run": "03-reactive-80775948",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 9000,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 502,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261013-224756-83c7c2",
+    "run": "05-reactive-5cac7b53",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 9001,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 605,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261013-224756-83c7c2",
+    "run": "07-reactive-558485b3",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 9002,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 536,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261013-224756-83c7c2",
+    "run": "10-reactive-be08df25",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 9003,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 545,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261013-224756-83c7c2",
+    "run": "15-reactive-9d17c3d7",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [
+      {
+        "elapsed": 1269.5456508980133,
+        "text": "You don  have the BOULDERBADGE yet!"
+      },
+      {
+        "elapsed": 1270.4470146570238,
+        "text": "You don  have the BOULDERBADGE yet!"
+      }
+    ],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 9004,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 530,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "03-reactive-3f3ae61d",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10000,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 642,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "05-reactive-94d1f052",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10001,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 469,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "07-reactive-1bae2148",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10002,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 613,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "10-reactive-a3fe2533",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10003,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 548,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "15-reactive-43112f78",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10004,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 626,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "17-reactive-87092e5d",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10005,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 558,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "21-reactive-7c996b9e",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10006,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 530,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "23-reactive-f442ad40",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [
+      {
+        "elapsed": 2509.144242216018,
+        "text": "You don  have the BOULDERBADGE yet!"
+      },
+      {
+        "elapsed": 2510.0593834440224,
+        "text": "You don  have the BOULDERBADGE yet!"
+      }
+    ],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10007,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 559,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "25-reactive-86caff46",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10008,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 560,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "28-reactive-c83f4a58",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10009,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 559,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "33-reactive-dae8fb74",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10010,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 572,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "35-reactive-5b4d0859",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10011,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 560,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "39-reactive-76efdad3",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10012,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 542,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "41-reactive-03678850",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10013,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 573,
+    "final_badges": [],
+    "save_badges": []
+  },
+  {
+    "batch": "20261015-132403-64e4d3",
+    "run": "43-reactive-fe1b6814",
+    "recovery": true,
+    "badge_event": null,
+    "receipt": [],
+    "request": {
+      "model": "qwen3.8-flash-next:iq4_nl",
+      "think": false,
+      "options": {
+        "temperature": 0.2,
+        "seed": 10014,
+        "num_ctx": 8192,
+        "num_predict": 64
+      }
+    },
+    "responses": 637,
+    "final_badges": [],
+    "save_badges": []
+  }
+]

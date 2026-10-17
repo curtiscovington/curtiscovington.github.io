@@ -1,0 +1,148 @@
+{
+  "arms": {
+    "random": {
+      "badges": 0,
+      "n": 15,
+      "wilson95": [
+        0,
+        0.20388330103584862
+      ],
+      "badge_restricted_mean_seconds_3600": 3600.0,
+      "milestones": {
+        "parcel_delivery_text": {
+          "completed": 2,
+          "n": 15,
+          "restricted_mean_seconds_3600": 3561.2900428766075
+        },
+        "parcel_in_bag": {
+          "completed": 5,
+          "n": 15,
+          "restricted_mean_seconds_3600": 3323.3408516991262
+        },
+        "pokedex_receipt_text": {
+          "completed": 1,
+          "n": 15,
+          "restricted_mean_seconds_3600": 3565.957351663468
+        },
+        "starter_observed": {
+          "completed": 15,
+          "n": 15,
+          "restricted_mean_seconds_3600": 705.4745224018582
+        }
+      },
+      "manual_reviews_pending": 15
+    },
+    "scripted": {
+      "badges": 12,
+      "n": 15,
+      "wilson95": [
+        0.5481455128483065,
+        0.9295245065301844
+      ],
+      "badge_restricted_mean_seconds_3600": 3004.7210075466737,
+      "milestones": {
+        "first_badge": {
+          "completed": 12,
+          "n": 15,
+          "restricted_mean_seconds_3600": 3004.7210075466737
+        },
+        "forest_entered": {
+          "completed": 15,
+          "n": 15,
+          "restricted_mean_seconds_3600": 994.7121392157394
+        },
+        "forest_north_gate": {
+          "completed": 15,
+          "n": 15,
+          "restricted_mean_seconds_3600": 1492.4427671382748
+        },
+        "parcel_delivery_text": {
+          "completed": 15,
+          "n": 15,
+          "restricted_mean_seconds_3600": 590.9860859178007
+        },
+        "parcel_in_bag": {
+          "completed": 15,
+          "n": 15,
+          "restricted_mean_seconds_3600": 429.04352842113
+        },
+        "pewter_gym_entered": {
+          "completed": 15,
+          "n": 15,
+          "restricted_mean_seconds_3600": 1638.6492609707327
+        },
+        "pewter_reached": {
+          "completed": 15,
+          "n": 15,
+          "restricted_mean_seconds_3600": 1543.5848692158702
+        },
+        "pokedex_receipt_text": {
+          "completed": 15,
+          "n": 15,
+          "restricted_mean_seconds_3600": 624.3766139319322
+        },
+        "starter_observed": {
+          "completed": 15,
+          "n": 15,
+          "restricted_mean_seconds_3600": 107.16880003625216
+        }
+      },
+      "manual_reviews_pending": 15
+    },
+    "reactive": {
+      "badges": 0,
+      "n": 15,
+      "wilson95": [
+        0,
+        0.20388330103584862
+      ],
+      "badge_restricted_mean_seconds_3600": 3600.0,
+      "milestones": {
+        "forest_entered": {
+          "completed": 14,
+          "n": 15,
+          "restricted_mean_seconds_3600": 1701.0344791565944
+        },
+        "forest_north_gate": {
+          "completed": 13,
+          "n": 15,
+          "restricted_mean_seconds_3600": 2515.1390829536053
+        },
+        "parcel_delivery_text": {
+          "completed": 14,
+          "n": 15,
+          "restricted_mean_seconds_3600": 1264.0110670285999
+        },
+        "parcel_in_bag": {
+          "completed": 15,
+          "n": 15,
+          "restricted_mean_seconds_3600": 567.932524052596
+        },
+        "pewter_gym_entered": {
+          "completed": 9,
+          "n": 15,
+          "restricted_mean_seconds_3600": 2986.3093039197847
+        },
+        "pewter_reached": {
+          "completed": 13,
+          "n": 15,
+          "restricted_mean_seconds_3600": 2638.904226240399
+        },
+        "pokedex_receipt_text": {
+          "completed": 14,
+          "n": 15,
+          "restricted_mean_seconds_3600": 1298.8541920184002
+        },
+        "starter_observed": {
+          "completed": 15,
+          "n": 15,
+          "restricted_mean_seconds_3600": 132.27427313099616
+        }
+      },
+      "manual_reviews_pending": 15
+    }
+  },
+  "primary_model_vs_script_fisher_two_sided_p": 1.0521055261842763e-05,
+  "alpha": 0.05,
+  "interpretation": "Primary test assumes independent repeated trials; policy seeds do not reseed game RNG. Pending trace review precludes final publication. Secondary milestones exploratory; unreached are censored at3600."
+}

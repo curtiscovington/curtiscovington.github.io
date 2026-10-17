@@ -1,0 +1,6891 @@
+{
+  "batch": "20261015-132403-64e4d3",
+  "scope": "Same full-log checks for all45 runs: badge state/award dialogue, offered-action legality, Brock/Onix evidence, named moves/guide calls, observed center HP increases, navigation reasons, errors and deterministic first/every100th request samples. Not exhaustive manual review of every frame. Existing policy-audit manual_review flags remain untouched; this is a separate uniform log audit.",
+  "runs": [
+    {
+      "run": "01-random-58ce08c7",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 693.6393259559991
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 27
+      },
+      "navigation_reasons": {
+        "primitive": 1116,
+        "map_changed": 43,
+        "confirmed_once": 42,
+        "interacted": 60,
+        "decision_boundary": 53,
+        "menu_changed": 8,
+        "dialogue_or_battle": 24,
+        "limit": 2,
+        "unchanged": 3,
+        "blocked": 3
+      },
+      "named_move_actions": {
+        "use:TACKLE": 9
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.23057810496538877,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 992,
+          "seconds": 229.2022748979507,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 2005,
+          "seconds": 468.7547333110124,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 2986,
+          "seconds": 709.6033669009339,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 3905,
+          "seconds": 869.6037587529281,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4918,
+          "seconds": 1120.198183903005,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 14
+        },
+        {
+          "line": 5893,
+          "seconds": 1324.5581941489363,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 16
+        },
+        {
+          "line": 6983,
+          "seconds": 1646.15293761692,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 16
+        },
+        {
+          "line": 7972,
+          "seconds": 1865.5379726879764,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 21
+        },
+        {
+          "line": 9181,
+          "seconds": 2265.062734700972,
+          "map": "Blues House",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 10130,
+          "seconds": 2460.555892036995,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 11213,
+          "seconds": 2770.437407171936,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 12318,
+          "seconds": 3106.2823209909257,
+          "map": "Viridian City",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 13290,
+          "seconds": 3339.072820693953,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 14
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 570
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "requests": 175
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 172
+        }
+      ]
+    },
+    {
+      "run": "02-scripted-0093cd7c",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 107.44882544293068,
+        "parcel_in_bag": 353.650503541925,
+        "parcel_delivery_text": 459.8387412499869,
+        "pokedex_receipt_text": 493.0986011789646,
+        "forest_entered": 992.3777327549178,
+        "forest_north_gate": 1287.7094281240134,
+        "pewter_reached": 1341.755388534977,
+        "pewter_gym_entered": 1429.1248935980257,
+        "first_badge": 2571.4548906550044
+      },
+      "badge": {
+        "line": 9623,
+        "seconds": 2571.4548906550044
+      },
+      "award_dialogue": [
+        {
+          "line": 9519,
+          "seconds": 2530.2102783479495,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "line": 9521,
+          "seconds": 2532.4036032509757,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        },
+        {
+          "line": 9523,
+          "seconds": 2533.333527539973,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "final_badges": [
+        "Boulder"
+      ],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 42
+      },
+      "navigation_reasons": {
+        "map_changed": 62,
+        "dialogue_or_battle": 26,
+        "decision_boundary": 72,
+        "primitive": 611,
+        "limit": 11,
+        "interacted": 31,
+        "confirmed_once": 96,
+        "unchanged": 78,
+        "blocked": 2
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 35,
+        "use:EMBER": 57
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 3,
+      "center_hp_increases": 4,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22592337999958545,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1145,
+          "seconds": 352.28567878191825,
+          "map": "Viridian Mart",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 2374,
+          "seconds": 722.7105944319628,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3521,
+          "seconds": 1037.3096049570013,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4661,
+          "seconds": 1365.418766223942,
+          "map": "Pewter Pokecenter",
+          "objective": "heal_team",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 5896,
+          "seconds": 1750.3502596969483,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6924,
+          "seconds": 1975.3822218850255,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7961,
+          "seconds": 2200.5874222029233,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8976,
+          "seconds": 2430.0936517679365,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10359,
+          "seconds": 2963.741138283978,
+          "map": "Pewter City",
+          "objective": "continue_journey",
+          "interface": "overworld",
+          "offered": 29
+        },
+        {
+          "line": 11793,
+          "seconds": 3525.464069310925,
+          "map": "Route 3",
+          "objective": "continue_journey",
+          "interface": "battle",
+          "offered": 17
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 222
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 128
+        },
+        {
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "requests": 100
+        }
+      ]
+    },
+    {
+      "run": "03-reactive-3f3ae61d",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 127.46776651102118,
+        "parcel_in_bag": 656.8842042669421,
+        "parcel_delivery_text": 974.9041294689523,
+        "pokedex_receipt_text": 1012.3101890279213,
+        "forest_entered": 1518.363745106035,
+        "forest_north_gate": 1979.451566735981,
+        "pewter_reached": 2058.041332502966,
+        "pewter_gym_entered": 2187.985382781946
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 218
+      },
+      "navigation_reasons": {
+        "map_changed": 45,
+        "dialogue_or_battle": 22,
+        "primitive": 169,
+        "decision_boundary": 58,
+        "limit": 8,
+        "interacted": 13,
+        "unchanged": 27,
+        "confirmed_once": 81
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 39,
+        "use:EMBER": 40
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 3,
+      "center_hp_increases": 4,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.23462933592963964,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 959,
+          "seconds": 474.5817223379854,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2163,
+          "seconds": 1144.762302711024,
+          "map": "Route 1",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 3225,
+          "seconds": 1724.9714056520024,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 4377,
+          "seconds": 2342.878172533936,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5476,
+          "seconds": 2910.030752263963,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6466,
+          "seconds": 3378.2879193129484,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 117
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 113
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 93
+        }
+      ]
+    },
+    {
+      "run": "04-scripted-98267a11",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 107.31112994602881,
+        "parcel_in_bag": 455.6027880180627,
+        "parcel_delivery_text": 604.7156012610067,
+        "pokedex_receipt_text": 638.5955346149858,
+        "forest_entered": 1041.5967787220143,
+        "forest_north_gate": 1789.481332504074,
+        "pewter_reached": 1843.290632258053,
+        "pewter_gym_entered": 1930.1734054150293,
+        "first_badge": 3269.38568695297
+      },
+      "badge": {
+        "line": 12034,
+        "seconds": 3269.38568695297
+      },
+      "award_dialogue": [
+        {
+          "line": 11930,
+          "seconds": 3228.5767310040537,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "line": 11932,
+          "seconds": 3230.7526846010005,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        },
+        {
+          "line": 11934,
+          "seconds": 3231.661409019027,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "final_badges": [
+        "Boulder"
+      ],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 39
+      },
+      "navigation_reasons": {
+        "map_changed": 61,
+        "dialogue_or_battle": 28,
+        "decision_boundary": 55,
+        "primitive": 724,
+        "limit": 12,
+        "interacted": 19,
+        "confirmed_once": 108,
+        "unchanged": 53,
+        "blocked": 2
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 42,
+        "use:EMBER": 64
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 2,
+      "center_hp_increases": 3,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.2250076449709013,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1001,
+          "seconds": 241.89755465497728,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "transition",
+          "offered": 11
+        },
+        {
+          "line": 2184,
+          "seconds": 605.9066957910545,
+          "map": "Oaks Lab",
+          "objective": "deliver_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 3416,
+          "seconds": 993.3986260159872,
+          "map": "Route 2",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4523,
+          "seconds": 1292.2780920710647,
+          "map": "Viridian Forest",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5843,
+          "seconds": 1755.7996841140557,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7038,
+          "seconds": 2118.9293415889842,
+          "map": "Pewter Pokecenter",
+          "objective": "recover_team",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 8108,
+          "seconds": 2360.0002939270344,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9192,
+          "seconds": 2645.1113714620005,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10242,
+          "seconds": 2878.326584447059,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 11273,
+          "seconds": 3106.125373521005,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 12615,
+          "seconds": 3581.7380109810038,
+          "map": "Pewter City",
+          "objective": "continue_journey",
+          "interface": "overworld",
+          "offered": 29
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 219
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 195
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 113
+        }
+      ]
+    },
+    {
+      "run": "05-reactive-94d1f052",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 133.0907036869321,
+        "parcel_in_bag": 586.7389806179563,
+        "parcel_delivery_text": 710.8137359629618,
+        "pokedex_receipt_text": 747.6766655460233,
+        "forest_entered": 1620.8892716289265,
+        "forest_north_gate": 2850.586273932946,
+        "pewter_reached": 2883.573809713009
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 162
+      },
+      "navigation_reasons": {
+        "map_changed": 97,
+        "blocked": 1,
+        "dialogue_or_battle": 26,
+        "primitive": 76,
+        "decision_boundary": 45,
+        "limit": 5,
+        "interacted": 3,
+        "unchanged": 15,
+        "confirmed_once": 39
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 30,
+        "use:EMBER": 8
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 1,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.22224954597186297,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 953,
+          "seconds": 476.339395108982,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2446,
+          "seconds": 1437.3930257729953,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "overworld",
+          "offered": 15
+        },
+        {
+          "line": 3561,
+          "seconds": 2083.3377928369446,
+          "map": "Viridian Forest",
+          "objective": "recover_team",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 5049,
+          "seconds": 3022.285009884974,
+          "map": "Pewter City",
+          "objective": "enter_pewter_gym",
+          "interface": "overworld",
+          "offered": 31
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 95
+        },
+        {
+          "map": "Pewter City",
+          "objective": "enter_pewter_gym",
+          "requests": 69
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 51
+        }
+      ]
+    },
+    {
+      "run": "06-random-d9f574b7",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 511.0395154180005,
+        "parcel_in_bag": 2331.1222347759176
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 22
+      },
+      "navigation_reasons": {
+        "primitive": 1102,
+        "decision_boundary": 49,
+        "confirmed_once": 31,
+        "map_changed": 38,
+        "interacted": 45,
+        "menu_changed": 4,
+        "dialogue_or_battle": 39,
+        "limit": 2,
+        "unchanged": 7
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 5,
+        "use:GROWL": 3
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22388466994743794,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1008,
+          "seconds": 224.21345327992458,
+          "map": "Blues House",
+          "objective": "obtain_starter",
+          "interface": "menu",
+          "offered": 11
+        },
+        {
+          "line": 1999,
+          "seconds": 467.4107616869733,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 23
+        },
+        {
+          "line": 2932,
+          "seconds": 647.0374193509342,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3848,
+          "seconds": 805.0580834759166,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 4770,
+          "seconds": 956.649855080992,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5686,
+          "seconds": 1118.3054768230068,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6797,
+          "seconds": 1426.281244691927,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 13
+        },
+        {
+          "line": 7724,
+          "seconds": 1597.9686094309436,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8813,
+          "seconds": 1907.9263006879482,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 15
+        },
+        {
+          "line": 9936,
+          "seconds": 2267.4409241229296,
+          "map": "Viridian City",
+          "objective": "recover_team",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 10983,
+          "seconds": 2558.2312262349296,
+          "map": "Viridian Nickname House",
+          "objective": "recover_team",
+          "interface": "overworld",
+          "offered": 17
+        },
+        {
+          "line": 12187,
+          "seconds": 2990.320267174975,
+          "map": "Viridian City",
+          "objective": "recover_team",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 13422,
+          "seconds": 3452.2828078779858,
+          "map": "Viridian City",
+          "objective": "recover_team",
+          "interface": "overworld",
+          "offered": 27
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 429
+        },
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 281
+        },
+        {
+          "map": "Viridian City",
+          "objective": "recover_team",
+          "requests": 197
+        }
+      ]
+    },
+    {
+      "run": "07-reactive-1bae2148",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 127.91994427889585,
+        "parcel_in_bag": 441.141457678983,
+        "parcel_delivery_text": 1130.480656514992,
+        "pokedex_receipt_text": 1167.7147248899564,
+        "forest_entered": 1512.6135141439736,
+        "forest_north_gate": 2007.5534820079338,
+        "pewter_reached": 2117.656108929892,
+        "pewter_gym_entered": 2215.551176496898
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 218
+      },
+      "navigation_reasons": {
+        "map_changed": 74,
+        "dialogue_or_battle": 21,
+        "primitive": 129,
+        "decision_boundary": 56,
+        "limit": 6,
+        "interacted": 11,
+        "unchanged": 22,
+        "confirmed_once": 76
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 36,
+        "use:EMBER": 37
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 4,
+      "center_hp_increases": 2,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.22872040094807744,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1128,
+          "seconds": 599.9352457989007,
+          "map": "Oaks Lab",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 20
+        },
+        {
+          "line": 2303,
+          "seconds": 1279.6628637289396,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3323,
+          "seconds": 1877.6439873559866,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 4396,
+          "seconds": 2430.1582760539604,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5420,
+          "seconds": 2962.0572151918896,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6556,
+          "seconds": 3544.3085019208957,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 16
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 113
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 95
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 78
+        }
+      ]
+    },
+    {
+      "run": "08-random-13a87537",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 140.96357002004515,
+        "parcel_in_bag": 2587.09514681797,
+        "parcel_delivery_text": 3570.342783863074
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 33
+      },
+      "navigation_reasons": {
+        "primitive": 1225,
+        "map_changed": 33,
+        "dialogue_or_battle": 18,
+        "decision_boundary": 35,
+        "limit": 2,
+        "interacted": 51,
+        "confirmed_once": 31,
+        "unchanged": 6,
+        "blocked": 5,
+        "menu_changed": 5
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 5,
+        "use:GROWL": 8
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.2387940160697326,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 950,
+          "seconds": 232.64731554605532,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 1847,
+          "seconds": 391.8990187610034,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2747,
+          "seconds": 541.8771697800839,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3660,
+          "seconds": 699.7627337130252,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4577,
+          "seconds": 856.4201289700577,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5484,
+          "seconds": 1003.6097763950238,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6384,
+          "seconds": 1159.2407040770631,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7380,
+          "seconds": 1391.3753725669812,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 8577,
+          "seconds": 1804.464939018013,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 9554,
+          "seconds": 2014.9979888810776,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 16
+        },
+        {
+          "line": 10629,
+          "seconds": 2320.6941367400577,
+          "map": "Viridian City",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 11740,
+          "seconds": 2645.427294139983,
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 30
+        },
+        {
+          "line": 12938,
+          "seconds": 3072.9055295640137,
+          "map": "Viridian City",
+          "objective": "recover_team",
+          "interface": "overworld",
+          "offered": 30
+        },
+        {
+          "line": 14063,
+          "seconds": 3425.3783805309795,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 544
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "requests": 301
+        },
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 177
+        }
+      ]
+    },
+    {
+      "run": "09-scripted-21f2aaf0",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 107.15874984895345,
+        "parcel_in_bag": 450.8738016259158,
+        "parcel_delivery_text": 558.2428839099593,
+        "pokedex_receipt_text": 591.4484771329444,
+        "forest_entered": 885.4960188959958,
+        "forest_north_gate": 1611.7000849120086,
+        "pewter_reached": 1664.5466007048963,
+        "pewter_gym_entered": 1750.621389369946,
+        "first_badge": 3164.8055944329826
+      },
+      "badge": {
+        "line": 11774,
+        "seconds": 3164.8055944329826
+      },
+      "award_dialogue": [
+        {
+          "line": 11670,
+          "seconds": 3123.6213784778956,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "line": 11672,
+          "seconds": 3125.87347230094,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        },
+        {
+          "line": 11674,
+          "seconds": 3126.8166423729854,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "final_badges": [
+        "Boulder"
+      ],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 46
+      },
+      "navigation_reasons": {
+        "map_changed": 59,
+        "dialogue_or_battle": 24,
+        "decision_boundary": 56,
+        "primitive": 715,
+        "limit": 12,
+        "interacted": 23,
+        "confirmed_once": 105,
+        "unchanged": 57,
+        "blocked": 2
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 37,
+        "use:EMBER": 66
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 2,
+      "center_hp_increases": 3,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22489604994188994,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1031,
+          "seconds": 251.64527252095286,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 22
+        },
+        {
+          "line": 2346,
+          "seconds": 703.9632520069135,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3445,
+          "seconds": 1014.9231128159445,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 4606,
+          "seconds": 1353.4484678719891,
+          "map": "Route 2",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 16
+        },
+        {
+          "line": 5888,
+          "seconds": 1804.658724639914,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7032,
+          "seconds": 2115.834588347003,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8041,
+          "seconds": 2342.381925049005,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9083,
+          "seconds": 2573.0073758899234,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10113,
+          "seconds": 2801.6535744949942,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 11119,
+          "seconds": 3020.397598157986,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 12552,
+          "seconds": 3582.1144962429535,
+          "map": "Pewter City",
+          "objective": "continue_journey",
+          "interface": "overworld",
+          "offered": 29
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 371
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 128
+        },
+        {
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "requests": 120
+        }
+      ]
+    },
+    {
+      "run": "10-reactive-a3fe2533",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 131.06497742503416,
+        "parcel_in_bag": 600.6987321530469,
+        "parcel_delivery_text": 1016.8633275110042,
+        "pokedex_receipt_text": 1054.8347590379417,
+        "forest_entered": 1400.6977073589806,
+        "forest_north_gate": 3408.2870712260483,
+        "pewter_reached": 3555.043717827997
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 177
+      },
+      "navigation_reasons": {
+        "map_changed": 81,
+        "dialogue_or_battle": 27,
+        "decision_boundary": 51,
+        "primitive": 118,
+        "limit": 5,
+        "interacted": 12,
+        "unchanged": 20,
+        "confirmed_once": 55,
+        "step_limit": 1
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 37,
+        "use:EMBER": 17
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 2,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.23020637803710997,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1007,
+          "seconds": 517.8921507589985,
+          "map": "Viridian City",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 2113,
+          "seconds": 1108.5541102630086,
+          "map": "Pallet Town",
+          "objective": "reach_forest",
+          "interface": "overworld",
+          "offered": 22
+        },
+        {
+          "line": 3383,
+          "seconds": 1917.8259469770128,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 4722,
+          "seconds": 2707.2455780029995,
+          "map": "Route 2",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5838,
+          "seconds": 3285.075536848046,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 16
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 118
+        },
+        {
+          "map": "Route 2",
+          "objective": "reach_forest",
+          "requests": 88
+        },
+        {
+          "map": "Route 1",
+          "objective": "deliver_parcel",
+          "requests": 45
+        }
+      ]
+    },
+    {
+      "run": "11-scripted-b0522888",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 107.07418130501173,
+        "parcel_in_bag": 388.73670259700157,
+        "parcel_delivery_text": 540.9847527859965,
+        "pokedex_receipt_text": 574.273094321019,
+        "forest_entered": 814.2504224460572,
+        "forest_north_gate": 1790.4632754760096,
+        "pewter_reached": 1853.9249404780567,
+        "pewter_gym_entered": 1898.1446062150644
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 62
+      },
+      "navigation_reasons": {
+        "map_changed": 48,
+        "dialogue_or_battle": 32,
+        "decision_boundary": 51,
+        "primitive": 728,
+        "limit": 10,
+        "interacted": 13,
+        "confirmed_once": 106,
+        "unchanged": 50,
+        "blocked": 3
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 49,
+        "use:EMBER": 55
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 1,
+      "center_hp_increases": 1,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.21891076304018497,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1050,
+          "seconds": 295.1005459539592,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2486,
+          "seconds": 862.1685485270573,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3400,
+          "seconds": 1035.919581923983,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4403,
+          "seconds": 1262.3462830580538,
+          "map": "Viridian Forest",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5660,
+          "seconds": 1672.5540293729864,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6924,
+          "seconds": 2125.453248495003,
+          "map": "Route 2",
+          "objective": "enter_pewter_gym",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8150,
+          "seconds": 2526.4895955490647,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 9299,
+          "seconds": 2849.70742396696,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10330,
+          "seconds": 3082.319841825054,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 11359,
+          "seconds": 3306.9345423360355,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 12469,
+          "seconds": 3593.488496531034,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "overworld",
+          "offered": 16
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 253
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 211
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 192
+        }
+      ]
+    },
+    {
+      "run": "12-random-368948bc",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 692.1684979709098
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 48
+      },
+      "navigation_reasons": {
+        "primitive": 1222,
+        "decision_boundary": 52,
+        "map_changed": 39,
+        "interacted": 52,
+        "blocked": 4,
+        "confirmed_once": 55,
+        "unchanged": 4,
+        "dialogue_or_battle": 18,
+        "deadline": 1,
+        "menu_changed": 8
+      },
+      "named_move_actions": {
+        "use:TACKLE": 10,
+        "use:GROWL": 6
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.23038651188835502,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1056,
+          "seconds": 284.62332524592057,
+          "map": "Reds House 1F",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 1973,
+          "seconds": 503.2100520209642,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 2944,
+          "seconds": 742.6524087209255,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 3874,
+          "seconds": 930.7522180789383,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 4784,
+          "seconds": 1084.7279129979433,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 5714,
+          "seconds": 1271.3153449329548,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6631,
+          "seconds": 1446.231273607933,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7566,
+          "seconds": 1618.0173473969335,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8618,
+          "seconds": 1921.0242073509144,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 21
+        },
+        {
+          "line": 9714,
+          "seconds": 2232.320958132972,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 10817,
+          "seconds": 2572.047511820914,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 14
+        },
+        {
+          "line": 11854,
+          "seconds": 2859.9161403659964,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 13
+        },
+        {
+          "line": 12866,
+          "seconds": 3125.8151166279567,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 13840,
+          "seconds": 3371.530202185968,
+          "map": "Route 1",
+          "objective": "recover_team",
+          "interface": "overworld",
+          "offered": 16
+        },
+        {
+          "line": 14819,
+          "seconds": 3594.6068131239153,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 396
+        },
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 242
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "requests": 227
+        }
+      ]
+    },
+    {
+      "run": "13-scripted-2b285d84",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 107.43485505098943,
+        "parcel_in_bag": 438.5661453050561,
+        "parcel_delivery_text": 578.645492790034,
+        "pokedex_receipt_text": 611.7647089910461,
+        "forest_entered": 1080.1213575940346,
+        "forest_north_gate": 1325.7201668369817,
+        "pewter_reached": 1353.91165213997,
+        "pewter_gym_entered": 1397.6768621000228,
+        "first_badge": 2862.0023941330146
+      },
+      "badge": {
+        "line": 10024,
+        "seconds": 2862.0023941330146
+      },
+      "award_dialogue": [
+        {
+          "line": 9920,
+          "seconds": 2821.101859144983,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "line": 9922,
+          "seconds": 2823.3041811239673,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        },
+        {
+          "line": 9924,
+          "seconds": 2824.2103732969845,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "final_badges": [
+        "Boulder"
+      ],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 37
+      },
+      "navigation_reasons": {
+        "map_changed": 66,
+        "dialogue_or_battle": 26,
+        "decision_boundary": 68,
+        "primitive": 579,
+        "limit": 10,
+        "interacted": 26,
+        "confirmed_once": 87,
+        "unchanged": 60,
+        "blocked": 3
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 37,
+        "use:EMBER": 46
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 2,
+      "center_hp_increases": 1,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.2198099959641695,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1034,
+          "seconds": 277.0043381890282,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2304,
+          "seconds": 687.4442566300277,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3355,
+          "seconds": 921.7757685589604,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4608,
+          "seconds": 1325.7205028639873,
+          "map": "Viridian Forest North Gate",
+          "objective": "reach_pewter",
+          "interface": "overworld",
+          "offered": 16
+        },
+        {
+          "line": 5991,
+          "seconds": 1868.6689832539996,
+          "map": "Route 2",
+          "objective": "enter_pewter_gym",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 7209,
+          "seconds": 2245.4696909920312,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 16
+        },
+        {
+          "line": 8251,
+          "seconds": 2474.4924039010657,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9264,
+          "seconds": 2701.3937708960148,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10507,
+          "seconds": 3097.6340478929924,
+          "map": "Pewter City",
+          "objective": "continue_journey",
+          "interface": "overworld",
+          "offered": 29
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 222
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 143
+        },
+        {
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "requests": 113
+        }
+      ]
+    },
+    {
+      "run": "14-random-c3140edc",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 603.2196969670476
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 18
+      },
+      "navigation_reasons": {
+        "primitive": 1548,
+        "map_changed": 27,
+        "interacted": 33,
+        "confirmed_once": 58,
+        "blocked": 5,
+        "menu_changed": 19,
+        "decision_boundary": 41,
+        "dialogue_or_battle": 24,
+        "limit": 1,
+        "unchanged": 7
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 11,
+        "use:GROWL": 15
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22037698607891798,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 972,
+          "seconds": 213.0466210040031,
+          "map": "Reds House 1F",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 1965,
+          "seconds": 473.2152489760192,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 2965,
+          "seconds": 681.8622860000469,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3873,
+          "seconds": 831.8242800859734,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 4796,
+          "seconds": 990.807525568991,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 5730,
+          "seconds": 1141.4665676919976,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6665,
+          "seconds": 1310.0816838770406,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 7599,
+          "seconds": 1472.5386940289754,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8512,
+          "seconds": 1635.5472589710262,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9415,
+          "seconds": 1787.9116051320452,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10333,
+          "seconds": 1940.0470556520158,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 11254,
+          "seconds": 2099.4091661709826,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 12157,
+          "seconds": 2242.151268181973,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 13083,
+          "seconds": 2395.4287712579826,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 14204,
+          "seconds": 2707.2014588590246,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 17
+        },
+        {
+          "line": 15340,
+          "seconds": 3073.5384366679937,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 16421,
+          "seconds": 3399.89119057497,
+          "map": "Route 22",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 1116
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "requests": 115
+        },
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 107
+        }
+      ]
+    },
+    {
+      "run": "15-reactive-43112f78",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 127.52339091303293,
+        "parcel_in_bag": 670.4376791520044,
+        "parcel_delivery_text": 1016.3646675870987,
+        "pokedex_receipt_text": 1053.6080269970698,
+        "forest_entered": 1476.8945645870408,
+        "forest_north_gate": 2344.7238610640634,
+        "pewter_reached": 2428.9964950160356,
+        "pewter_gym_entered": 2527.176181077026
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 218
+      },
+      "navigation_reasons": {
+        "map_changed": 50,
+        "dialogue_or_battle": 34,
+        "primitive": 142,
+        "decision_boundary": 60,
+        "limit": 7,
+        "interacted": 10,
+        "unchanged": 24,
+        "confirmed_once": 80
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 46,
+        "use:EMBER": 33
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 2,
+      "center_hp_increases": 2,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.2294017670210451,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1014,
+          "seconds": 513.3239605650306,
+          "map": "Viridian City",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 2230,
+          "seconds": 1171.0698197780875,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3380,
+          "seconds": 1861.24243540701,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4237,
+          "seconds": 2299.85637984809,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 5499,
+          "seconds": 2976.063215160044,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6529,
+          "seconds": 3449.21040164202,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 115
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 94
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 75
+        }
+      ]
+    },
+    {
+      "run": "16-random-0ed2ba65",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 1250.1958448500372
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 24
+      },
+      "navigation_reasons": {
+        "primitive": 1341,
+        "decision_boundary": 57,
+        "map_changed": 39,
+        "blocked": 9,
+        "menu_changed": 14,
+        "interacted": 68,
+        "dialogue_or_battle": 33,
+        "confirmed_once": 35,
+        "unchanged": 2
+      },
+      "named_move_actions": {
+        "use:TACKLE": 8,
+        "use:GROWL": 5
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.2255683010444045,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 954,
+          "seconds": 200.97106456605252,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 2137,
+          "seconds": 589.8643626499688,
+          "map": "Pallet Town",
+          "objective": "obtain_starter",
+          "interface": "transition",
+          "offered": 11
+        },
+        {
+          "line": 3045,
+          "seconds": 800.2284415999893,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 4058,
+          "seconds": 1032.1220247959718,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 23
+        },
+        {
+          "line": 5066,
+          "seconds": 1253.589632721967,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 5976,
+          "seconds": 1411.6229221710237,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6902,
+          "seconds": 1572.648896476021,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 7825,
+          "seconds": 1729.4921628480079,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8734,
+          "seconds": 1881.5095825269818,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9671,
+          "seconds": 2038.3383866320364,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10592,
+          "seconds": 2191.9344585810322,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 11625,
+          "seconds": 2439.27668529097,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 12660,
+          "seconds": 2693.4138111070497,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 18
+        },
+        {
+          "line": 13783,
+          "seconds": 3028.4794585939962,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 11
+        },
+        {
+          "line": 14803,
+          "seconds": 3285.5848943149904,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 15816,
+          "seconds": 3539.099510648055,
+          "map": "Reds House 1F",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 725
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "requests": 308
+        },
+        {
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "requests": 121
+        }
+      ]
+    },
+    {
+      "run": "17-reactive-87092e5d",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 129.11216013599187,
+        "parcel_in_bag": 587.4958288799971,
+        "parcel_delivery_text": 769.4854864000808,
+        "pokedex_receipt_text": 806.9360399070429,
+        "forest_entered": 1033.7105571359862,
+        "forest_north_gate": 1414.8502848130884,
+        "pewter_reached": 1557.2646517140092,
+        "pewter_gym_entered": 1655.4611846540356
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 162
+      },
+      "navigation_reasons": {
+        "map_changed": 38,
+        "dialogue_or_battle": 35,
+        "primitive": 146,
+        "decision_boundary": 77,
+        "limit": 5,
+        "interacted": 14,
+        "unchanged": 11,
+        "confirmed_once": 69,
+        "step_limit": 1
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 59
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 10,
+      "center_hp_increases": 1,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.22751816699746996,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1028,
+          "seconds": 523.0777417090721,
+          "map": "Viridian City",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 30
+        },
+        {
+          "line": 2358,
+          "seconds": 1328.808174584061,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3532,
+          "seconds": 1948.8057042300934,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 4732,
+          "seconds": 2580.322523372015,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 5998,
+          "seconds": 3264.54213977803,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 181
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 70
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "requests": 65
+        }
+      ]
+    },
+    {
+      "run": "18-scripted-3076f77a",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 106.83872695802711,
+        "parcel_in_bag": 361.2059361319989,
+        "parcel_delivery_text": 609.4086599600269,
+        "pokedex_receipt_text": 642.6936706900597,
+        "forest_entered": 946.2433916630689,
+        "forest_north_gate": 1736.549672379042,
+        "pewter_reached": 1764.9415340881096,
+        "pewter_gym_entered": 1808.8639832750196,
+        "first_badge": 3201.751956504071
+      },
+      "badge": {
+        "line": 10641,
+        "seconds": 3201.751956504071
+      },
+      "award_dialogue": [
+        {
+          "line": 10537,
+          "seconds": 3160.8016714710975,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "line": 10539,
+          "seconds": 3163.0204514000798,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        },
+        {
+          "line": 10541,
+          "seconds": 3163.929362612078,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "final_badges": [
+        "Boulder"
+      ],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 33
+      },
+      "navigation_reasons": {
+        "map_changed": 61,
+        "dialogue_or_battle": 26,
+        "decision_boundary": 61,
+        "primitive": 580,
+        "limit": 10,
+        "interacted": 23,
+        "confirmed_once": 84,
+        "unchanged": 58,
+        "blocked": 3,
+        "step_limit": 2
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 38,
+        "use:EMBER": 43
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 2,
+      "center_hp_increases": 2,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.23526480002328753,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1123,
+          "seconds": 347.8711777450517,
+          "map": "Viridian Mart",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 2190,
+          "seconds": 598.1915625270922,
+          "map": "Oaks Lab",
+          "objective": "deliver_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 3541,
+          "seconds": 1089.894609463052,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4915,
+          "seconds": 1625.1224412720185,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6214,
+          "seconds": 2087.7948674890213,
+          "map": "Viridian Forest",
+          "objective": "enter_pewter_gym",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 7350,
+          "seconds": 2389.9372364340816,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8499,
+          "seconds": 2702.1012166420696,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9532,
+          "seconds": 2928.672399021103,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "overworld",
+          "offered": 16
+        },
+        {
+          "line": 10658,
+          "seconds": 3204.7532385720406,
+          "map": "Pewter Gym",
+          "objective": "continue_journey",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 204
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 149
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 106
+        }
+      ]
+    },
+    {
+      "run": "19-random-19804bd0",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 691.5336480590049
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 24,
+        "error": 1
+      },
+      "navigation_reasons": {
+        "primitive": 1040,
+        "map_changed": 42,
+        "interacted": 81,
+        "decision_boundary": 71,
+        "dialogue_or_battle": 9,
+        "limit": 1,
+        "confirmed_once": 19,
+        "menu_changed": 10,
+        "unchanged": 4,
+        "blocked": 5
+      },
+      "named_move_actions": {
+        "use:TACKLE": 4
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [
+        {
+          "line": 13751,
+          "seconds": 3599.9993986749323,
+          "error": "TimeoutError()"
+        }
+      ],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22473291296046227,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1063,
+          "seconds": 289.3506079519866,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 2113,
+          "seconds": 585.6115809309995,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 3085,
+          "seconds": 776.2340898809489,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 14
+        },
+        {
+          "line": 3999,
+          "seconds": 931.6753893529531,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 14
+        },
+        {
+          "line": 4927,
+          "seconds": 1090.969761795015,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 14
+        },
+        {
+          "line": 5963,
+          "seconds": 1336.8036097199656,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 7067,
+          "seconds": 1650.6416838959558,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 14
+        },
+        {
+          "line": 8235,
+          "seconds": 2028.100548058981,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 15
+        },
+        {
+          "line": 9362,
+          "seconds": 2376.9536010089796,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 10405,
+          "seconds": 2648.006137085962,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 17
+        },
+        {
+          "line": 11543,
+          "seconds": 3003.510836853995,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "menu",
+          "offered": 11
+        },
+        {
+          "line": 12492,
+          "seconds": 3189.981529143988,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 13689,
+          "seconds": 3589.985196165042,
+          "map": "Viridian City",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 384
+        },
+        {
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "requests": 296
+        },
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 266
+        }
+      ]
+    },
+    {
+      "run": "20-scripted-c7251dcf",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 107.00302850501612,
+        "parcel_in_bag": 440.93795024894644,
+        "parcel_delivery_text": 800.9734468850074,
+        "pokedex_receipt_text": 834.3658390810015,
+        "forest_entered": 1570.2815457929391,
+        "forest_north_gate": 1837.002256040927,
+        "pewter_reached": 1905.58794415195,
+        "pewter_gym_entered": 1950.131543988944
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 46
+      },
+      "navigation_reasons": {
+        "map_changed": 58,
+        "dialogue_or_battle": 37,
+        "decision_boundary": 55,
+        "primitive": 649,
+        "limit": 6,
+        "interacted": 8,
+        "confirmed_once": 91,
+        "unchanged": 52,
+        "blocked": 4
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 58,
+        "use:EMBER": 31
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 4,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.2219711790094152,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 986,
+          "seconds": 254.00247933599167,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 16
+        },
+        {
+          "line": 2104,
+          "seconds": 548.794185281964,
+          "map": "Route 1",
+          "objective": "recover_team",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 3362,
+          "seconds": 945.0050901300274,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4449,
+          "seconds": 1216.0394703180064,
+          "map": "Route 2",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5642,
+          "seconds": 1598.9528878129786,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6869,
+          "seconds": 1987.8506129760062,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8070,
+          "seconds": 2371.751903631026,
+          "map": "Route 2",
+          "objective": "enter_pewter_gym",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9327,
+          "seconds": 2808.108686199994,
+          "map": "Viridian City",
+          "objective": "enter_pewter_gym",
+          "interface": "overworld",
+          "offered": 30
+        },
+        {
+          "line": 10635,
+          "seconds": 3271.3497086879797,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 11787,
+          "seconds": 3589.6706648910185,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Route 2",
+          "objective": "enter_pewter_gym",
+          "requests": 115
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "enter_pewter_gym",
+          "requests": 103
+        },
+        {
+          "map": "Route 2",
+          "objective": "reach_forest",
+          "requests": 100
+        }
+      ]
+    },
+    {
+      "run": "21-reactive-7c996b9e",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 128.06534165004268,
+        "parcel_in_bag": 481.57135520898737,
+        "parcel_delivery_text": 716.494016631972,
+        "pokedex_receipt_text": 753.8745239400305,
+        "forest_entered": 1224.395277973963,
+        "forest_north_gate": 1839.3501017879462,
+        "pewter_reached": 1986.7877121500205
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 233
+      },
+      "navigation_reasons": {
+        "map_changed": 42,
+        "dialogue_or_battle": 38,
+        "primitive": 80,
+        "decision_boundary": 72,
+        "limit": 5,
+        "interacted": 4,
+        "unchanged": 17,
+        "confirmed_once": 39
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 34,
+        "use:EMBER": 4
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 2,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.23601563298143446,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1049,
+          "seconds": 550.0907636430347,
+          "map": "Route 1",
+          "objective": "deliver_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 2269,
+          "seconds": 1247.8663401489612,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3369,
+          "seconds": 1876.934501465992,
+          "map": "Route 2",
+          "objective": "reach_pewter",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4554,
+          "seconds": 2585.5854010529583,
+          "map": "Pewter City",
+          "objective": "enter_pewter_gym",
+          "interface": "transition",
+          "offered": 11
+        },
+        {
+          "line": 5762,
+          "seconds": 3343.6137825360056,
+          "map": "Pewter City",
+          "objective": "enter_pewter_gym",
+          "interface": "transition",
+          "offered": 11
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter City",
+          "objective": "enter_pewter_gym",
+          "requests": 197
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 78
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 39
+        }
+      ]
+    },
+    {
+      "run": "22-scripted-d5093fbb",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 106.73982387105934,
+        "parcel_in_bag": 569.2438091670629,
+        "parcel_delivery_text": 743.5554754349869,
+        "pokedex_receipt_text": 777.2290765770013,
+        "forest_entered": 1085.6268357230583,
+        "forest_north_gate": 1581.5233164370293,
+        "pewter_reached": 1633.1363317780197,
+        "pewter_gym_entered": 1677.1610773300054,
+        "first_badge": 3184.6103888390353
+      },
+      "badge": {
+        "line": 11322,
+        "seconds": 3184.6103888390353
+      },
+      "award_dialogue": [
+        {
+          "line": 11218,
+          "seconds": 3143.652933620033,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "line": 11220,
+          "seconds": 3145.8658967460506,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        },
+        {
+          "line": 11222,
+          "seconds": 3146.8028000839986,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "final_badges": [
+        "Boulder"
+      ],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 33
+      },
+      "navigation_reasons": {
+        "map_changed": 61,
+        "dialogue_or_battle": 32,
+        "decision_boundary": 66,
+        "primitive": 643,
+        "limit": 11,
+        "interacted": 25,
+        "confirmed_once": 91,
+        "unchanged": 61,
+        "blocked": 3,
+        "step_limit": 1
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 37,
+        "use:EMBER": 52
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 3,
+      "center_hp_increases": 2,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.24033444200176746,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1053,
+          "seconds": 268.8579939760966,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2057,
+          "seconds": 463.7481914340751,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3334,
+          "seconds": 871.1157320850762,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4598,
+          "seconds": 1313.3977495570434,
+          "map": "Viridian Forest South Gate",
+          "objective": "reach_forest",
+          "interface": "overworld",
+          "offered": 16
+        },
+        {
+          "line": 5854,
+          "seconds": 1717.0189254480647,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7124,
+          "seconds": 2167.120937381056,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 16
+        },
+        {
+          "line": 8276,
+          "seconds": 2482.522301949095,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9379,
+          "seconds": 2770.156424783054,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10416,
+          "seconds": 2998.1220508300466,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 11553,
+          "seconds": 3281.140803948045,
+          "map": "Pewter Gym",
+          "objective": "continue_journey",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 268
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 122
+        },
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 108
+        }
+      ]
+    },
+    {
+      "run": "23-reactive-f442ad40",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 132.40855216002092,
+        "parcel_in_bag": 562.7153101039585,
+        "parcel_delivery_text": 3015.6452710559824,
+        "pokedex_receipt_text": 3052.674313509953,
+        "forest_entered": 3549.9957118009916
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 94
+      },
+      "navigation_reasons": {
+        "map_changed": 62,
+        "blocked": 1,
+        "dialogue_or_battle": 140,
+        "primitive": 50,
+        "decision_boundary": 150,
+        "limit": 5,
+        "interacted": 3,
+        "unchanged": 24,
+        "confirmed_once": 29
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 29
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 1,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.23109412204939872,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 983,
+          "seconds": 475.50612325803377,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2272,
+          "seconds": 1202.2678057950689,
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 3503,
+          "seconds": 1729.1698457390303,
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 4736,
+          "seconds": 2257.032576738973,
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 6030,
+          "seconds": 2943.4161316719837,
+          "map": "Route 1",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 2
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "requests": 237
+        },
+        {
+          "map": "Route 1",
+          "objective": "deliver_parcel",
+          "requests": 57
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 47
+        }
+      ]
+    },
+    {
+      "run": "24-random-3daf863e",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 232.25025608204305,
+        "parcel_in_bag": 2911.2520276360447
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 21
+      },
+      "navigation_reasons": {
+        "primitive": 1460,
+        "decision_boundary": 35,
+        "map_changed": 37,
+        "dialogue_or_battle": 20,
+        "limit": 1,
+        "interacted": 33,
+        "confirmed_once": 55,
+        "menu_changed": 23,
+        "blocked": 4,
+        "unchanged": 3
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 12,
+        "use:GROWL": 11
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22806171607226133,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 979,
+          "seconds": 227.7215519840829,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 1905,
+          "seconds": 398.1024951230502,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 2823,
+          "seconds": 550.8304736990249,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 3752,
+          "seconds": 711.3166025880491,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4685,
+          "seconds": 874.8239806280471,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5601,
+          "seconds": 1027.2592024340993,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6501,
+          "seconds": 1174.1660762520041,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7401,
+          "seconds": 1324.4940521700773,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8326,
+          "seconds": 1472.170266602072,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 9266,
+          "seconds": 1643.6375718250638,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 20
+        },
+        {
+          "line": 10372,
+          "seconds": 1977.3314393310575,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 13
+        },
+        {
+          "line": 11371,
+          "seconds": 2211.4034091830254,
+          "map": "Reds House 1F",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 14
+        },
+        {
+          "line": 12381,
+          "seconds": 2458.1229430710664,
+          "map": "Blues House",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 13565,
+          "seconds": 2847.4671640261076,
+          "map": "Viridian Nickname House",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 17
+        },
+        {
+          "line": 14694,
+          "seconds": 3196.2744076011004,
+          "map": "Route 1",
+          "objective": "deliver_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 15654,
+          "seconds": 3380.4897459540516,
+          "map": "Route 1",
+          "objective": "deliver_parcel",
+          "interface": "battle",
+          "offered": 11
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 494
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "requests": 418
+        },
+        {
+          "map": "Route 1",
+          "objective": "deliver_parcel",
+          "requests": 213
+        }
+      ]
+    },
+    {
+      "run": "25-reactive-86caff46",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 128.12104084901512,
+        "parcel_in_bag": 594.0923082419904,
+        "parcel_delivery_text": 2135.790388787049,
+        "pokedex_receipt_text": 2173.664826671011,
+        "forest_entered": 2591.3514275050256,
+        "forest_north_gate": 3065.296576878056,
+        "pewter_reached": 3131.134730841033,
+        "pewter_gym_entered": 3230.518815514981
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 184
+      },
+      "navigation_reasons": {
+        "map_changed": 72,
+        "dialogue_or_battle": 56,
+        "primitive": 79,
+        "decision_boundary": 75,
+        "limit": 6,
+        "interacted": 8,
+        "unchanged": 23,
+        "confirmed_once": 57
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 37,
+        "use:EMBER": 19
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 3,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.22055560094304383,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 982,
+          "seconds": 478.6692583130207,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2058,
+          "seconds": 1084.0216799100162,
+          "map": "Pallet Town",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 22
+        },
+        {
+          "line": 3190,
+          "seconds": 1631.188486056053,
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 4496,
+          "seconds": 2403.0787422270514,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5863,
+          "seconds": 3241.760923178983,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Route 1",
+          "objective": "deliver_parcel",
+          "requests": 104
+        },
+        {
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "requests": 61
+        },
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 49
+        }
+      ]
+    },
+    {
+      "run": "26-random-9008cc7b",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 359.0727653489448
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 26,
+        "error": 1
+      },
+      "navigation_reasons": {
+        "primitive": 1676,
+        "map_changed": 24,
+        "interacted": 30,
+        "decision_boundary": 37,
+        "blocked": 2,
+        "dialogue_or_battle": 18,
+        "limit": 2,
+        "confirmed_once": 52,
+        "unchanged": 3,
+        "menu_changed": 27
+      },
+      "named_move_actions": {
+        "use:GROWL": 18,
+        "use:TACKLE": 14
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [
+        {
+          "line": 18103,
+          "seconds": 3599.9996064950246,
+          "error": "TimeoutError()"
+        }
+      ],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22716590599156916,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1046,
+          "seconds": 303.7333499180386,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 1986,
+          "seconds": 488.7559821200557,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2908,
+          "seconds": 640.5734311010456,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3818,
+          "seconds": 795.4672136569861,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4724,
+          "seconds": 948.4598733859602,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5658,
+          "seconds": 1108.8436744509963,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 6581,
+          "seconds": 1275.7095729319844,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7487,
+          "seconds": 1416.5670362629462,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8396,
+          "seconds": 1560.5010698559927,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9317,
+          "seconds": 1725.9129991489463,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10235,
+          "seconds": 1875.3589304999914,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 11153,
+          "seconds": 2023.948790007038,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 13
+        },
+        {
+          "line": 12063,
+          "seconds": 2184.544516057009,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 13
+        },
+        {
+          "line": 13143,
+          "seconds": 2494.70006680605,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 14145,
+          "seconds": 2716.188213377027,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 15168,
+          "seconds": 2962.848386808997,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 16110,
+          "seconds": 3129.035182930995,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 17032,
+          "seconds": 3288.088008624036,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 16
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 1152
+        },
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 357
+        },
+        {
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "requests": 125
+        }
+      ]
+    },
+    {
+      "run": "27-scripted-2653f927",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 106.88701953494456,
+        "parcel_in_bag": 572.1438803719357,
+        "parcel_delivery_text": 719.1350935769733,
+        "pokedex_receipt_text": 752.4936559959315,
+        "forest_entered": 1039.262024429976,
+        "forest_north_gate": 1464.8706524430308,
+        "pewter_reached": 1531.3365892899456,
+        "pewter_gym_entered": 1618.2000724279787,
+        "first_badge": 2291.449841164984
+      },
+      "badge": {
+        "line": 8522,
+        "seconds": 2291.449841164984
+      },
+      "award_dialogue": [
+        {
+          "line": 8418,
+          "seconds": 2250.6954287339468,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "line": 8420,
+          "seconds": 2252.9225128309336,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        },
+        {
+          "line": 8422,
+          "seconds": 2253.828315034043,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "final_badges": [
+        "Boulder"
+      ],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 40
+      },
+      "navigation_reasons": {
+        "map_changed": 58,
+        "dialogue_or_battle": 36,
+        "decision_boundary": 87,
+        "primitive": 599,
+        "limit": 8,
+        "interacted": 24,
+        "confirmed_once": 93,
+        "unchanged": 92,
+        "blocked": 3
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 42,
+        "use:EMBER": 46
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 2,
+      "center_hp_increases": 3,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22449802793562412,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1048,
+          "seconds": 272.9276508609764,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2033,
+          "seconds": 451.45092569396365,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 3441,
+          "seconds": 982.3123624930158,
+          "map": "Route 2",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4455,
+          "seconds": 1204.9033911329461,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5627,
+          "seconds": 1519.2868369449861,
+          "map": "Route 2",
+          "objective": "reach_pewter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 6772,
+          "seconds": 1848.5985262759496,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7922,
+          "seconds": 2161.621230900986,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9369,
+          "seconds": 2746.2985396239674,
+          "map": "Pewter City",
+          "objective": "continue_journey",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 10777,
+          "seconds": 3254.775776001974,
+          "map": "Route 3",
+          "objective": "continue_journey",
+          "interface": "transition",
+          "offered": 11
+        },
+        {
+          "line": 11885,
+          "seconds": 3493.9539543819847,
+          "map": "Route 3",
+          "objective": "continue_journey",
+          "interface": "battle",
+          "offered": 11
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Route 3",
+          "objective": "continue_journey",
+          "requests": 209
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 158
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "requests": 89
+        }
+      ]
+    },
+    {
+      "run": "28-reactive-c83f4a58",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 148.36423489102162,
+        "parcel_in_bag": 616.4651779960841,
+        "parcel_delivery_text": 860.8394852030324,
+        "pokedex_receipt_text": 898.1424381750403,
+        "forest_entered": 1191.6106022660388,
+        "forest_north_gate": 1556.5376258069882,
+        "pewter_reached": 2321.3946745590074,
+        "pewter_gym_entered": 3280.5059991059825
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 216
+      },
+      "navigation_reasons": {
+        "primitive": 115,
+        "decision_boundary": 67,
+        "map_changed": 50,
+        "blocked": 1,
+        "dialogue_or_battle": 30,
+        "limit": 5,
+        "interacted": 6,
+        "confirmed_once": 49,
+        "unchanged": 18,
+        "step_limit": 1
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 35,
+        "use:EMBER": 10
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 1,
+      "center_hp_increases": 1,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.24465913302265108,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 960,
+          "seconds": 446.6859428579919,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 2347,
+          "seconds": 1307.7356796030654,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3346,
+          "seconds": 1848.0887585850433,
+          "map": "Route 2",
+          "objective": "reach_pewter",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4592,
+          "seconds": 2570.0065818410367,
+          "map": "Pewter City",
+          "objective": "enter_pewter_gym",
+          "interface": "transition",
+          "offered": 11
+        },
+        {
+          "line": 5758,
+          "seconds": 3280.506369360024,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "overworld",
+          "offered": 16
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter City",
+          "objective": "enter_pewter_gym",
+          "requests": 121
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 62
+        },
+        {
+          "map": "Route 2",
+          "objective": "reach_pewter",
+          "requests": 49
+        }
+      ]
+    },
+    {
+      "run": "29-scripted-f1a090d0",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 107.37084512598813,
+        "parcel_in_bag": 354.8416112420382,
+        "parcel_delivery_text": 461.24686531804036,
+        "pokedex_receipt_text": 494.7604599799961,
+        "forest_entered": 736.2669870930258,
+        "forest_north_gate": 1276.0172963400837,
+        "pewter_reached": 1304.3102479290683,
+        "pewter_gym_entered": 1814.960115435999,
+        "first_badge": 2790.9250914750155
+      },
+      "badge": {
+        "line": 9885,
+        "seconds": 2790.9250914750155
+      },
+      "award_dialogue": [
+        {
+          "line": 9781,
+          "seconds": 2749.814865121036,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "line": 9783,
+          "seconds": 2752.0499578120653,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        },
+        {
+          "line": 9785,
+          "seconds": 2752.963462632033,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "final_badges": [
+        "Boulder"
+      ],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 53
+      },
+      "navigation_reasons": {
+        "map_changed": 63,
+        "dialogue_or_battle": 25,
+        "decision_boundary": 67,
+        "primitive": 598,
+        "limit": 10,
+        "interacted": 26,
+        "confirmed_once": 94,
+        "unchanged": 62,
+        "blocked": 2
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 38,
+        "use:EMBER": 52
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 2,
+      "center_hp_increases": 1,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22317570901941508,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1150,
+          "seconds": 384.46368188702036,
+          "map": "Route 1",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 16
+        },
+        {
+          "line": 2487,
+          "seconds": 876.4239109460032,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3449,
+          "seconds": 1091.6972914220532,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4524,
+          "seconds": 1342.9621192920022,
+          "map": "Route 1",
+          "objective": "enter_pewter_gym",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5874,
+          "seconds": 1854.779874777072,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7031,
+          "seconds": 2173.5021447470644,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8059,
+          "seconds": 2397.8900528470986,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9089,
+          "seconds": 2622.2326168960426,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 16
+        },
+        {
+          "line": 10260,
+          "seconds": 2965.047455180087,
+          "map": "Pewter City",
+          "objective": "continue_journey",
+          "interface": "overworld",
+          "offered": 29
+        },
+        {
+          "line": 11777,
+          "seconds": 3594.616958388011,
+          "map": "Route 3",
+          "objective": "continue_journey",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 246
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 224
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 129
+        }
+      ]
+    },
+    {
+      "run": "30-random-0cfa5981",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 387.1255184339825,
+        "parcel_in_bag": 2651.7181087089702,
+        "parcel_delivery_text": 3049.0078592860373,
+        "pokedex_receipt_text": 3089.3602749520214
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 33
+      },
+      "navigation_reasons": {
+        "primitive": 1329,
+        "map_changed": 29,
+        "interacted": 47,
+        "decision_boundary": 39,
+        "dialogue_or_battle": 20,
+        "limit": 4,
+        "confirmed_once": 57,
+        "unchanged": 5,
+        "blocked": 2,
+        "menu_changed": 8
+      },
+      "named_move_actions": {
+        "use:GROWL": 7,
+        "use:SCRATCH": 12
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.2229917929507792,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1010,
+          "seconds": 256.5863077889662,
+          "map": "Pallet Town",
+          "objective": "obtain_starter",
+          "interface": "transition",
+          "offered": 11
+        },
+        {
+          "line": 2015,
+          "seconds": 508.8016562629491,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2931,
+          "seconds": 667.2456552609801,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 3838,
+          "seconds": 823.5187232580502,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4740,
+          "seconds": 977.9879409170244,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5661,
+          "seconds": 1135.0047686250182,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 6568,
+          "seconds": 1286.2222155979834,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 7503,
+          "seconds": 1464.4622000959935,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 8566,
+          "seconds": 1748.22771869204,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 13
+        },
+        {
+          "line": 9513,
+          "seconds": 1930.3550469130278,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10580,
+          "seconds": 2236.465958068031,
+          "map": "Route 22",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 11664,
+          "seconds": 2559.7256940209772,
+          "map": "Viridian City",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 12759,
+          "seconds": 2873.232175981975,
+          "map": "Pallet Town",
+          "objective": "deliver_parcel",
+          "interface": "menu",
+          "offered": 15
+        },
+        {
+          "line": 13820,
+          "seconds": 3161.5249422210036,
+          "map": "Oaks Lab",
+          "objective": "reach_forest",
+          "interface": "overworld",
+          "offered": 18
+        },
+        {
+          "line": 14803,
+          "seconds": 3400.6525676420424,
+          "map": "Oaks Lab",
+          "objective": "reach_forest",
+          "interface": "overworld",
+          "offered": 18
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 722
+        },
+        {
+          "map": "Route 22",
+          "objective": "collect_parcel",
+          "requests": 165
+        },
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 117
+        }
+      ]
+    },
+    {
+      "run": "31-scripted-60cc4774",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 106.85274179198314,
+        "parcel_in_bag": 394.60423706797883,
+        "parcel_delivery_text": 548.7415636000223,
+        "pokedex_receipt_text": 582.0797536780592,
+        "forest_entered": 1026.8899938520044,
+        "forest_north_gate": 1332.7758596159983,
+        "pewter_reached": 1408.9368143860484,
+        "pewter_gym_entered": 1453.3517576740123,
+        "first_badge": 2511.0018049600767
+      },
+      "badge": {
+        "line": 8386,
+        "seconds": 2511.0018049600767
+      },
+      "award_dialogue": [
+        {
+          "line": 8282,
+          "seconds": 2469.883246427984,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "line": 8284,
+          "seconds": 2472.1073074860033,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        },
+        {
+          "line": 8286,
+          "seconds": 2473.031178530073,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "final_badges": [
+        "Boulder"
+      ],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 47
+      },
+      "navigation_reasons": {
+        "map_changed": 64,
+        "dialogue_or_battle": 32,
+        "decision_boundary": 78,
+        "primitive": 500,
+        "limit": 8,
+        "interacted": 24,
+        "confirmed_once": 73,
+        "unchanged": 82,
+        "blocked": 3
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 31,
+        "use:EMBER": 38
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 2,
+      "center_hp_increases": 3,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22840469097718596,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1027,
+          "seconds": 268.4044011910446,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2395,
+          "seconds": 774.0755611560307,
+          "map": "Route 2",
+          "objective": "reach_forest",
+          "interface": "overworld",
+          "offered": 14
+        },
+        {
+          "line": 3665,
+          "seconds": 1223.6956095610512,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 4774,
+          "seconds": 1502.360794991022,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5997,
+          "seconds": 1888.397044791025,
+          "map": "Route 2",
+          "objective": "enter_pewter_gym",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 7222,
+          "seconds": 2274.2108838750282,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8159,
+          "seconds": 2437.902414923068,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9964,
+          "seconds": 3333.1950083679985,
+          "map": "Route 3",
+          "objective": "continue_journey",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 11076,
+          "seconds": 3569.005721864989,
+          "map": "Route 3",
+          "objective": "continue_journey",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Route 3",
+          "objective": "continue_journey",
+          "requests": 126
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 110
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 100
+        }
+      ]
+    },
+    {
+      "run": "32-random-e3eb93a6",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 411.96831361798104
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 38
+      },
+      "navigation_reasons": {
+        "primitive": 1261,
+        "decision_boundary": 45,
+        "map_changed": 38,
+        "interacted": 49,
+        "dialogue_or_battle": 23,
+        "limit": 2,
+        "confirmed_once": 66,
+        "unchanged": 3,
+        "blocked": 6,
+        "menu_changed": 3
+      },
+      "named_move_actions": {
+        "use:GROWL": 10,
+        "use:TACKLE": 9
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22508455091156065,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1057,
+          "seconds": 281.4347381480038,
+          "map": "Pallet Town",
+          "objective": "obtain_starter",
+          "interface": "transition",
+          "offered": 11
+        },
+        {
+          "line": 2008,
+          "seconds": 486.90162053797394,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2920,
+          "seconds": 653.8470093569485,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3847,
+          "seconds": 821.9238254799275,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4754,
+          "seconds": 971.416987214936,
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 5778,
+          "seconds": 1220.716947098961,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 6893,
+          "seconds": 1546.9090707110008,
+          "map": "Blues House",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 7971,
+          "seconds": 1860.6293728780001,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "menu",
+          "offered": 11
+        },
+        {
+          "line": 8970,
+          "seconds": 2108.274994971929,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9888,
+          "seconds": 2267.708429666003,
+          "map": "Route 1",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10961,
+          "seconds": 2553.2564836309757,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 13
+        },
+        {
+          "line": 11934,
+          "seconds": 2766.776508255978,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 12966,
+          "seconds": 3010.642095746007,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 14038,
+          "seconds": 3295.0460937839234,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 14982,
+          "seconds": 3489.97502303496,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 574
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 268
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "recover_team",
+          "requests": 250
+        }
+      ]
+    },
+    {
+      "run": "33-reactive-dae8fb74",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 127.62413327698596,
+        "parcel_in_bag": 545.980484765023,
+        "parcel_delivery_text": 667.7542103839805,
+        "pokedex_receipt_text": 705.1509856740013,
+        "forest_entered": 1218.1276722030016,
+        "forest_north_gate": 2131.3405566120055,
+        "pewter_reached": 2277.5580544100376,
+        "pewter_gym_entered": 2377.042382871965
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 196
+      },
+      "navigation_reasons": {
+        "map_changed": 68,
+        "dialogue_or_battle": 20,
+        "primitive": 119,
+        "decision_boundary": 54,
+        "limit": 7,
+        "interacted": 12,
+        "unchanged": 24,
+        "confirmed_once": 71
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 32,
+        "use:EMBER": 37
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 3,
+      "center_hp_increases": 2,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.2341041750041768,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1060,
+          "seconds": 555.234170092037,
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 30
+        },
+        {
+          "line": 2269,
+          "seconds": 1261.9259260810213,
+          "map": "Pallet Town",
+          "objective": "reach_forest",
+          "interface": "overworld",
+          "offered": 22
+        },
+        {
+          "line": 3547,
+          "seconds": 2076.0749851330183,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 16
+        },
+        {
+          "line": 4750,
+          "seconds": 2718.124564414029,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5762,
+          "seconds": 3225.601862165029,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 16
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 99
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 91
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 74
+        }
+      ]
+    },
+    {
+      "run": "34-random-d2d49143",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 1017.1767822059337,
+        "parcel_in_bag": 3368.9252575479914
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 31
+      },
+      "navigation_reasons": {
+        "primitive": 1096,
+        "decision_boundary": 58,
+        "map_changed": 47,
+        "interacted": 68,
+        "blocked": 10,
+        "dialogue_or_battle": 14,
+        "limit": 1,
+        "unchanged": 5,
+        "confirmed_once": 20,
+        "menu_changed": 4,
+        "unavailable": 1
+      },
+      "named_move_actions": {
+        "use:TACKLE": 2
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.23451523203402758,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1074,
+          "seconds": 294.0716851139441,
+          "map": "Reds House 1F",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 2181,
+          "seconds": 630.4075841859449,
+          "map": "Reds House 1F",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 3229,
+          "seconds": 916.8943856949918,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "transition",
+          "offered": 11
+        },
+        {
+          "line": 4174,
+          "seconds": 1118.3583082580008,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 14
+        },
+        {
+          "line": 5089,
+          "seconds": 1274.0690725209424,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6002,
+          "seconds": 1434.130706202006,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6931,
+          "seconds": 1611.1378347059945,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 8111,
+          "seconds": 2002.4164000690216,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9110,
+          "seconds": 2238.9669458640274,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10184,
+          "seconds": 2526.808027636027,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "menu",
+          "offered": 11
+        },
+        {
+          "line": 11261,
+          "seconds": 2835.3443329610163,
+          "map": "Reds House 2F",
+          "objective": "collect_parcel",
+          "interface": "menu",
+          "offered": 15
+        },
+        {
+          "line": 12342,
+          "seconds": 3151.5196733330376,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 13292,
+          "seconds": 3367.800053643994,
+          "map": "Viridian Mart",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 396
+        },
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 295
+        },
+        {
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "requests": 118
+        }
+      ]
+    },
+    {
+      "run": "35-reactive-5b4d0859",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 138.10360601905268,
+        "parcel_in_bag": 652.3844996540574,
+        "parcel_delivery_text": 874.1661821999587,
+        "pokedex_receipt_text": 911.6469174530357,
+        "forest_entered": 1389.4279440930113,
+        "forest_north_gate": 2247.751554141054,
+        "pewter_reached": 2286.6439944240265,
+        "pewter_gym_entered": 3246.7005010959692
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 226
+      },
+      "navigation_reasons": {
+        "primitive": 118,
+        "map_changed": 35,
+        "blocked": 1,
+        "dialogue_or_battle": 33,
+        "decision_boundary": 69,
+        "limit": 5,
+        "interacted": 6,
+        "unchanged": 14,
+        "confirmed_once": 52
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 36,
+        "use:EMBER": 14
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 2,
+      "center_hp_increases": 1,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.2279797870432958,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 934,
+          "seconds": 451.3840518599609,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 2073,
+          "seconds": 1074.2384211110184,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3181,
+          "seconds": 1710.3658269720618,
+          "map": "Viridian Forest",
+          "objective": "recover_team",
+          "interface": "overworld",
+          "offered": 30
+        },
+        {
+          "line": 4526,
+          "seconds": 2546.7322055760305,
+          "map": "Pewter City",
+          "objective": "enter_pewter_gym",
+          "interface": "transition",
+          "offered": 11
+        },
+        {
+          "line": 5757,
+          "seconds": 3296.998947086977,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "choice",
+          "offered": 13
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter City",
+          "objective": "enter_pewter_gym",
+          "requests": 120
+        },
+        {
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "requests": 70
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 64
+        }
+      ]
+    },
+    {
+      "run": "36-scripted-c23e6f37",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 107.40629355493002,
+        "parcel_in_bag": 496.54101525701117,
+        "parcel_delivery_text": 602.6997081539594,
+        "pokedex_receipt_text": 636.4142906659981,
+        "forest_entered": 846.5928205209784,
+        "forest_north_gate": 1496.6316305790097,
+        "pewter_reached": 1560.8369627549546,
+        "pewter_gym_entered": 1646.3896490669576,
+        "first_badge": 2966.511423044023
+      },
+      "badge": {
+        "line": 9965,
+        "seconds": 2966.511423044023
+      },
+      "award_dialogue": [
+        {
+          "line": 9861,
+          "seconds": 2925.261532017961,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "line": 9863,
+          "seconds": 2927.489260487957,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        },
+        {
+          "line": 9865,
+          "seconds": 2928.409966295003,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "final_badges": [
+        "Boulder"
+      ],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 47
+      },
+      "navigation_reasons": {
+        "map_changed": 63,
+        "dialogue_or_battle": 22,
+        "decision_boundary": 63,
+        "primitive": 549,
+        "limit": 9,
+        "interacted": 26,
+        "confirmed_once": 82,
+        "unchanged": 52,
+        "blocked": 7,
+        "step_limit": 1
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 34,
+        "use:EMBER": 42
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 2,
+      "center_hp_increases": 3,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.2256051249569282,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1045,
+          "seconds": 274.81268972100224,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2300,
+          "seconds": 671.1040608070325,
+          "map": "Oaks Lab",
+          "objective": "reach_forest",
+          "interface": "transition",
+          "offered": 11
+        },
+        {
+          "line": 3584,
+          "seconds": 1157.259071181994,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 4961,
+          "seconds": 1681.8524536839686,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6000,
+          "seconds": 1950.6589945439482,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 7060,
+          "seconds": 2223.6854302469874,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8263,
+          "seconds": 2591.3876189909643,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9300,
+          "seconds": 2821.447686575935,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 10701,
+          "seconds": 3353.824567751959,
+          "map": "Pewter City",
+          "objective": "continue_journey",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 272
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "requests": 101
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 91
+        }
+      ]
+    },
+    {
+      "run": "37-random-610b8817",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 961.5501386009855
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 28
+      },
+      "navigation_reasons": {
+        "primitive": 1018,
+        "menu_changed": 8,
+        "map_changed": 32,
+        "interacted": 82,
+        "decision_boundary": 75,
+        "blocked": 9,
+        "dialogue_or_battle": 29,
+        "limit": 1,
+        "confirmed_once": 33,
+        "unchanged": 5
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 8,
+        "use:GROWL": 6
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22172733000479639,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1029,
+          "seconds": 251.1890861649299,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 22
+        },
+        {
+          "line": 2064,
+          "seconds": 519.3374223170104,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 22
+        },
+        {
+          "line": 3202,
+          "seconds": 888.6839270079508,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 4199,
+          "seconds": 1094.0100652129622,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5114,
+          "seconds": 1258.5939829020062,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 13
+        },
+        {
+          "line": 6160,
+          "seconds": 1519.9736891150242,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 7156,
+          "seconds": 1744.2443814609433,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8184,
+          "seconds": 2003.4816906269407,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 22
+        },
+        {
+          "line": 9195,
+          "seconds": 2223.5566837139195,
+          "map": "Reds House 2F",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 10273,
+          "seconds": 2521.357810551999,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 11358,
+          "seconds": 2817.746258834959,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 16
+        },
+        {
+          "line": 12505,
+          "seconds": 3167.0440256999573,
+          "map": "Viridian City",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 27
+        },
+        {
+          "line": 13645,
+          "seconds": 3514.817655285937,
+          "map": "Viridian City",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 245
+        },
+        {
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "requests": 221
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "requests": 218
+        }
+      ]
+    },
+    {
+      "run": "38-scripted-e104a99d",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 107.21980356099084,
+        "parcel_in_bag": 357.58315524994396,
+        "parcel_delivery_text": 534.7941127719823,
+        "pokedex_receipt_text": 567.9629721189849,
+        "forest_entered": 935.1798779360252,
+        "forest_north_gate": 1298.1494503609138,
+        "pewter_reached": 1326.558033599984,
+        "pewter_gym_entered": 1370.862018506974,
+        "first_badge": 2246.6296124999644
+      },
+      "badge": {
+        "line": 8111,
+        "seconds": 2246.6296124999644
+      },
+      "award_dialogue": [
+        {
+          "line": 8007,
+          "seconds": 2205.726780197001,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "line": 8009,
+          "seconds": 2207.9036550309975,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        },
+        {
+          "line": 8011,
+          "seconds": 2208.819993723999,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "final_badges": [
+        "Boulder"
+      ],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 51
+      },
+      "navigation_reasons": {
+        "map_changed": 58,
+        "dialogue_or_battle": 31,
+        "decision_boundary": 84,
+        "primitive": 555,
+        "limit": 10,
+        "interacted": 28,
+        "confirmed_once": 92,
+        "unchanged": 93,
+        "blocked": 2
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 33,
+        "use:EMBER": 55
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 2,
+      "center_hp_increases": 3,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.2276426349999383,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1101,
+          "seconds": 316.95328178594355,
+          "map": "Viridian City",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 30
+        },
+        {
+          "line": 2348,
+          "seconds": 703.4663501949981,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 3533,
+          "seconds": 1064.6772763219196,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 4715,
+          "seconds": 1411.1250533849234,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 16
+        },
+        {
+          "line": 5859,
+          "seconds": 1723.710404968937,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6964,
+          "seconds": 2013.052655005944,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7887,
+          "seconds": 2174.6914435139624,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9687,
+          "seconds": 3068.3965454340214,
+          "map": "Route 3",
+          "objective": "continue_journey",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 10779,
+          "seconds": 3295.17604733794,
+          "map": "Route 3",
+          "objective": "continue_journey",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 11885,
+          "seconds": 3550.7496655340074,
+          "map": "Route 3",
+          "objective": "recover_team",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Route 3",
+          "objective": "continue_journey",
+          "requests": 208
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 131
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 125
+        }
+      ]
+    },
+    {
+      "run": "39-reactive-76efdad3",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 132.2661623338936,
+        "parcel_in_bag": 560.3211415939732,
+        "parcel_delivery_text": 771.981745203957,
+        "pokedex_receipt_text": 808.914990670979,
+        "forest_entered": 1227.0924502689159,
+        "forest_north_gate": 3338.9966620439664,
+        "pewter_reached": 3404.076962972991
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 196
+      },
+      "navigation_reasons": {
+        "map_changed": 79,
+        "blocked": 1,
+        "dialogue_or_battle": 26,
+        "primitive": 108,
+        "decision_boundary": 43,
+        "limit": 5,
+        "interacted": 5,
+        "unchanged": 14,
+        "confirmed_once": 62,
+        "step_limit": 2
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 54,
+        "use:EMBER": 7
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 1,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.22775580896995962,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1047,
+          "seconds": 548.8501054679509,
+          "map": "Viridian Mart",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 2270,
+          "seconds": 1257.4706646580016,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 3182,
+          "seconds": 1744.7857166209724,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4185,
+          "seconds": 2307.733909416944,
+          "map": "Viridian Forest",
+          "objective": "recover_team",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 5576,
+          "seconds": 3156.933491960983,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 167
+        },
+        {
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "requests": 69
+        },
+        {
+          "map": "Viridian Forest",
+          "objective": "recover_team",
+          "requests": 55
+        }
+      ]
+    },
+    {
+      "run": "40-scripted-754e2899",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 107.6113859419711,
+        "parcel_in_bag": 407.4579160900321,
+        "parcel_delivery_text": 601.4213153780438,
+        "pokedex_receipt_text": 634.5361039299751,
+        "forest_entered": 908.6325878279749,
+        "forest_north_gate": 1256.5747279099887,
+        "pewter_reached": 1285.4532866979716,
+        "pewter_gym_entered": 1372.4658063029638,
+        "first_badge": 3210.286428538966
+      },
+      "badge": {
+        "line": 11928,
+        "seconds": 3210.286428538966
+      },
+      "award_dialogue": [
+        {
+          "line": 11824,
+          "seconds": 3168.9646575250663,
+          "text": "victory, here the BOULDERBADGE!"
+        },
+        {
+          "line": 11826,
+          "seconds": 3171.225670446991,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        },
+        {
+          "line": 11828,
+          "seconds": 3172.1588066159748,
+          "text": "AAAAAAA received the BOULDERBADGE!"
+        }
+      ],
+      "final_badges": [
+        "Boulder"
+      ],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 66
+      },
+      "navigation_reasons": {
+        "map_changed": 61,
+        "dialogue_or_battle": 24,
+        "decision_boundary": 53,
+        "primitive": 732,
+        "limit": 10,
+        "interacted": 18,
+        "confirmed_once": 112,
+        "unchanged": 46,
+        "blocked": 8
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 39,
+        "use:EMBER": 70
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 2,
+      "center_hp_increases": 3,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22477519104722887,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1006,
+          "seconds": 251.59442101803143,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 22
+        },
+        {
+          "line": 2242,
+          "seconds": 637.2592858499847,
+          "map": "Oaks Lab",
+          "objective": "reach_forest",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 3434,
+          "seconds": 1012.6947967919987,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4671,
+          "seconds": 1418.6605499769794,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5699,
+          "seconds": 1689.0322090550326,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6757,
+          "seconds": 1967.9992947169812,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7823,
+          "seconds": 2247.267080403981,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 8958,
+          "seconds": 2564.5434964400483,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9976,
+          "seconds": 2788.2601782140555,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10976,
+          "seconds": 3011.8088972599944,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 12061,
+          "seconds": 3279.688664110028,
+          "map": "Pewter Pokecenter",
+          "objective": "continue_journey",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 267
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 244
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "requests": 187
+        }
+      ]
+    },
+    {
+      "run": "41-reactive-03678850",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 128.05943003401626,
+        "parcel_in_bag": 430.7814785729861,
+        "parcel_delivery_text": 698.5827025179751,
+        "pokedex_receipt_text": 735.6634787759976,
+        "forest_entered": 960.346741277026,
+        "forest_north_gate": 2342.3606272540055,
+        "pewter_reached": 2375.3911485449644,
+        "pewter_gym_entered": 2473.697935197968
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 194
+      },
+      "navigation_reasons": {
+        "map_changed": 65,
+        "dialogue_or_battle": 17,
+        "primitive": 138,
+        "decision_boundary": 45,
+        "limit": 9,
+        "interacted": 11,
+        "unchanged": 21,
+        "confirmed_once": 73
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 40,
+        "use:EMBER": 29
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 2,
+      "center_hp_increases": 2,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.22843476000707597,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1141,
+          "seconds": 620.1373516509775,
+          "map": "Pallet Town",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 22
+        },
+        {
+          "line": 2403,
+          "seconds": 1372.8131647140253,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 15
+        },
+        {
+          "line": 3350,
+          "seconds": 1885.9817698349943,
+          "map": "Route 1",
+          "objective": "reach_forest",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 4542,
+          "seconds": 2597.331775555969,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 5738,
+          "seconds": 3219.0320234430255,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "requests": 114
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 83
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "requests": 58
+        }
+      ]
+    },
+    {
+      "run": "42-random-f45d639e",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 1078.2675357799744
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 20
+      },
+      "navigation_reasons": {
+        "primitive": 1259,
+        "confirmed_once": 34,
+        "menu_changed": 10,
+        "map_changed": 26,
+        "dialogue_or_battle": 64,
+        "decision_boundary": 70,
+        "limit": 1,
+        "interacted": 55,
+        "blocked": 11,
+        "unchanged": 5,
+        "unavailable": 3
+      },
+      "named_move_actions": {
+        "use:TACKLE": 9
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.23629729100503027,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 929,
+          "seconds": 212.10019496292807,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 1944,
+          "seconds": 439.50073419499677,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 2944,
+          "seconds": 659.2039340699557,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 3962,
+          "seconds": 883.6613705719355,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 23
+        },
+        {
+          "line": 4997,
+          "seconds": 1106.8053942569532,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 5899,
+          "seconds": 1261.973673788947,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6813,
+          "seconds": 1421.096586677013,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 14
+        },
+        {
+          "line": 7720,
+          "seconds": 1576.4577836409444,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8653,
+          "seconds": 1733.8298748689704,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9573,
+          "seconds": 1881.6894162049284,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 14
+        },
+        {
+          "line": 10608,
+          "seconds": 2156.5479229909834,
+          "map": "Pallet Town",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 22
+        },
+        {
+          "line": 11699,
+          "seconds": 2471.965189034934,
+          "map": "Reds House 2F",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 12850,
+          "seconds": 2840.4559667649446,
+          "map": "Route 22",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 13799,
+          "seconds": 3011.9550955960294,
+          "map": "Route 22",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 14
+        },
+        {
+          "line": 14865,
+          "seconds": 3305.963572243927,
+          "map": "Viridian City",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 656
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "requests": 422
+        },
+        {
+          "map": "Route 22",
+          "objective": "collect_parcel",
+          "requests": 195
+        }
+      ]
+    },
+    {
+      "run": "43-reactive-fe1b6814",
+      "policy": "reactive",
+      "milestones": {
+        "starter_observed": 144.92265279998537,
+        "parcel_in_bag": 531.2792219029507
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 47
+      },
+      "navigation_reasons": {
+        "primitive": 33,
+        "map_changed": 25,
+        "blocked": 1,
+        "dialogue_or_battle": 250,
+        "decision_boundary": 260,
+        "limit": 2,
+        "interacted": 1,
+        "unchanged": 6,
+        "confirmed_once": 12
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 12
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 4,
+          "seconds": 0.22289071592967957,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1052,
+          "seconds": 539.0188193989452,
+          "map": "Viridian Mart",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 16
+        },
+        {
+          "line": 2377,
+          "seconds": 1250.3439724829514,
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 29
+        },
+        {
+          "line": 3648,
+          "seconds": 1805.5895253579365,
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 4883,
+          "seconds": 2334.5313715999946,
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 6114,
+          "seconds": 2865.916577633936,
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 2
+        },
+        {
+          "line": 7343,
+          "seconds": 3396.3976323249517,
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "interface": "overworld",
+          "offered": 2
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Viridian City",
+          "objective": "deliver_parcel",
+          "requests": 496
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 51
+        },
+        {
+          "map": "Route 1",
+          "objective": "deliver_parcel",
+          "requests": 27
+        }
+      ]
+    },
+    {
+      "run": "44-random-80c94829",
+      "policy": "random",
+      "milestones": {
+        "starter_observed": 1551.9464267169824
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 30,
+        "error": 1
+      },
+      "navigation_reasons": {
+        "primitive": 1283,
+        "map_changed": 35,
+        "blocked": 3,
+        "interacted": 74,
+        "decision_boundary": 59,
+        "menu_changed": 8,
+        "confirmed_once": 27,
+        "unchanged": 6,
+        "dialogue_or_battle": 14
+      },
+      "named_move_actions": {
+        "use:GROWL": 4,
+        "use:SCRATCH": 3
+      },
+      "brock_geodude_seen": false,
+      "onix_seen": false,
+      "guide_calls": 0,
+      "center_hp_increases": 0,
+      "errors": [
+        {
+          "line": 5742,
+          "seconds": 1560.2467655789806,
+          "error": "TimeoutError('GET /observation: observation deadline reached')"
+        }
+      ],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22319591999985278,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1061,
+          "seconds": 273.5806964429794,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 2120,
+          "seconds": 548.7078301890288,
+          "map": "Reds House 1F",
+          "objective": "obtain_starter",
+          "interface": "menu",
+          "offered": 15
+        },
+        {
+          "line": 3148,
+          "seconds": 812.645565591054,
+          "map": "Pallet Town",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 4288,
+          "seconds": 1180.7760230320273,
+          "map": "Pallet Town",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 5190,
+          "seconds": 1411.9118416630663,
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 6199,
+          "seconds": 1657.8019761299947,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7107,
+          "seconds": 1814.176486424054,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8010,
+          "seconds": 1972.765215535066,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 8922,
+          "seconds": 2132.6190583619755,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9856,
+          "seconds": 2303.92169479304,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10772,
+          "seconds": 2472.0908096639905,
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 11767,
+          "seconds": 2712.6965607739985,
+          "map": "Blues House",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 12857,
+          "seconds": 3039.403587496956,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "dialogue",
+          "offered": 12
+        },
+        {
+          "line": 13839,
+          "seconds": 3268.233540605055,
+          "map": "Blues House",
+          "objective": "collect_parcel",
+          "interface": "overworld",
+          "offered": 14
+        },
+        {
+          "line": 14810,
+          "seconds": 3497.7262370729586,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Oaks Lab",
+          "objective": "collect_parcel",
+          "requests": 654
+        },
+        {
+          "map": "Oaks Lab",
+          "objective": "obtain_starter",
+          "requests": 234
+        },
+        {
+          "map": "Pallet Town",
+          "objective": "obtain_starter",
+          "requests": 231
+        }
+      ]
+    },
+    {
+      "run": "45-scripted-f1b5d122",
+      "policy": "scripted",
+      "milestones": {
+        "starter_observed": 107.17459010495804,
+        "parcel_in_bag": 393.6634744020412,
+        "parcel_delivery_text": 500.3875756909838,
+        "pokedex_receipt_text": 533.9329700230155,
+        "forest_entered": 1011.8637129840208,
+        "forest_north_gate": 1301.4723571150098,
+        "pewter_reached": 1375.2460794460494,
+        "pewter_gym_entered": 1461.6117338540498
+      },
+      "badge": null,
+      "award_dialogue": [],
+      "final_badges": [],
+      "counts": {
+        "outside_enum": 0,
+        "route_target_unavailable": 0,
+        "stale_action_discarded": 61
+      },
+      "navigation_reasons": {
+        "map_changed": 52,
+        "dialogue_or_battle": 25,
+        "decision_boundary": 48,
+        "primitive": 806,
+        "limit": 10,
+        "interacted": 15,
+        "confirmed_once": 115,
+        "unchanged": 52,
+        "blocked": 9
+      },
+      "named_move_actions": {
+        "use:SCRATCH": 36,
+        "use:EMBER": 74
+      },
+      "brock_geodude_seen": true,
+      "onix_seen": true,
+      "guide_calls": 1,
+      "center_hp_increases": 3,
+      "errors": [],
+      "fixed_samples": [
+        {
+          "line": 3,
+          "seconds": 0.22486099100206047,
+          "map": "Reds House 2F",
+          "objective": "obtain_starter",
+          "interface": "overworld",
+          "offered": 12
+        },
+        {
+          "line": 1051,
+          "seconds": 285.51346839102916,
+          "map": "Route 1",
+          "objective": "collect_parcel",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 2438,
+          "seconds": 802.9632511159871,
+          "map": "Route 2",
+          "objective": "reach_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 3677,
+          "seconds": 1229.2638773960061,
+          "map": "Viridian Forest",
+          "objective": "cross_forest",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 4801,
+          "seconds": 1531.753978198045,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 5893,
+          "seconds": 1849.0953543790383,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 6909,
+          "seconds": 2113.0350966550177,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 7988,
+          "seconds": 2397.8702384900535,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 9141,
+          "seconds": 2711.471996710985,
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 10135,
+          "seconds": 2931.108954460011,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 11176,
+          "seconds": 3158.440062450012,
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "interface": "battle",
+          "offered": 11
+        },
+        {
+          "line": 12203,
+          "seconds": 3380.8006005140487,
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "interface": "battle",
+          "offered": 11
+        }
+      ],
+      "top_request_contexts": [
+        {
+          "map": "Pewter Gym",
+          "objective": "heal_team",
+          "requests": 323
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "challenge_brock",
+          "requests": 304
+        },
+        {
+          "map": "Pewter Gym",
+          "objective": "recover_team",
+          "requests": 184
+        }
+      ]
+    }
+  ]
+}
