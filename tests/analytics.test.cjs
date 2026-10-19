@@ -8,7 +8,7 @@ function setup(options = {}) {
   let now = 0, interval;
   const rect = { top: 0, height: 4000 };
   const document = {
-    currentScript: { dataset: { websiteId: 'test-id', scriptUrl: 'https://cloud.umami.is/script.js', domains: 'curtiscovington.com', ...options.config } },
+    currentScript: { dataset: { measurementId: 'G-GEE9RVSV3L', domains: 'curtiscovington.com', ...options.config } },
     hidden: false, referrer: 'https://example.com/page?secret=yes#private',
     createElement: () => ({ dataset: {} }),
     head: { appendChild: s => scripts.push(s) },
@@ -21,24 +21,29 @@ function setup(options = {}) {
     URL, Promise, Set, innerHeight: 1000, performance: { now: () => now },
     setInterval: cb => { interval = cb; },
     addEventListener: (name, cb) => { listeners[name] = cb; },
-    umami: { track: cb => events.push(cb({ website: 'test-id', url: '/?secret', referrer: document.referrer })) }
+    dataLayer: { push: args => events.push({ command: args[0], name: args[1], data: args[2] }) }
   };
   context.window = context;
   vm.runInNewContext(source, context);
   if (scripts[0] && !options.blocked) scripts[0].onload();
   return { events, scripts, document, rect, listeners, tick: () => { now += 1000; interval?.(); } };
 }
-test('disabled on privacy signals, preview hosts, absent config and insecure script', () => {
-  for (const options of [{ navigator: { doNotTrack: '1' } }, { navigator: { globalPrivacyControl: true } }, { hostname: 'localhost' }, { config: { websiteId: '' } }, { config: { scriptUrl: 'http://bad.example/script.js' } }]) {
+test('disabled on privacy signals, preview hosts, absent or invalid ID', () => {
+  for (const options of [{ navigator: { doNotTrack: '1' } }, { navigator: { globalPrivacyControl: true } }, { hostname: 'localhost' }, { config: { measurementId: '' } }, { config: { measurementId: 'invalid' } }]) {
     assert.equal(setup(options).scripts.length, 0);
   }
 });
-test('one sanitized pageview and manual collection only', () => {
+test('one GA config pageview with sanitized URLs and advertising disabled', () => {
   const s = setup({ home: true });
-  assert.equal(s.events.length, 1);
-  assert.equal(s.events[0].url, '/posts/example/');
-  assert.equal(s.events[0].referrer, 'https://example.com/page');
-  assert.equal(s.scripts[0].dataset.autoTrack, 'false');
+  const configs = s.events.filter(e => e.command === 'config');
+  assert.equal(configs.length, 1);
+  assert.equal(configs[0].name, 'G-GEE9RVSV3L');
+  assert.equal(configs[0].data.page_location, 'https://curtiscovington.com/posts/example/');
+  assert.equal(configs[0].data.page_referrer, 'https://example.com/page');
+  assert.equal(configs[0].data.allow_google_signals, false);
+  assert.equal(configs[0].data.allow_ad_personalization_signals, false);
+  assert.equal(s.events.filter(e => e.name === 'page_view').length, 0);
+  assert.equal(s.scripts[0].src, 'https://www.googletagmanager.com/gtag/js?id=G-GEE9RVSV3L');
 });
 test('milestones deduplicate, hidden time does not count', () => {
   const s = setup();
@@ -64,6 +69,6 @@ test('resource classification strips query and fragment and ignores email links'
 });
 test('blocked tracker produces no events or listeners', () => {
   const s = setup({ blocked: true });
-  assert.equal(s.events.length, 0);
+  assert.equal(s.events.filter(e => e.command === 'event').length, 0);
   assert.equal(Object.keys(s.listeners).length, 0);
 });

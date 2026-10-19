@@ -3,36 +3,29 @@
   var config = document.currentScript;
   if (!config || navigator.doNotTrack === "1" || navigator.globalPrivacyControl) return;
   if (!(config.dataset.domains || "").split(",").includes(location.hostname)) return;
-  if (!config.dataset.websiteId) return;
-  var source;
-  try { source = new URL(config.dataset.scriptUrl); } catch (_) { return; }
-  if (source.protocol !== "https:") return;
+  var id = config.dataset.measurementId;
+  if (!/^G-[A-Z0-9]+$/.test(id || "")) return;
+  function cleanURL(value) {
+    try { var url = new URL(value); return url.origin + url.pathname; }
+    catch (_) { return ""; }
+  }
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  // The config command sends one pageview; do not also send a page_view event.
+  window.gtag("config", id, {
+    page_location: location.origin + location.pathname,
+    page_referrer: cleanURL(document.referrer),
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
   var tracker = document.createElement("script");
-  tracker.src = source.href;
+  tracker.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
   tracker.async = true;
-  tracker.dataset.websiteId = config.dataset.websiteId;
-  tracker.dataset.autoTrack = "false";
-  tracker.dataset.excludeSearch = "true";
-  tracker.dataset.excludeHash = "true";
   tracker.onload = function () {
-    if (!window.umami) return;
-    function cleanURL(value) {
-      try { var url = new URL(value); return url.origin + url.pathname; }
-      catch (_) { return ""; }
-    }
     function send(name, data) {
-      try {
-        Promise.resolve(window.umami.track(function (props) {
-          var payload = Object.assign({}, props, {
-            url: location.pathname,
-            referrer: cleanURL(document.referrer)
-          });
-          if (name) { payload.name = name; payload.data = data; }
-          return payload;
-        })).catch(function () {});
-      } catch (_) { /* Tracking failure must never interrupt navigation. */ }
+      window.gtag("event", name, Object.assign({ send_to: id }, data));
     }
-    send();
     document.addEventListener("click", function (event) {
       var link = event.target.closest && event.target.closest("a[href]");
       if (!link) return;

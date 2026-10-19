@@ -1,17 +1,22 @@
 # Blog Analytics
 
-## Activate
+## Configuration
 
-1. Create a free Umami Cloud Hobby account and add `curtiscovington.com`.
-2. Copy the public website ID and script URL from its tracking snippet into
-   `analytics.website_id` and `analytics.script_url` in `_config.yml`.
-3. Build with `JEKYLL_ENV=production` and deploy through the existing GitHub Pages workflow.
-4. Visit a post on the production domain and check Umami Realtime for a single
-   pageview, depth milestones, and a repository click. Development builds,
-   other hostnames, Do Not Track, and Global Privacy Control are excluded.
+The blog uses Google Analytics 4 property `G-GEE9RVSV3L`, configured in
+`analytics.measurement_id` in `_config.yml`. Emptying the ID disables collection.
+The Google tag sends a pageview through its config command, then custom events
+record the readership signals below. Umami is no longer loaded.
 
-The integration is inactive until configured. No account or dashboard is created
-by the code. The dashboard stays in your Umami account, not on the public blog.
+Production builds on `curtiscovington.com` and `www.curtiscovington.com` collect
+analytics. Development builds, other hostnames, Do Not Track, and Global Privacy
+Control are excluded. Visit a production post and check GA4 Realtime to verify
+receipt; script delivery alone does not prove events reached the property.
+
+For detailed GA4 reporting, register event-scoped custom dimensions for
+`depth_percent`, `visible_seconds`, `resource_type`, and `link_path` in Admin >
+Custom definitions. Use the built-in link domain dimension for `link_domain`.
+Enhanced Measurement may also collect scroll/click events; use our custom event
+names below consistently, rather than adding those counts together.
 
 ## Signals and decisions
 
@@ -25,7 +30,10 @@ by the code. The dashboard stays in your Umami account, not on the public blog.
 Clicks also include `link_domain` and `link_path`, without query strings,
 fragments, or link text. Page URLs and referrers are also stripped of queries
 and fragments. This deliberately forgoes UTM campaign attribution. No custom
-visitor identifiers, cookies, session replay, or form values are added.
+visitor identifiers, session replay, or form values are added. Google Analytics
+uses its own cookies. Google Signals and advertising personalization are disabled.
+URL stripping applies to our configured pageview and custom events; additional
+Enhanced Measurement behavior is controlled in the GA4 property.
 
 Depth means the viewport reached that part of the article, not that the person
 read it. Short articles can reach all thresholds immediately. Visible time is
@@ -48,17 +56,13 @@ Use 100% depth events / post pageviews as a rough bottom-reach rate, and
 60-second events / pageviews as a rough sustained-visibility rate. Click events
 can repeat: clicks / pageviews is a click frequency, not a unique-user conversion
 rate. Avoid conclusions from a handful of visits and change one thing at a time.
-Export results monthly if you want comparisons beyond the retention window.
+Export results periodically for longer-term comparisons.
 
-## Free plan and verification
-
-As checked on 2026-10-19, Hobby includes one website, 100,000 monthly events,
-and six months of retention. Event properties also count toward usage. A visit
-that reaches every depth/time milestone consumes 17 units before clicks; each
-resource click adds four. Monitor usage; do not start a paid trial or upgrade
-for this setup. API/MCP access is paid, so use dashboard exports for free reviews.
-
-Sources: https://umami.is/pricing and https://docs.umami.is/docs/tracker-functions
+## Verification
 
 Run `node --test tests/analytics.test.cjs` for local behavior checks. A live
-Realtime check is still required after adding the real ID and deploying.
+GA4 Realtime check is still required after deployment.
+
+References:
+- https://developers.google.com/analytics/devguides/collection/ga4/events
+- https://developers.google.com/analytics/devguides/collection/ga4/views
