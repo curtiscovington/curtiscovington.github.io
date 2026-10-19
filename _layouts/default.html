@@ -69,6 +69,12 @@
     />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}" />
+    {% if jekyll.environment == 'production' and site.analytics.website_id != nil and site.analytics.website_id != '' %}
+      <script defer src="{{ '/assets/js/analytics.js' | relative_url }}"
+        data-website-id="{{ site.analytics.website_id | escape }}"
+        data-script-url="{{ site.analytics.script_url | escape }}"
+        data-domains="{{ site.analytics.domains | escape }}"></script>
+    {% endif %}
   </head>
   {% assign body_class = page.body_class %}
   {% if page.layout == 'post' %}

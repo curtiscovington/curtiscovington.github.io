@@ -34,3 +34,14 @@ feed:
 
 sass:
   sass_dir: assets/css
+
+# Public Umami website ID. Empty disables all analytics.
+analytics:
+  website_id: "fcb5361a-cbc3-4e80-916e-9e42693e3c22"
+  script_url: "https://cloud.umami.is/script.js"
+  domains: "curtiscovington.com,www.curtiscovington.com"
+
+exclude:
+  - docs
+  - tests
+  - AGENTS.md
