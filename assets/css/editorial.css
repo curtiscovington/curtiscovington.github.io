@@ -10,3 +10,14 @@ html[data-theme="light"]{--accent:#875035;--ink:#252d29;--muted:#62665d;--paper:
 /* Long artifact URLs wrap without expanding the reading column. */
 .post__content { overflow-wrap: anywhere; }
 .post__content pre { overflow-wrap: normal; }
+/* Replace the legacy article offset; the shell owns horizontal gutters. */
+.post {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 32px !important;
+}
+.back-link { margin-bottom: 24px; }
+@media (max-width: 1100px) {
+  .post__shell { grid-template-columns: minmax(0, 1fr) !important; }
+  .post__rail { display: none !important; }
+}
