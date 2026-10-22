@@ -21,3 +21,8 @@ html[data-theme="light"]{--accent:#875035;--ink:#252d29;--muted:#62665d;--paper:
   .post__shell { grid-template-columns: minmax(0, 1fr) !important; }
   .post__rail { display: none !important; }
 }
+/* Let article headings use their reading column, rather than the old 16ch cap. */
+.post__title { max-width: 100%; }
+.post { padding-top: 20px !important; }
+.back-link { margin-bottom: 16px; }
+.post__title { margin-top: 12px !important; }
