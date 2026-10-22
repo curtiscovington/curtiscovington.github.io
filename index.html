@@ -1,107 +1,40 @@
 ---
 layout: default
-title: "Curtis Covington — Personal Blog"
+title: "Curtis Covington — Experiments & Lab Notes"
 description: "Curtis Covington builds reproducible ML experiments and tools around them, focused on interpretability, methodology, and runnable artifacts."
 body_class: home-page
 ---
-<main>
-  {% assign latest_posts = site.posts | sort: 'date' | reverse %}
-  {% assign latest_post = latest_posts | first %}
-  <section id="latest" class="posts">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-heading__eyebrow">Latest post</p>
-        <h2 class="section-heading__title">Experiment reports and implementation notes.</h2>
-        <p class="section-heading__subtitle">
-          Metrics first, caveats included, and enough context to understand the result instead of just the headline.
-        </p>
-      </div>
-      {% if latest_post %}
-        {% assign latest_image = latest_post.og_image | default: latest_post.image %}
-        <article class="post-card post-card--latest">
-          {% if latest_image %}
-            <a class="post-card__media" href="{{ latest_post.url | relative_url }}" aria-label="Read {{ latest_post.title }}">
-              <img
-                src="{{ latest_image | relative_url }}"
-                alt="{{ latest_post.title | escape }}"
-                loading="eager"
-                decoding="async"
-              />
-            </a>
-          {% endif %}
-          <div class="post-card__latest-content">
-            <div class="post-card__meta post-card__meta--rail">
-              <span class="post-card__date">{{ latest_post.date | date: '%B %-d, %Y' }}</span>
-              {% if latest_post.reading_time %}
-                <span class="post-card__reading">{{ latest_post.reading_time }}</span>
-              {% endif %}
-            </div>
-            <h3 class="post-card__title">{{ latest_post.title }}</h3>
-            <p class="post-card__excerpt">
-              {{ latest_post.description | default: latest_post.excerpt | strip_html }}
-            </p>
-            {% if latest_post.tags %}
-              <div class="post-card__tags">
-                {% for tag in latest_post.tags limit:4 %}
-                  <span class="post-card__tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-            <a class="post-card__link" href="{{ latest_post.url | relative_url }}">
-              Read post
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </article>
-      {% endif %}
-
-      <div class="posts__grid">
-        {% for post in latest_posts offset:1 %}
-          <article class="post-card">
-            <div class="post-card__meta post-card__meta--rail">
-              <span class="post-card__date">{{ post.date | date: '%B %-d, %Y' }}</span>
-              {% if post.reading_time %}
-                <span class="post-card__reading">{{ post.reading_time }}</span>
-              {% endif %}
-            </div>
-            <h3 class="post-card__title">{{ post.title }}</h3>
-            <p class="post-card__excerpt">
-              {{ post.description | default: post.excerpt | strip_html }}
-            </p>
-            {% if post.tags %}
-              <div class="post-card__tags">
-                {% for tag in post.tags limit:4 %}
-                  <span class="post-card__tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-            <a class="post-card__link" href="{{ post.url | relative_url }}">
-              Read post
-              <span aria-hidden="true">→</span>
-            </a>
-          </article>
-        {% endfor %}
-      </div>
+<main id="main"><section class="intro"><div class="overline">A PERSONAL RESEARCH JOURNAL <span>EST. 2025</span></div><h1>Looking inside<br/>the <span>machine.</span></h1><div class="intro-bottom"><p>Experiments in interpretability, local AI, and the systems around them. What worked, what broke, and what the evidence actually says.</p><a href="#latest">Explore the notes <span>↓</span></a></div></section>{% assign latest_posts = site.posts | sort: 'date' | reverse %}
+{% assign latest_post = latest_posts | first %}
+{% if latest_post %}
+<section id="latest" class="latest">
+  <div class="section-rule"><h2>01 / The latest experiment</h2><span>{{ latest_post.date | date: '%B %-d, %Y' }}</span></div>
+  <div class="feature">
+    <div class="feature-copy">
+      <p class="overline">{{ latest_post.feature_category | default: 'Research & implementation' | escape }}</p>
+      <h2><a href="{{ latest_post.url | relative_url }}">{{ latest_post.title | escape }}</a></h2>
+      <p>{{ latest_post.description | default: latest_post.excerpt | strip_html | escape }}</p>
+      <a class="read-link" href="{{ latest_post.url | relative_url }}">Read the experiment <span aria-hidden="true">↗</span></a>
+      {% if latest_post.reading_time %}<span class="reading">{{ latest_post.reading_time | escape }}{% if latest_post.repo_card %} · Code & data included{% endif %}</span>{% endif %}
     </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="container">
-      <div class="about__panel">
-        <div class="about__copy">
-          <p class="section-heading__eyebrow">About</p>
-          <p class="about__text">
-            I’ve been fascinated by artificial intelligence since childhood. In high school, <a href="https://en.wikipedia.org/wiki/ELIZA">ELIZA</a> captured my imagination with its simple yet surprisingly compelling responses. Inspired, I built a tic-tac-toe AI in programming class—my first neural network and an early glimpse of what machines could learn. That curiosity eventually took me to CU Boulder, where I earned a Master of Science in Computer Science through the Data Science and Engineering program. Today, I help build large-scale technology infrastructure—the systems and facilities that make modern data centers possible. I still enjoy poking and prodding at the “digital neurons,” exploring how intelligent systems learn, think, and occasionally surprise us—and sharing what I discover along the way.
-          </p>
-          <p class="about__meta">
-            <span>M.S. in Computer Science</span>
-            <span>University of Colorado Boulder</span>
-            <span>Distributed systems and infrastructure</span>
-            <span>Interpretability and local-first tooling</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
+    {% assign latest_image = latest_post.og_image | default: latest_post.image %}
+    {% if latest_image %}<a class="feature-art" href="{{ latest_post.url | relative_url }}"><img src="{{ latest_image | relative_url }}" alt="{{ latest_post.feature_image_alt | default: latest_post.title | escape }}" decoding="async" />{% if latest_post.feature_caption %}<span>{{ latest_post.feature_caption | escape }}</span>{% endif %}</a>{% endif %}
+  </div>
+  {% if latest_post.feature_results %}
+  <div class="result-strip"><p>THE RESULT, AT A GLANCE<span>{{ latest_post.feature_results.label | escape }}</span></p>
+    {% for result in latest_post.feature_results.items %}<div><strong>{{ result.value | escape }}<span>{{ result.denominator | escape }}</span></strong><span>{{ result.label | escape }}</span></div>{% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+<section class="archive"><aside><p class="overline">THE NOTEBOOK</p><h2>Questions,<br/>then experiments.</h2><p>A running record of building, probing, and testing.</p><span class="archive-count">{{ site.posts.size }} published notes<br/>{{ site.posts.last.date | date: '%Y' }} — {{ site.posts.first.date | date: '%Y' }}</span></aside><div class="entries">
+{% for post in latest_posts offset:1 %}
+<article class="entry">
+  <span class="entry-number">{% assign number = forloop.index | plus: 1 %}{% if number < 10 %}0{% endif %}{{ number }}</span>
+  <div><p class="entry-meta">{{ post.date | date: '%Y-%m-%d' }}{% if post.reading_time %}<span> / {{ post.reading_time | escape }}</span>{% endif %}</p>
+  <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+  <p class="entry-description">{{ post.description | default: post.excerpt | strip_html | escape }}</p></div>
+  <span class="entry-arrow" aria-hidden="true">↗</span>
+</article>
+{% endfor %}
+</div></section><section class="about-journal" id="about"><p class="overline">THE PERSON BEHIND THE NOTES</p><div><h2>Hi, I’m Curtis.</h2><p>I build reproducible ML experiments and the tools around them—mostly interpretability work on open models, with clear methodology, measurable results, and runnable artifacts.</p><p>My curiosity about AI started with ELIZA and a tic-tac-toe neural network. Today, I work on large-scale technology infrastructure and still enjoy poking at the “digital neurons.”</p><p class="credentials">M.S. Computer Science · University of Colorado Boulder</p><a class="read-link" href="https://github.com/curtiscovington">Find my work on GitHub ↗</a></div></section></main>

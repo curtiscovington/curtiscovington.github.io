@@ -7,6 +7,22 @@ reading_time: "13 min read"
 og_image: "/img/posts/pokemon-red-fixed-controls/social-preview.png"
 og_image_width: 1536
 og_image_height: 1024
+feature_category: "Agents & evaluation"
+feature_caption: "FIG. 01 — SHARED CONTROLS. THREE POLICIES."
+feature_image_alt: "Research comic comparing random, scripted, and model policies in Pokémon Red"
+feature_results:
+  label: "Boulder Badges / 15 runs per policy"
+  items:
+    - value: "12"
+      denominator: "/15"
+      label: "Route-and-combat script"
+    - value: "0"
+      denominator: "/15"
+      label: "Local model"
+    - value: "0"
+      denominator: "/15"
+      label: "Random policy"
+
 repo_card:
   url: "https://github.com/curtiscovington/pokemon-red-agent-lab-results/tree/main/results/fixed-controls"
   title: "Pokémon Red: Fixed-Controls Results"
