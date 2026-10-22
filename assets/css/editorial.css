@@ -26,3 +26,10 @@ html[data-theme="light"]{--accent:#875035;--ink:#252d29;--muted:#62665d;--paper:
 .post { padding-top: 20px !important; }
 .back-link { margin-bottom: 16px; }
 .post__title { margin-top: 12px !important; }
+
+.about-journal p a:not(.read-link) {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
