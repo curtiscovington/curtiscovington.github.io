@@ -4,37 +4,209 @@ title: "Curtis Covington — Experiments & Lab Notes"
 description: "Curtis Covington builds reproducible ML experiments and tools around them, focused on interpretability, methodology, and runnable artifacts."
 body_class: home-page
 ---
-<main id="main"><section class="intro"><div class="overline">A PERSONAL RESEARCH JOURNAL <span>EST. 2025</span></div><h1>Looking inside<br/>the <span>machine.</span></h1><div class="intro-bottom"><p>Experiments in interpretability, local AI, and the systems around them. What worked, what broke, and what the evidence actually says.</p><a href="#latest">Explore the notes <span>↓</span></a></div></section>{% assign latest_posts = site.posts | sort: 'date' | reverse %}
-{% assign latest_post = latest_posts | first %}
-{% if latest_post %}
-<section id="latest" class="latest">
-  <div class="section-rule"><h2>01 / The latest experiment</h2><span>{{ latest_post.date | date: '%B %-d, %Y' }}</span></div>
-  <div class="feature">
-    <div class="feature-copy">
-      <p class="overline">{{ latest_post.feature_category | default: 'Research & implementation' | escape }}</p>
-      <h2><a href="{{ latest_post.url | relative_url }}">{{ latest_post.title | escape }}</a></h2>
-      <p>{{ latest_post.description | default: latest_post.excerpt | strip_html | escape }}</p>
-      <a class="read-link" href="{{ latest_post.url | relative_url }}">Read the experiment <span aria-hidden="true">↗</span></a>
-      {% if latest_post.reading_time %}<span class="reading">{{ latest_post.reading_time | escape }}{% if latest_post.repo_card %} · Code & data included{% endif %}</span>{% endif %}
+
+<main id="main">
+  <section class="intro">
+    <div class="overline">
+      A PERSONAL RESEARCH JOURNAL <span>EST. 2025</span>
     </div>
-    {% assign latest_image = latest_post.og_image | default: latest_post.image %}
-    {% if latest_image %}<a class="feature-art" href="{{ latest_post.url | relative_url }}"><img src="{{ latest_image | relative_url }}" alt="{{ latest_post.feature_image_alt | default: latest_post.title | escape }}" decoding="async" />{% if latest_post.feature_caption %}<span>{{ latest_post.feature_caption | escape }}</span>{% endif %}</a>{% endif %}
-  </div>
-  {% if latest_post.feature_results %}
-  <div class="result-strip"><p>THE RESULT, AT A GLANCE<span>{{ latest_post.feature_results.label | escape }}</span></p>
-    {% for result in latest_post.feature_results.items %}<div><strong>{{ result.value | escape }}<span>{{ result.denominator | escape }}</span></strong><span>{{ result.label | escape }}</span></div>{% endfor %}
-  </div>
+    <h1>Looking inside<br />the <span>machine.</span></h1>
+    <div class="intro-bottom">
+      <p>
+        Experiments in interpretability, local AI, and the systems around them.
+        What worked, what broke, and what the evidence actually says.
+      </p>
+      <a href="#latest">Explore the notes <span>↓</span></a>
+    </div>
+  </section>
+  {% assign latest_posts = site.posts | sort: 'date' | reverse %} {% assign
+  latest_post = latest_posts | first %} {% if latest_post %}
+  <section id="latest" class="latest">
+    <div class="section-rule">
+      <h2>01 / The latest experiment</h2>
+      <span>{{ latest_post.date | date: '%B %-d, %Y' }}</span>
+    </div>
+    <div class="feature">
+      <div class="feature-copy">
+        <p class="overline">
+          {{ latest_post.feature_category | default: 'Research & implementation'
+          | escape }}
+        </p>
+        <h2>
+          <a href="{{ latest_post.url | relative_url }}"
+            >{{ latest_post.title | escape }}</a
+          >
+        </h2>
+        <p>
+          {{ latest_post.description | default: latest_post.excerpt | strip_html
+          | escape }}
+        </p>
+        <a class="read-link" href="{{ latest_post.url | relative_url }}"
+          >Read the experiment <span aria-hidden="true">↗</span></a
+        >
+        {% if latest_post.reading_time %}<span class="reading"
+          >{{ latest_post.reading_time | escape }}{% if latest_post.repo_card %}
+          · Code & data included{% endif %}</span
+        >{% endif %}
+      </div>
+      {% assign latest_image = latest_post.og_image | default: latest_post.image
+      %} {% if latest_image %}<a
+        class="feature-art"
+        href="{{ latest_post.url | relative_url }}"
+        ><img
+          src="{{ latest_image | relative_url }}"
+          alt="{{ latest_post.feature_image_alt | default: latest_post.title | escape }}"
+          decoding="async"
+        />{% if latest_post.feature_caption %}<span
+          >{{ latest_post.feature_caption | escape }}</span
+        >{% endif %}</a
+      >{% endif %}
+    </div>
+    {% if latest_post.feature_results %}
+    <div class="result-strip">
+      <p>
+        THE RESULT, AT A GLANCE<span
+          >{{ latest_post.feature_results.label | escape }}</span
+        >
+      </p>
+      {% for result in latest_post.feature_results.items %}
+      <div>
+        <strong
+          >{{ result.value | escape }}<span
+            >{{ result.denominator | escape }}</span
+          ></strong
+        ><span>{{ result.label | escape }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
   {% endif %}
-</section>
-{% endif %}
-<section class="archive"><aside><p class="overline">THE NOTEBOOK</p><h2>Questions,<br/>then experiments.</h2><p>A running record of building, probing, and testing.</p><span class="archive-count">{{ site.posts.size }} published notes<br/>{{ site.posts.last.date | date: '%Y' }} — {{ site.posts.first.date | date: '%Y' }}</span></aside><div class="entries">
-{% for post in latest_posts offset:1 %}
-<article class="entry">
-  <span class="entry-number">{% assign number = forloop.index | plus: 1 %}{% if number < 10 %}0{% endif %}{{ number }}</span>
-  <div><p class="entry-meta">{{ post.date | date: '%Y-%m-%d' }}{% if post.reading_time %}<span> / {{ post.reading_time | escape }}</span>{% endif %}</p>
-  <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-  <p class="entry-description">{{ post.description | default: post.excerpt | strip_html | escape }}</p></div>
-  <span class="entry-arrow" aria-hidden="true">↗</span>
-</article>
-{% endfor %}
-</div></section><section class="about-journal" id="about"><p class="overline">THE PERSON BEHIND THE NOTES</p><div><h2>Hi, I’m Curtis.</h2><p>I build reproducible ML experiments and the tools around them—mostly interpretability work on open models, with clear methodology, measurable results, and runnable artifacts.</p><p>My curiosity about AI started with <a href="https://en.wikipedia.org/wiki/ELIZA">ELIZA</a> and a tic-tac-toe neural network. Today, I work on large-scale technology infrastructure and still enjoy poking at the “digital neurons.”</p><p class="credentials">M.S. Computer Science · University of Colorado Boulder</p><a class="read-link" href="https://github.com/curtiscovington">Find my work on GitHub ↗</a></div></section></main>
+  <section class="archive">
+    <aside>
+      <p class="overline">THE NOTEBOOK</p>
+      <h2>Questions,<br />then experiments.</h2>
+      <p>A running record of building, probing, and testing.</p>
+      <span class="archive-count"
+        >{{ site.posts.size }} published notes<br />{{ site.posts.last.date |
+        date: '%Y' }} — {{ site.posts.first.date | date: '%Y' }}</span
+      >
+    </aside>
+    <div class="entries">
+      {% for post in latest_posts offset:1 %}
+      <article class="entry">
+        <span class="entry-number"
+          >{% assign number = forloop.index | plus: 1 %}{% if number < 10 %}0{%
+          endif %}{{ number }}</span
+        >
+        <div>
+          <p class="entry-meta">
+            {{ post.date | date: '%Y-%m-%d' }}{% if post.reading_time %}<span>
+              / {{ post.reading_time | escape }}</span
+            >{% endif %}
+          </p>
+          <h3>
+            <a href="{{ post.url | relative_url }}"
+              >{{ post.title | escape }}</a
+            >
+          </h3>
+          <p class="entry-description">
+            {{ post.description | default: post.excerpt | strip_html | escape }}
+          </p>
+        </div>
+        <span class="entry-arrow" aria-hidden="true">↗</span>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="about-journal" id="about">
+      <p class="overline">THE PERSON BEHIND THE NOTES</p>
+      <div>
+        <h2>About Me</h2>
+      <p>
+        I’m a software engineer, independent AI researcher, and someone who has
+        never been particularly good at leaving an interesting question alone.
+      </p>
+      <p>
+        My fascination with artificial intelligence started long before the
+        current wave of large language models. In high school, I discovered
+        <a href="https://en.wikipedia.org/wiki/ELIZA">ELIZA</a>, an early
+        conversational program whose simple responses managed to make a computer
+        feel surprisingly alive. Not long afterward, I built a neural network to
+        play tic-tac-toe. It wasn’t particularly sophisticated, but the
+        underlying question stuck with me:
+        <em
+          >How much of what we call intelligence can emerge from relatively
+          simple machinery?</em
+        >
+      </p>
+      <p>
+        I’ve spent more than a decade building software, working across
+        different industries and systems. Today, I’m a Senior Core
+        Infrastructure Engineer at Oracle, working on the distributed systems
+        behind Oracle Cloud Infrastructure’s Compute Control Plane. I also hold
+        a Master’s degree in Computer Science from the University of Colorado
+        Boulder.
+      </p>
+      <p>
+        Outside my professional work, I pursue independent AI research,
+        primarily focused on mechanistic interpretability and autonomous agents.
+        I run experiments on open-weight language models using local hardware,
+        including an NVIDIA DGX Spark, investigating questions like:
+      </p>
+      <ul>
+        <li>
+          Can we identify meaningful concepts inside neural networks and
+          causally influence their behavior?
+        </li>
+        <li>
+          How do models represent, retrieve, and manipulate information
+          internally?
+        </li>
+        <li>
+          Why do AI agents sometimes possess the information necessary to solve
+          a problem but fail to use it?
+        </li>
+        <li>
+          What happens when agents can share knowledge, collaborate, and pursue
+          goals over extended periods?
+        </li>
+      </ul>
+      <p>
+        My experiments have explored sparse autoencoders, activation steering,
+        Jacobian lenses, agent memory, and more. Some have produced encouraging
+        results. Others have fallen apart under stronger controls. I find both
+        outcomes valuable. I publish my methods, measurements, code, and
+        failures because I believe good research should be reproducible, not
+        just impressive.
+      </p>
+      <p>
+        My interests aren’t limited to AI. I founded an educational technology
+        company that worked with Waco Independent School District, experimented
+        with game development, and built countless tools and prototypes simply
+        because an idea caught my attention. I’m drawn to philosophy, science
+        fiction, the nature of consciousness, and the strange relationship
+        between technological progress and the human experience.
+      </p>
+      <p>
+        I tend to approach the world with a mixture of curiosity, skepticism,
+        and optimism. I think we’re living through an extraordinary period in
+        human history, and that artificial intelligence may fundamentally
+        reshape what civilization is capable of. I’m excited by that
+        possibility, but I also think extraordinary claims deserve extraordinary
+        scrutiny.
+      </p>
+      <p>
+        Ultimately, I don’t want to be someone who merely watches the future
+        arrive. I want to participate in building it, understanding it, and
+        occasionally discovering something nobody thought to look for.
+      </p>
+      <p class="about-journal__closing">
+        This website is where I document that process.
+      </p>
+      <a class="read-link" href="https://github.com/curtiscovington"
+        >Find my work on GitHub ↗</a
+      >
+    </div>
+  </section>
+</main>

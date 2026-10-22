@@ -33,3 +33,19 @@ html[data-theme="light"]{--accent:#875035;--ink:#252d29;--muted:#62665d;--paper:
   text-decoration-thickness: 1px;
   text-underline-offset: 0.16em;
 }
+
+.about-journal ul {
+  max-width: 640px;
+  margin: 1.25rem 0 2rem;
+  padding-left: 1.25rem;
+  font: 17px/1.65 var(--serif);
+}
+
+.about-journal li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.35rem;
+}
+
+.about-journal__closing {
+  font-size: 24px !important;
+}
