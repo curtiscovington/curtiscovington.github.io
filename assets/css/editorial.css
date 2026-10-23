@@ -71,6 +71,23 @@ html[data-theme="light"]{--accent:#875035;--ink:#252d29;--muted:#62665d;--paper:
 .icon-arrow--up { transform: rotate(-45deg); }
 .icon-arrow--left { transform: rotate(-135deg); }
 
+.entry { grid-template-columns: 30px minmax(0, 1fr) 44px; }
+@media (max-width: 560px) {
+  .entry { grid-template-columns: 20px minmax(0, 1fr) 44px; }
+}
+.entry-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  align-self: start;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+.entry-arrow:hover,
+.entry-arrow:focus-visible { background: #e9e6dc; color: var(--accent); }
+
 .feature h1 {
   max-width: 550px;
   margin: 15px 0 20px;

@@ -97,7 +97,7 @@ body_class: home-page
             {{ post.description | default: post.excerpt | strip_html | escape }}
           </p>
         </div>
-        <span class="entry-arrow" aria-hidden="true">{% include arrow.html %}</span>
+        <a class="entry-arrow" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title | escape }}">{% include arrow.html %}</a>
       </article>
       {% endfor %}
     </div>
