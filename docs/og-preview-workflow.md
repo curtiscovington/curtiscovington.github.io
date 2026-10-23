@@ -1,6 +1,9 @@
 # Open Graph Preview Workflow
 
-Use this process for every post-specific social image.
+Use this process for social images. The site-wide default is
+`/img/social/site-preview-editorial-v1.png`, rendered at 1200×630 from
+`docs/social-card.html` using Chromium with Newsreader and Inter loaded.
+The HTML source is excluded from the published site by the `docs` exclusion.
 
 ## Path Convention
 
@@ -17,13 +20,14 @@ og_image: "/img/posts/<slug>/social-preview.png"
 ## Card Recipe (Consistent Base)
 
 - Canvas: `1200x630`
-- Background: dark blue gradient based on the site palette
-  - `#0B1020` to `#111833`
-- Left element: monogram mark
-- Right element: `Curtis Covington` name lockup
-- Overlay: post title text
-- Watermark: very faint `CC` in the background
-- No additional imagery
+- Background: warm paper `#f5f2ea`
+- Main text: ink `#252d29`; secondary accent: muted olive `#66705b`
+- Typography: Newsreader headings and Inter labels
+- Fine horizontal rules, generous margins, no gradients or watermarks
+- Site-wide card: author name, Experiments & Lab Notes, research subjects, domain
+- New post cards: use the same typography and palette with the post title;
+  evidence or article-specific imagery can be included when useful
+- Existing custom post images remain independent and take priority over the site default
 
 ## Pre-Publish Checks
 
