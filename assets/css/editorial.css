@@ -53,8 +53,8 @@ html[data-theme="light"]{--accent:#875035;--ink:#252d29;--muted:#62665d;--paper:
 .about-portrait .overline { margin: 0 0 24px; }
 .about-portrait figure { margin: 0; width: 200px; max-width: 100%; }
 .about-portrait img { display: block; width: 200px; max-width: 100%; height: auto; border-radius: 0; }
-.about-portrait figcaption { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--rule); font: 20px/1.3 var(--serif); }
-.about-portrait figcaption span { display: block; margin-top: 7px; font: 10px/1.7 var(--sans); color: var(--muted); }
+.about-portrait figcaption { margin-top: 16px; font: 20px/1.3 var(--serif); }
+.about-portrait figcaption span { display: block; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); font: 10px/1.7 var(--sans); color: var(--muted); }
 @media (max-width: 560px) {
   .about-portrait { margin-bottom: 32px; }
   .about-portrait figure { width: 100%; display: grid; grid-template-columns: 110px 1fr; align-items: end; gap: 20px; }
