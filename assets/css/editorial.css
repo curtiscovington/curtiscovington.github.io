@@ -49,3 +49,22 @@ html[data-theme="light"]{--accent:#875035;--ink:#252d29;--muted:#62665d;--paper:
 .about-journal__closing {
   font-size: 24px !important;
 }
+
+.home-page .latest {
+  padding-top: 24px;
+}
+
+.feature h1 {
+  max-width: 550px;
+  margin: 15px 0 20px;
+  font: 400 clamp(32px, 3.5vw, 49px) / 1.09 var(--serif);
+  letter-spacing: -0.035em;
+}
+
+@media (max-width: 800px) {
+  .feature h1 { font-size: 34px; }
+}
+
+@media (max-width: 560px) {
+  .feature h1 { font-size: 39px; }
+}

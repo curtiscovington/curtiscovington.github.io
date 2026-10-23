@@ -6,37 +6,20 @@ body_class: home-page
 ---
 
 <main id="main">
-  <section class="intro">
-    <div class="overline">
-      A PERSONAL RESEARCH JOURNAL <span>EST. 2025</span>
-    </div>
-    <h1>Looking inside<br />the <span>machine.</span></h1>
-    <div class="intro-bottom">
-      <p>
-        Experiments in interpretability, local AI, and the systems around them.
-        What worked, what broke, and what the evidence actually says.
-      </p>
-      <a href="#latest">Explore the notes <span>↓</span></a>
-    </div>
-  </section>
   {% assign latest_posts = site.posts | sort: 'date' | reverse %} {% assign
   latest_post = latest_posts | first %} {% if latest_post %}
   <section id="latest" class="latest">
-    <div class="section-rule">
-      <h2>01 / The latest experiment</h2>
-      <span>{{ latest_post.date | date: '%B %-d, %Y' }}</span>
-    </div>
     <div class="feature">
       <div class="feature-copy">
         <p class="overline">
           {{ latest_post.feature_category | default: 'Research & implementation'
           | escape }}
         </p>
-        <h2>
+        <h1>
           <a href="{{ latest_post.url | relative_url }}"
             >{{ latest_post.title | escape }}</a
           >
-        </h2>
+        </h1>
         <p>
           {{ latest_post.description | default: latest_post.excerpt | strip_html
           | escape }}
