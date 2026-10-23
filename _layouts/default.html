@@ -88,14 +88,14 @@
   {% endif %}
   <body{% if body_class %} class="{{ body_class }}"{% endif %}>
     <a class="skip" href="#main">Skip to content</a>
-<header class="masthead"><a class="wordmark" href="{{ '/' | relative_url }}">Curtis Covington<span>EXPERIMENTS &amp; LAB NOTES</span></a><nav aria-label="Primary navigation"><a href="{{ '/#latest' | relative_url }}">Writing</a><a href="{{ '/#about' | relative_url }}">About</a><a href="https://github.com/curtiscovington">GitHub ↗</a><a href="{{ '/feed.xml' | relative_url }}">RSS ↗</a></nav></header>
+<header class="masthead"><a class="wordmark" href="{{ '/' | relative_url }}">Curtis Covington<span>EXPERIMENTS &amp; LAB NOTES</span></a><nav aria-label="Primary navigation"><a href="{{ '/#latest' | relative_url }}">Writing</a><a href="{{ '/#about' | relative_url }}">About</a><a href="https://github.com/curtiscovington">GitHub {% include arrow.html %}</a><a href="{{ '/feed.xml' | relative_url }}">RSS {% include arrow.html %}</a></nav></header>
 
     {{ content }}
 
     <footer class="journal-footer">
       <span>CURTIS COVINGTON<br><small>Independent experiments. Reproducible artifacts.</small></span>
       <span><small>&copy; {{ 'now' | date: '%Y' }} Curtis Covington.</small></span>
-      <a href="#">Back to top ↑</a>
+      <a href="#">Back to top <span class="icon-arrow icon-arrow--up">{% include arrow.html %}</span></a>
     </footer>
     <script>
       (function () {

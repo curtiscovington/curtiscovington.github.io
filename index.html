@@ -25,7 +25,7 @@ body_class: home-page
           | escape }}
         </p>
         <a class="read-link" href="{{ latest_post.url | relative_url }}"
-          >Read the experiment <span aria-hidden="true">↗</span></a
+          >Read the experiment <span aria-hidden="true">{% include arrow.html %}</span></a
         >
         {% if latest_post.reading_time %}<span class="reading"
           >{{ latest_post.reading_time | escape }}{% if latest_post.repo_card %}
@@ -97,7 +97,7 @@ body_class: home-page
             {{ post.description | default: post.excerpt | strip_html | escape }}
           </p>
         </div>
-        <span class="entry-arrow" aria-hidden="true">↗</span>
+        <span class="entry-arrow" aria-hidden="true">{% include arrow.html %}</span>
       </article>
       {% endfor %}
     </div>
@@ -194,7 +194,7 @@ body_class: home-page
         This website is where I document that process.
       </p>
       <a class="read-link" href="https://github.com/curtiscovington"
-        >Find my work on GitHub ↗</a
+        >Find my work on GitHub {% include arrow.html %}</a
       >
     </div>
   </section>

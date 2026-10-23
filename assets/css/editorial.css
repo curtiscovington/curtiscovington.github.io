@@ -66,6 +66,11 @@ html[data-theme="light"]{--accent:#875035;--ink:#252d29;--muted:#62665d;--paper:
   padding-top: 24px;
 }
 
+/* Vector arrows cannot be substituted with color emoji by mobile fonts. */
+.icon-arrow { display: inline-block; width: 1em; height: 1em; vertical-align: -0.12em; flex-shrink: 0; }
+.icon-arrow--up { transform: rotate(-45deg); }
+.icon-arrow--left { transform: rotate(-135deg); }
+
 .feature h1 {
   max-width: 550px;
   margin: 15px 0 20px;
