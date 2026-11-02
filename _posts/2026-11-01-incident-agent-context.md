@@ -18,6 +18,8 @@ repo_card:
 
 Can a local AI agent take an incident from an alarm to a verified repair? I built a lab to test the whole loop: inspect what is happening, choose a bounded action, then check whether the application actually recovered.
 
+After my earlier [Pokémon agent experiments](/posts/pokemon-red-one-hour-agent-lab/), I wanted to explore what a local model could do when the task was investigating and repairing a system.
+
 Across 160 live trials, the agent achieved immediate verified recovery in 57/80 trials without added runbook guidance and 67/80 with it. It could carry out useful repairs, including rolling back a broken API release. It also missed database diagnostics, restarted processes without removing the fault, and sometimes ran out of room to finish its answer. Nine of the 36 failed trials ended in truncated JSON.
 
 That leaves a more useful question than whether the agent can ever fix something: where does the incident-handling loop hold up, and where does it break?
