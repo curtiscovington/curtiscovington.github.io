@@ -7,11 +7,9 @@ og_image: /img/posts/incident-agent-context/incident-agent-handling-cover.webp
 og_image_width: 1536
 og_image_height: 1024
 repo_card:
-  url: /assets/posts/incident-agent-context/incident-agent-evidence-v0.1.0.zip
-  title: "Results, evidence, and code"
-  description: "Saved results, architecture, source, and reproducible analysis."
-  eyebrow: "Study evidence"
-  icon: "download"
+  url: "https://github.com/curtiscovington/incident-agent-lab-results"
+  title: "Incident Agent Lab Results"
+  description: "Protocols, saved results, environment source, and reproducible analysis."
 ---
 
 ![A local incident agent investigates an alarm, performs a bounded rollback and checks recovery](/img/posts/incident-agent-context/incident-agent-handling-cover.webp)
@@ -22,7 +20,7 @@ After my earlier [Pokémon agent experiments](/posts/pokemon-red-one-hour-agent-
 
 Across 160 live trials, the agent achieved immediate verified recovery in 57/80 trials without added runbook guidance and 67/80 with it. It could carry out useful repairs, including rolling back a broken API release. It also missed database diagnostics, restarted processes without removing the fault, and sometimes ran out of room to finish its answer. Nine of the 36 failed trials ended in truncated JSON.
 
-That leaves a more useful question than whether the agent can ever fix something: where does the incident-handling loop hold up, and where does it break?
+That leaves the same question I explored with the [Pokémon agents](/posts/pokemon-red-one-hour-agent-lab/): where does the loop hold up, and where does it break?
 
 ## The System the Agent Had to Repair
 
@@ -185,7 +183,7 @@ The replay states were selected with knowledge of the original outcomes. They we
 
 I also used Codex to help implement the harness and build the replays. The trace review and action scoring were automated; a separate human diagnosis review remains unfinished. The recovery checks lacked sustained recurrence observation, healthy and self-resolving incident controls, and a comprehensive penalty for unnecessary or collateral changes.
 
-The downloadable evidence includes results, protocols, model exchanges and offline analysis, with MIT-licensed code and CC BY 4.0 documentation and data. It also includes frozen study source and labeled historical architecture, Terraform, service and build definitions, so readers can inspect the environment, fault injection and agent tools. Saved-data analysis is reproducible; a complete live rerun is not packaged. Model and container images, credentials and fixture volumes are not included.
+The project repository includes results, protocols, model exchanges and offline analysis, with MIT-licensed code and CC BY 4.0 documentation and data. It also includes frozen study source and labeled historical architecture, Terraform, service and build definitions, so readers can inspect the environment, fault injection and agent tools. Saved-data analysis is reproducible; a complete live rerun is not packaged. Model and container images, credentials and fixture volumes are not included.
 
 ## What I Would Test Next
 
