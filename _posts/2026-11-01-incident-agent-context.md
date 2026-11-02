@@ -56,7 +56,7 @@ The comparison covered eight known faults, with ten repetitions per condition. O
 
 I used the Ollama tag `qwen3.8:27b-q4_K_M` on my DGX Spark, pinned to model digest `25b843619e944cd0ae6069f94ff4e5e26a16e109ccbc0a66a0f05979ed70098e`. Temperature was zero, the seed was 42, and the output cap was 384 tokens. Each live trial had a maximum of 24 steps and 600 seconds.
 
-I chose an 8,192-token context as an initial best estimate, intending to refine it as the experiments progressed. It was the configured study limit, not a hardware or model maximum. I kept it fixed for these comparisons; I did not compare context-window sizes.
+I started with an 8,192-token context limit to keep memory use bounded and reduce the risk of exhausting memory, intending to measure the available headroom and refine it later. It was the configured study limit, not a hardware or model maximum. I kept it fixed for these comparisons; I did not compare context-window sizes.
 
 These were live executions, not identical prompts repeated at temperature zero. Each ten-trial scenario/condition group had two to ten distinct initial contexts, with changing timestamps, alarms, measurements and asynchronous observations. I did not isolate which differences changed decisions or measure serving nondeterminism.
 
