@@ -88,7 +88,7 @@
   {% endif %}
   <body{% if body_class %} class="{{ body_class }}"{% endif %}>
     <a class="skip" href="#main">Skip to content</a>
-<header class="masthead"><a class="wordmark" href="{{ '/' | relative_url }}">Curtis Covington<span>EXPERIMENTS &amp; LAB NOTES</span></a><nav aria-label="Primary navigation"><a href="{{ '/#latest' | relative_url }}">Writing</a><a href="{{ '/#about' | relative_url }}">About</a><a href="https://github.com/curtiscovington">GitHub {% include arrow.html %}</a><a href="{{ '/feed.xml' | relative_url }}">RSS {% include arrow.html %}</a></nav></header>
+<header class="masthead"><a class="wordmark" href="{{ '/' | relative_url }}">Curtis Covington<span>EXPERIMENTS &amp; LAB NOTES</span></a><nav aria-label="Primary navigation"><a href="{{ '/#about' | relative_url }}">About</a><a class="social-link" href="https://github.com/curtiscovington" rel="me">{% include github.html %} GitHub</a>{% if site.linkedin_url %}<a class="social-link" href="{{ site.linkedin_url | escape }}" rel="me">{% include linkedin.html %} LinkedIn</a>{% endif %}<a class="social-link" href="{{ '/feed.xml' | relative_url }}">{% include rss.html %} RSS</a></nav></header>
 
     {{ content }}
 

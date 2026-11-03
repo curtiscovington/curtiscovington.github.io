@@ -1,6 +1,13 @@
 ---
 layout: post
 title: "Can a Local AI Agent Handle an Incident?"
+description: "Across 160 local lab trials, immediate verified recovery was 57/80 without added runbook guidance and 67/80 with it. I examine the repairs and failure modes."
+reading_time: "13 min read"
+tags:
+  - ai
+  - agents
+  - incident-response
+  - local-inference
 date: 2026-11-01
 permalink: /posts/incident-agent-context/
 og_image: /img/posts/incident-agent-context/incident-agent-handling-cover.webp

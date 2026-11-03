@@ -193,9 +193,14 @@ body_class: home-page
       <p class="about-journal__closing">
         This website is where I document that process.
       </p>
-      <a class="read-link" href="https://github.com/curtiscovington"
-        >Find my work on GitHub {% include arrow.html %}</a
-      >
+      <nav class="social-links" aria-label="Social profiles">
+        <a class="read-link social-link" href="https://github.com/curtiscovington" rel="me"
+          >{% include github.html %} Find my work on GitHub</a>
+        {% if site.linkedin_url %}
+        <a class="read-link social-link" href="{{ site.linkedin_url | escape }}" rel="me"
+          >{% include linkedin.html %} Connect on LinkedIn</a>
+        {% endif %}
+      </nav>
     </div>
   </section>
 </main>
