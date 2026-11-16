@@ -111,3 +111,7 @@ html[data-theme="light"]{--accent:#875035;--ink:#252d29;--muted:#62665d;--paper:
   .masthead { flex-direction: column; gap: 20px; }
   .masthead nav { flex-wrap: wrap; gap: 14px; }
 }
+
+/* Site-wide authorship disclosure, kept readable on narrow screens. */
+.journal-footer{flex-wrap:wrap;column-gap:22px}
+.journal-footer .ai-disclosure{flex-basis:100%;margin:18px 0 0;color:var(--muted);font-size:11px;line-height:1.7}
